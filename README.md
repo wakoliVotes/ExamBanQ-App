@@ -71,7 +71,7 @@ User Interface (UX) features | Importance
 
 - **Trimester Paper Sections**
 
-<img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/161351015-9846393f-f5c5-4ffd-bb3a-b34efbc74e52.png">   <img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/158043659-b727e112-d728-405c-9889-28e1794e8fb3.png"><img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/159119037-aad86b09-d232-4ab1-88e0-a325a4d6e2a2.png"><img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/159118930-cf851c19-404b-4f4f-bada-80052095f291.png">
+<img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/161351015-9846393f-f5c5-4ffd-bb3a-b34efbc74e52.png">   <img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/161351185-5e82b3e0-d3b7-4c10-b231-fa7831158475.png"><img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/161351321-573de65d-98ab-4ac8-b7a0-3ca419535434.png"><img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/161351421-4ccd65e1-9dcc-4031-b3b8-eb3263d2430b.png">
 
 
 
