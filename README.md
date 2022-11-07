@@ -61,20 +61,11 @@ User Interface (UX) features | Importance
   > 2. Year 2
   > 3. Year 3
   > 4. Year 4
-### Coding Roadmap
+### Core Layouts
 - **Splash screen, Login Page and Regsiter/Sign Up Page**
  
 <img width="218" height="420" alt="splash screen" src="https://user-images.githubusercontent.com/77758884/153352238-53ecc3bb-ce49-450a-a2e7-503def032c87.png" ><img width="218" height="420" alt="login page" src="https://user-images.githubusercontent.com/77758884/156889586-8ce0b5b2-3ed2-489c-9725-50d3f061cb63.png" ><img width="218" height="420" alt="register page" src="https://user-images.githubusercontent.com/77758884/156889515-356937f2-c1f6-4b46-b225-ebefcbbea38f.png" >
 
-- **Dashboard for Each Year**
-<img width="218" height="420" alt="image" src="https://user-images.githubusercontent.com/77758884/157392659-26e5bdb9-6171-4f66-8d9c-f154b625afd6.png">
-
-- **Trimester Paper Sections**
-
-<img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/161351015-9846393f-f5c5-4ffd-bb3a-b34efbc74e52.png">   <img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/161351185-5e82b3e0-d3b7-4c10-b231-fa7831158475.png"><img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/161351321-573de65d-98ab-4ac8-b7a0-3ca419535434.png"><img width="218" height="420" src="https://user-images.githubusercontent.com/77758884/161351421-4ccd65e1-9dcc-4031-b3b8-eb3263d2430b.png">
-
-
-
-
 
 ### External Resources
+<!-- - You can check and download the application on Google Play [here](https://play.google.com/store/games?hl=en&gl=US) -->
