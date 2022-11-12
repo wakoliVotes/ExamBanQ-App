@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import com.airbnb.lottie.compose.LottieAnimation
 import com.airbnb.lottie.compose.LottieCompositionSpec
@@ -13,7 +14,6 @@ import com.airbnb.lottie.compose.animateLottieCompositionAsState
 import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.exambankcompose.R
 import com.example.exambankcompose.Routes
-import java.lang.reflect.Modifier
 
 @Composable
 fun SplashScreen(navController: NavHostController) {
@@ -29,7 +29,8 @@ fun SplashScreen(navController: NavHostController) {
             progress = { logoAnimationState.progress }
         )
         if (logoAnimationState.isAtEnd && logoAnimationState.isPlaying) {
-            navController.navigate(Routes.Home.route)
+            // from splash screen, we go to log in screen
+            navController.navigate(Routes.Login.route)
         }
     }
 }

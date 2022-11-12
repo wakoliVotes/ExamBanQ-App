@@ -12,7 +12,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.exambankcompose.Routes
 import com.example.exambankcompose.SignIn
-import java.lang.reflect.Modifier
 
 @Composable
 fun ScreenMain(){
@@ -33,7 +32,7 @@ fun ScreenMain(){
                 }
                 composable(Routes.Home.route) {
                     Box(
-                        modifier = Modifier
+                        modifier = androidx.compose.ui.Modifier.fillMaxSize()
                             .fillMaxSize()
                             .background(Color.White),
                         contentAlignment = Alignment.Center
