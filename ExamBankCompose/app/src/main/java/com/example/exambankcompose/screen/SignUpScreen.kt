@@ -27,7 +27,6 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextDecoration
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
@@ -212,7 +211,7 @@ fun SignUp( navController: NavHostController ){
         // Already have an account Call
         ClickableText(
             text = AnnotatedString("Log in"),
-            onClick = {  },
+            onClick = { navController.navigate(Routes.Login.route) },
             style = TextStyle(
                 fontSize = 16.sp,
                 fontFamily = FontFamily.Default,
