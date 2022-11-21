@@ -32,7 +32,8 @@ fun ScreenMain(){
                 }
                 composable(Routes.Home.route) {
                     Box(
-                        modifier = androidx.compose.ui.Modifier.fillMaxSize()
+                        modifier = androidx.compose.ui.Modifier
+                            .fillMaxSize()
                             .fillMaxSize()
                             .background(Color.White),
                         contentAlignment = Alignment.Center
@@ -41,7 +42,8 @@ fun ScreenMain(){
                     }
                 }
 
-        composable(Routes.ForgotPassword.route) {navBackStack ->
-            Routes.ForgotPassword }
+        composable(Routes.ForgotPassword.route) {
+            ForgotPassword(navController = navController)
+        }
     }
 }

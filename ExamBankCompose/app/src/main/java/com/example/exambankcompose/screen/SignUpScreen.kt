@@ -207,18 +207,22 @@ fun SignUp( navController: NavHostController ){
         )) {  }
 
         Spacer(modifier = Modifier.padding(20.dp))
-        Text(text = "Already have an Account?")
-        // Already have an account Call
-        ClickableText(
-            text = AnnotatedString("Log in"),
-            onClick = { navController.navigate(Routes.Login.route) },
-            style = TextStyle(
-                fontSize = 16.sp,
-                fontFamily = FontFamily.Default,
-                textDecoration = TextDecoration.Underline,
-                color = Purple500
+        Row() {
+            Text(text = "Already have an Account?")
+            // Already have an account Call
+            ClickableText(
+                text = AnnotatedString("Log in"),
+                onClick = { navController.navigate(Routes.Login.route) },
+                modifier = Modifier.padding(start = 5.dp),
+                style = TextStyle(
+                    fontSize = 16.sp,
+                    fontFamily = FontFamily.Default,
+                    textDecoration = TextDecoration.None,
+                    color = Purple500
+                )
             )
-        )
+
+        }
 
         Spacer(modifier = Modifier.padding(5.dp))
 

@@ -28,7 +28,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import com.example.exambankcompose.ui.theme.Purple500
-import com.example.exambankcompose.ui.theme.Purple700
 import com.example.exambankcompose.ui.theme.color1
 import com.example.exambankcompose.ui.theme.color2
 
@@ -135,19 +134,37 @@ fun SignIn(navController: NavHostController){
         )) {  }
 
         Spacer(modifier = Modifier.padding(5.dp))
-
-
-        Text(text = "Do not have have an account?")
-        // Do not have have an account Call
-        ClickableText(
-            text = AnnotatedString("Sign Up"),
-            onClick = { navController.navigate(Routes.SignUp.route) },
-            style = TextStyle(
-                fontSize = 16.sp,
-                fontFamily = FontFamily.Default,
-                textDecoration = TextDecoration.Underline,
-                color = Purple500
+        Row() {
+            Text(text = "Do not have have an account?")
+            // Do not have have an account Call
+            ClickableText(
+                text = AnnotatedString("Sign Up"),
+                onClick = { navController.navigate(Routes.SignUp.route) },
+                modifier = Modifier.padding(start = 5.dp),
+                style = TextStyle(
+                    fontSize = 16.sp,
+                    fontFamily = FontFamily.Default,
+                    textDecoration = TextDecoration.None,
+                    color = Purple500
+                )
             )
-        )
+        }
+        // Forgotten Password Call
+        Spacer(modifier = Modifier.padding(30.dp))
+        Row() {
+            Text(text = "Forgot Your Password?")
+            // Do not have have an account Call
+            ClickableText(
+                text = AnnotatedString("Reset"),
+                onClick = { navController.navigate(Routes.ForgotPassword.route) },
+                modifier = Modifier.padding(start = 5.dp),
+                style = TextStyle(
+                    fontSize = 16.sp,
+                    fontFamily = FontFamily.Default,
+                    textDecoration = TextDecoration.None,
+                    color = Purple500
+                )
+            )
+        }
     }
 }

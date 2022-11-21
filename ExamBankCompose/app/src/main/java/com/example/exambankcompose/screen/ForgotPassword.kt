@@ -3,134 +3,124 @@ package com.example.exambankcompose.screen
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.text.ClickableText
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import com.example.exambankcompose.GradientButton
 import com.example.exambankcompose.R
-import com.example.exambankcompose.ui.theme.Shapes
+import com.example.exambankcompose.Routes
+import com.example.exambankcompose.ui.theme.Purple500
+import com.example.exambankcompose.ui.theme.color1
+import com.example.exambankcompose.ui.theme.color2
+
 
 @Composable
-fun ForgotPassword(  /* navController: NavHostController */ ) {
+fun ForgotPassword(navController: NavHostController){
+    var emailItem by remember { mutableStateOf("Enter email ...") }
 
-    var email by remember {
-        mutableStateOf("")
-    }
-    Column (
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally
-
-            ) {
-        Text(text = "FORGOT YOUR PASSWORD",
-            fontFamily = FontFamily.Monospace,
-            color = MaterialTheme.colors.primaryVariant,
-            textAlign = TextAlign.Center,
-            modifier = Modifier
-                .padding(top = 80.dp),
-            fontWeight = FontWeight.ExtraBold,
-            fontSize = 16.sp
+    Column(modifier = Modifier
+        .fillMaxSize()
+        .background(Color.White),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        // Welcome Banner
+        Text(
+            text = "Forgot Your Password",
+            style = TextStyle(
+                fontSize = 30.sp,
+                fontFamily = FontFamily.SansSerif
             )
-        // image
-        Image(painter = painterResource(id = R.drawable.forgot_pass),
-            contentDescription = null,
-            modifier = Modifier.size(240.dp)
         )
+        Image(painter = painterResource(id = R.drawable.forgot_pass), contentDescription = null)
+        // Card to Hold Next Items
         // Card to hold next items
         Card(
             backgroundColor = Color.White,
             elevation = 0.dp,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(20.dp)
+                .padding(20.dp),
         ) {
-            Column {
-                Text(text = "Enter Your Registration Email Below to receive password reset instructions",
-                    fontWeight = FontWeight.ExtraBold,
-                    fontSize = 12.sp
-                )
-                OutlinedTextField (value = email, onValueChange = {email=it},
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = 20.dp),
-                    colors = TextFieldDefaults.textFieldColors(
-                        textColor = MaterialTheme.colors.primary,
-                        backgroundColor = MaterialTheme.colors.surface,
-                        cursorColor = MaterialTheme.colors.primary,
-                        focusedIndicatorColor = Color.Transparent,
-                        unfocusedIndicatorColor = Color.Transparent
-                    ),
-                    shape = Shapes.medium,
-                    singleLine = true,
-                    leadingIcon = {
-                        Row(
-                            modifier = Modifier.padding(start = 8.dp),
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            Icon(
-                                painter = painterResource(id = R.drawable.ic_baseline_email),
-                                contentDescription = null,
-                                tint = MaterialTheme.colors.primary,
-                                modifier = Modifier.size(20.dp)
-                            )
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Spacer(modifier = Modifier
-                                .width(3.dp)
-                                .height(24.dp)
-                                .background(MaterialTheme.colors.primary)
-                            )
-
-                        }
-                    },
-                    placeholder = {
-                        Text(text = "Email Address",
-                            color = Color.Gray
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
+            ) {
+                // Email
+                OutlinedTextField(value = emailItem, onValueChange = { newText ->
+                    {
+                        emailItem = newText
+                    }
+                }, label = {
+                    Text(text = "Email:")
+                }, singleLine = true, leadingIcon = {
+                    IconButton(onClick = { /*TODO*/ }) {
+                        Icon(
+                            imageVector = Icons.Filled.Email,
+                            contentDescription = "Email"
                         )
-                    },
-                    textStyle = TextStyle(
-                        fontSize = 14.sp,
-                        fontWeight = FontWeight.SemiBold,
-                        fontFamily = FontFamily.SansSerif
-                    )
-                )
-                Button(onClick = { /*TODO*/ },
-                    colors = ButtonDefaults.buttonColors(
-                        backgroundColor = MaterialTheme.colors.primary
-                    ),
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = 20.dp)
-                        .padding(top = 20.dp),
-                    contentPadding = PaddingValues(vertical = 14.dp),
-                    elevation = ButtonDefaults.elevation(
-                        defaultElevation = 0.dp,
-                        pressedElevation = 2.dp
-                    ),
-                    shape = Shapes.medium
-                ) {
 
-                }
+                    }
+                }, trailingIcon = {
+                    IconButton(onClick = { /*TODO*/ }) {
+                        Icon(
+                            imageVector = Icons.Filled.Check,
+                            contentDescription = "Check"
+                        )
+                    }
+                }, keyboardOptions = KeyboardOptions(
+                    keyboardType = KeyboardType.Email,
+                    imeAction = ImeAction.Go
+                )
+                )
+                Spacer(modifier = Modifier.padding(10.dp))
+                // Created Button Called Here
+                GradientButton(text = "Send Reset Link", textColor = Color.White, gradient = Brush.horizontalGradient(
+                    colors = listOf(
+                        color1, color2
+                    )
+                )) {  }
+
             }
 
         }
-
-        
+        Text(text = "Do not have have an account?")
+        // Do not have have an account Call
+        ClickableText(
+            text = AnnotatedString("Sign Up"),
+            onClick = { navController.navigate(Routes.SignUp.route) },
+            modifier = Modifier.padding(start = 5.dp),
+            style = TextStyle(
+                fontSize = 16.sp,
+                fontFamily = FontFamily.Default,
+                textDecoration = TextDecoration.None,
+                color = Purple500
+            )
+        )
     }
-
 }
 
 
-
-@Preview
-@Composable
-fun PreviewForgotPassword () {
-    ForgotPassword()
-}
+//@Preview
+//@Composable
+//fun PreviewForgotPassword () {
+//    ForgotPassword ()
+//}
