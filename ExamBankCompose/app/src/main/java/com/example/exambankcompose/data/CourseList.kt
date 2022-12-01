@@ -1,11 +1,11 @@
 package com.example.exambankcompose.data
 
-data class CourseList (
+data class CourseList(
     val unitId: Int,
-    val unitCodeAndName: String
-        )
+    val unitCodeAndName: String,
+)
 
-data class QuestionList (
+data class QuestionList(
     val questionNumber: String,
-    val marks: String
-    )
+    val marks: String,
+)

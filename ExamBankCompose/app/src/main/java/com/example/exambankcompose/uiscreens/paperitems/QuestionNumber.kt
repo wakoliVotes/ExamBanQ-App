@@ -16,22 +16,28 @@ import androidx.compose.ui.unit.sp
 import com.example.exambankcompose.R
 import com.example.exambankcompose.data.QuestionData
 import com.example.exambankcompose.data.QuestionList
+import com.example.exambankcompose.data.Questions
 
+@Preview
 @Composable
 fun QuestionNumberSection() {
     Column {
         LazyColumn {
-            items(QuestionData.listQuestions.size) {
-                QuestionOne(QuestionData.listQuestions[it])
-
-
+            item {
+                QuestionNumberTemplate(
+                    quizTitle = "Question 1: ",
+                    quizMarks = "30 Marks (Compulsory)"
+                )
             }
         }
     }
 }
 
 @Composable
-fun QuestionOne(questions: QuestionList) {
+fun QuestionNumberTemplate(
+    quizTitle: String,
+    quizMarks: String
+) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -56,7 +62,7 @@ fun QuestionOne(questions: QuestionList) {
                 modifier = Modifier
                     .padding(horizontal = 0.dp)
                     .align(Alignment.CenterVertically),
-                text = questions.questionNumber,
+                text = quizTitle,
                 color = Color.White,
                 fontSize = 14.sp
             )
@@ -64,17 +70,10 @@ fun QuestionOne(questions: QuestionList) {
                 modifier = Modifier
                     .padding(horizontal = 0.dp)
                     .align(Alignment.CenterVertically),
-                text = questions.marks,
+                text = quizMarks,
                 color = Color.White,
                 fontSize = 14.sp
             )
         }
     }
-}
-
-@Composable
-@Preview
-fun PreviewQuestionNumberSection() {
-    QuestionNumberSection()
-
 }

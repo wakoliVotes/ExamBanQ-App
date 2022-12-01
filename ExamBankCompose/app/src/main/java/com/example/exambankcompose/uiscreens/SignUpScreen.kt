@@ -33,7 +33,9 @@ import androidx.navigation.NavHostController
 import com.example.exambankcompose.GradientButton
 import com.example.exambankcompose.R
 import com.example.exambankcompose.navigation.Routes
-import com.example.exambankcompose.ui.theme.*
+import com.example.exambankcompose.ui.theme.Purple500
+import com.example.exambankcompose.ui.theme.color1
+import com.example.exambankcompose.ui.theme.color2
 
 
 @Composable
@@ -206,7 +208,7 @@ fun SignUp( navController: NavHostController ){
         )) {  }
 
         Spacer(modifier = Modifier.padding(20.dp))
-        Row() {
+        Row {
             Text(text = "Already have an Account?")
             // Already have an account Call
             ClickableText(
@@ -229,9 +231,3 @@ fun SignUp( navController: NavHostController ){
 
     }
 }
-
-//@Preview
-//@Composable
-//fun SignUpPreview () {
-//    SignUp()
-//}
