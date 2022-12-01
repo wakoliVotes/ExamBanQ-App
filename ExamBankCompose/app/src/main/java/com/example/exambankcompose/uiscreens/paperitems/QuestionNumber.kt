@@ -28,6 +28,14 @@ fun QuestionNumberSection() {
                     quizTitle = "Question 1: ",
                     quizMarks = "30 Marks (Compulsory)"
                 )
+                QuestionNumberTemplate(
+                    quizTitle = "Question 2: ",
+                    quizMarks = "20 Marks"
+                )
+                QuestionNumberTemplate(
+                    quizTitle = "Question 3: ",
+                    quizMarks = "20 Marks"
+                )
             }
         }
     }

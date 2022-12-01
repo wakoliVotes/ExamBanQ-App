@@ -17,7 +17,7 @@ fun FullExamPaper(){
 Column() {
     HeaderSection()
     Spacer(modifier = Modifier.height(10.dp))
-//    QuestionNumberSection()
+    QuestionNumberSection()
     QuestionEach()
 }
 
