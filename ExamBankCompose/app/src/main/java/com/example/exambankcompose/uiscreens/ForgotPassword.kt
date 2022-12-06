@@ -24,7 +24,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.exambankcompose.GradientButton
+import com.example.exambankcompose.component.GradientButton
 import com.example.exambankcompose.R
 import com.example.exambankcompose.navigation.Routes
 import com.example.exambankcompose.ui.theme.Purple500

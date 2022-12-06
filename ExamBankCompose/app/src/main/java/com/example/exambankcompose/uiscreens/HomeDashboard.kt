@@ -34,7 +34,6 @@ fun HomeDashboard (
             YearsCard(YearsData.list[it])
         }
     }
-
 }
 
 @Composable
@@ -75,7 +74,6 @@ private fun YearsCard(years: Years) {
                             fontFamily = FontFamily.SansSerif
                         )
                     )
-
                 }
                 Box(
                     modifier = Modifier.background(
@@ -92,13 +90,9 @@ private fun YearsCard(years: Years) {
                         ,
                         contentDescription = null)
                 }
-
             }
-
         }
-
     }
-
 }
 
 @Composable

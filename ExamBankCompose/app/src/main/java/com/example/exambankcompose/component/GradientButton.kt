@@ -1,4 +1,4 @@
-package com.example.exambankcompose
+package com.example.exambankcompose.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
