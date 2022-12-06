@@ -14,9 +14,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.exambankcompose.R
-import com.example.exambankcompose.data.QuestionData
-import com.example.exambankcompose.data.QuestionList
-import com.example.exambankcompose.data.Questions
 
 @Preview
 @Composable
@@ -59,13 +56,6 @@ fun QuestionNumberTemplate(
                 .fillMaxWidth()
 
         ) {
-            Image(
-                painter = painterResource(id = R.drawable.ic_launcher_foreground),
-                contentDescription = "user icon",
-                modifier = Modifier
-                    .padding(horizontal = 2.dp)
-                    .align(Alignment.CenterVertically)
-            )
             Text(
                 modifier = Modifier
                     .padding(horizontal = 0.dp)

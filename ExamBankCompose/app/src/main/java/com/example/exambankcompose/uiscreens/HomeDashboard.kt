@@ -21,8 +21,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.exambankcompose.data.Years
-import com.example.exambankcompose.data.YearsData
+import com.example.exambankcompose.datautils.Years
+import com.example.exambankcompose.datautils.YearsData
 
 
 @Composable

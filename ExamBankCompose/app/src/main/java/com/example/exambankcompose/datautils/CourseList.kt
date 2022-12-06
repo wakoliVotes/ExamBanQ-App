@@ -1,4 +1,4 @@
-package com.example.exambankcompose.data
+package com.example.exambankcompose.datautils
 
 data class CourseList(
     val unitId: Int,

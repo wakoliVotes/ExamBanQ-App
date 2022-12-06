@@ -1,4 +1,4 @@
-package com.example.exambankcompose.data
+package com.example.exambankcompose.datautils
 
 import androidx.annotation.DrawableRes
 

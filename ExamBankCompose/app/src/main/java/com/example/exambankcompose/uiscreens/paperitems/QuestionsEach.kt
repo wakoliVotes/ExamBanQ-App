@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.exambankcompose.data.*
+import com.example.exambankcompose.datautils.*
 import com.example.exambankcompose.ui.theme.black
 import com.example.exambankcompose.ui.theme.texttitlewhite
 
@@ -24,25 +24,37 @@ fun QuestionEach() {
         // 1
         LazyColumn {
             item {
-                Text(text = "Question 1")
+                QuestionNumberTemplate(
+                    quizTitle = "Question 1: ",
+                    quizMarks = "30 Marks (Compulsory)"
+                )
             }
                 items(QuestionOne.listOne.size) {
                 QuestionOne(QuestionOne.listOne[it])
             }
             item {
-                Text(text = "Question 2")
+                QuestionNumberTemplate(
+                    quizTitle = "Question 2: ",
+                    quizMarks = "20 Marks"
+                )
             }
             items(QuestionTwo.listTwo.size) {
                 QuestionTwo(QuestionTwo.listTwo[it])
             }
             item {
-                Text(text = "Question 3")
+                QuestionNumberTemplate(
+                    quizTitle = "Question 3: ",
+                    quizMarks = "20 Marks"
+                )
             }
             items(QuestionThree.listThree.size) {
                 QuestionThree(QuestionThree.listThree[it])
             }
             item {
-                Text(text = "Question 4")
+                QuestionNumberTemplate(
+                    quizTitle = "Question 4: ",
+                    quizMarks = "20 Marks"
+                )
             }
             items(QuestionFour.listFour.size) {
                 QuestionFour(QuestionFour.listFour[it])
@@ -62,13 +74,14 @@ fun QuestionOne(listOne: Questions) {
             .padding(2.dp)
             .height(25.dp)
             .background(color = texttitlewhite)
+
+
+
     ) {
         Row(
             modifier = Modifier
                 .padding(2.dp)
-                .fillMaxWidth(),
-
-
+                .fillMaxWidth()
         ) {
             Text(
                 modifier = Modifier

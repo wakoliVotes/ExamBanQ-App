@@ -1,4 +1,4 @@
-package com.example.exambankcompose.data
+package com.example.exambankcompose.datautils
 
 object QuestionOne {
     val listOne = listOf(
