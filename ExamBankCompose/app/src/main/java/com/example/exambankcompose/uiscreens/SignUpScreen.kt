@@ -1,6 +1,10 @@
 package com.example.exambankcompose.uiscreens
 
+import android.app.Activity
 import android.util.Log
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
@@ -40,6 +44,15 @@ import com.example.exambankcompose.ui.theme.color2
 
 @Composable
 fun SignUp( navController: NavHostController ){
+
+    // Sign Up with Google
+    val startResult = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        result: ActivityResult ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val intent = result.data
+            
+        }
+    }
 
     Column(modifier = Modifier
         .fillMaxSize()
