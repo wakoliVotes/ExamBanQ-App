@@ -5,15 +5,13 @@ import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.OutlinedTextField
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Email
@@ -38,19 +36,27 @@ import com.example.exambankcompose.component.GradientButton
 import com.example.exambankcompose.R
 import com.example.exambankcompose.navigation.Routes
 import com.example.exambankcompose.ui.theme.Purple500
+import com.example.exambankcompose.ui.theme.Shapes
 import com.example.exambankcompose.ui.theme.color1
 import com.example.exambankcompose.ui.theme.color2
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.tasks.Task
 
 
 @Composable
 fun SignUp( navController: NavHostController ){
 
     // Sign Up with Google
-    val startResult = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+    val startForResult = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         result: ActivityResult ->
         if (result.resultCode == Activity.RESULT_OK) {
             val intent = result.data
-            
+            if( result.data != null) {
+                val task: Task<GoogleSignInAccount> =
+                    GoogleSignIn.getSignedInAccountFromIntent(intent)
+                handleSignInResult(task)
+            }
         }
     }
 
@@ -237,6 +243,29 @@ fun SignUp( navController: NavHostController ){
             )
 
         }
+        Text(text = "Sign in with Google")
+        Button(
+            onClick = {
+                startForResult.launch(googleSignInClient?.signInIntent)
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(start = 16.dp, end = 16.dp),
+            shape = Shapes.medium,
+            colors = ButtonDefaults.buttonColors(
+                backgroundColor = Color.Black,
+                contentColor = Color.White
+            )
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.login_img),
+                contentDescription = ""
+            )
+            Text(text = "Sign In with Google", modifier = Modifier.padding(6.dp))
+            
+            
+        }
+
 
         Spacer(modifier = Modifier.padding(5.dp))
 
