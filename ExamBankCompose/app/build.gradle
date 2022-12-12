@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.exambankcompose'
+    namespace 'com.example.exambank'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.exambankcompose"
+        applicationId "com.example.exambank"
         minSdk 23
         targetSdk 33
         versionCode 1
