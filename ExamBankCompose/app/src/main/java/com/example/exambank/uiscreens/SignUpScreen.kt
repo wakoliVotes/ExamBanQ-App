@@ -245,7 +245,8 @@ fun SignUp( navController: NavHostController ){
             )
 
         }
-
+        
+        /*
         Text(text = "Sign in with Google")
         Button(
             onClick = {
@@ -268,6 +269,7 @@ fun SignUp( navController: NavHostController ){
             
             
         }
+        */
 
 
         Spacer(modifier = Modifier.padding(5.dp))
