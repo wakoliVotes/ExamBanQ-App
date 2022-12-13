@@ -1,4 +1,4 @@
-package com.example.exambank.uiscreens
+package com.example.exambank.viewscreens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -21,8 +21,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.exambank.datautils.Years
-import com.example.exambank.datautils.YearsData
+import com.example.exambank.modeldatautils.Years
+import com.example.exambank.modeldatautils.YearsData
 
 
 @Composable

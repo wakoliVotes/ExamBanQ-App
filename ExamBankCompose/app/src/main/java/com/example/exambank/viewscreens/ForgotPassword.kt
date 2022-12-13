@@ -1,4 +1,4 @@
-package com.example.exambank.uiscreens
+package com.example.exambank.viewscreens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

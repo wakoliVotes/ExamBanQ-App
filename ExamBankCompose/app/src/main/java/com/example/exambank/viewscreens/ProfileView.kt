@@ -1,4 +1,4 @@
-package com.example.exambank.uiscreens
+package com.example.exambank.viewscreens
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -7,14 +7,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 
 @Composable
-fun ExploreView(){
+fun ProfileView(){
     Column(
         verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
     )
     {
-        Text(text = "Explore")
+        Text(text = "Profile")
 
     }
+
 
 }

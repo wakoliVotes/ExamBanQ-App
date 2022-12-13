@@ -1,4 +1,4 @@
-package com.example.exambank.uiscreens
+package com.example.exambank.viewscreens
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -15,10 +15,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.exambank.datautils.CourseList
-import com.example.exambank.datautils.TrimesterOneData
-import com.example.exambank.datautils.TrimesterThreeData
-import com.example.exambank.datautils.TrimesterTwoData
+import com.example.exambank.modeldatautils.CourseList
+import com.example.exambank.modeldatautils.TrimesterOneData
+import com.example.exambank.modeldatautils.TrimesterThreeData
+import com.example.exambank.modeldatautils.TrimesterTwoData
 
 @Composable
 fun CoursesListing() {

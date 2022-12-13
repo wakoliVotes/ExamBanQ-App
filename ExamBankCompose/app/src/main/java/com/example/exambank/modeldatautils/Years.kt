@@ -1,4 +1,4 @@
-package com.example.exambank.datautils
+package com.example.exambank.modeldatautils
 
 data class Years (
     val studentYear: String,

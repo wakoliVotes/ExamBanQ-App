@@ -1,4 +1,4 @@
-package com.example.exambank.uiscreens.paperitems
+package com.example.exambank.viewscreens.paperitems
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.LinearOutSlowInEasing

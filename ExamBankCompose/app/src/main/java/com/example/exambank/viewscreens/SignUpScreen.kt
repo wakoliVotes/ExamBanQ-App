@@ -1,11 +1,6 @@
-package com.example.exambank.uiscreens
+package com.example.exambank.viewscreens
 
-import android.app.Activity
 import android.util.Log
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.ActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
@@ -35,13 +30,9 @@ import androidx.navigation.NavHostController
 import com.example.exambank.component.GradientButton
 import com.example.exambank.navigation.Routes
 import com.example.exambank.ui.theme.Purple500
-import com.example.exambank.ui.theme.Shapes
 import com.example.exambank.ui.theme.color1
 import com.example.exambank.ui.theme.color2
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.tasks.Task
-
+import com.example.exambankcompose.R
 
 
 @Composable

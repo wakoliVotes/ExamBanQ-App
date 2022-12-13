@@ -1,4 +1,4 @@
-package com.example.exambank.uiscreens.paperitems
+package com.example.exambank.viewscreens.paperitems
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.exambank.datautils.*
+import com.example.exambank.modeldatautils.*
 import com.example.exambank.ui.theme.black
 import com.example.exambank.ui.theme.texttitlewhite
 

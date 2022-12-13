@@ -1,4 +1,4 @@
-package com.example.exambank.datautils
+package com.example.exambank.modeldatautils
 
 import android.graphics.Color
 import androidx.annotation.DrawableRes
