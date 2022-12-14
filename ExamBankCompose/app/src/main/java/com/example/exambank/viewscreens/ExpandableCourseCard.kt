@@ -45,7 +45,16 @@ fun ExpandableCourseCard(
     }
 
     val rotationState by animateFloatAsState(
-        targetValue = if (expandedState) 180f else 0f
+        targetValue =
+        if (expandedState) 180f else 0f
+    )
+    val rotationStateTwo by animateFloatAsState(
+        targetValue =
+        if (expandedStateTwo) 180f else 0f
+    )
+    val rotationStateThree by animateFloatAsState(
+        targetValue =
+        if (expandedStateThree) 180f else 0f
     )
 
 Column() {
@@ -149,7 +158,7 @@ Column() {
                     modifier = Modifier
                         .weight(1f)
                         .alpha(ContentAlpha.medium)
-                        .rotate(rotationState),
+                        .rotate(rotationStateTwo),
                     onClick = {
                         expandedStateTwo = !expandedStateTwo
                     }
@@ -211,7 +220,7 @@ Column() {
                     modifier = Modifier
                         .weight(1f)
                         .alpha(ContentAlpha.medium)
-                        .rotate(rotationState),
+                        .rotate(rotationStateThree),
                     onClick = {
                         expandedStateThree = !expandedStateThree
                     }
