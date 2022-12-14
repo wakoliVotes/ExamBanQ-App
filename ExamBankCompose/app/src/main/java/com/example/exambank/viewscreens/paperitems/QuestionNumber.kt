@@ -3,14 +3,15 @@ package com.example.exambank.viewscreens.paperitems
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
+import com.example.exambank.ui.theme.black
+import com.example.exambank.ui.theme.white
 
 @Preview
 @Composable
@@ -44,12 +45,12 @@ fun QuestionNumberTemplate(
         modifier = Modifier
             .fillMaxWidth()
             .padding(2.dp)
-            .height(25.dp)
-            .background(color = Color.Gray)
+            .height(55.dp)
+            .background(color = white)
     ) {
         Row(
             modifier = Modifier
-                .padding(horizontal = 2.dp)
+                .padding(35.dp)
                 .fillMaxWidth()
 
         ) {
@@ -58,16 +59,16 @@ fun QuestionNumberTemplate(
                     .padding(horizontal = 0.dp)
                     .align(Alignment.CenterVertically),
                 text = quizTitle,
-                color = Color.White,
-                fontSize = 14.sp
+                color = black,
+                style = MaterialTheme.typography.h6
             )
             Text(
                 modifier = Modifier
                     .padding(horizontal = 0.dp)
                     .align(Alignment.CenterVertically),
                 text = quizMarks,
-                color = Color.White,
-                fontSize = 14.sp
+                color = black,
+                style = MaterialTheme.typography.h6
             )
         }
     }

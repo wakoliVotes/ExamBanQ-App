@@ -13,6 +13,7 @@ import androidx.compose.ui.unit.sp
 import com.example.exambank.modeldatautils.*
 import com.example.exambank.ui.theme.black
 import com.example.exambank.ui.theme.texttitlewhite
+import com.example.exambank.ui.theme.white
 
 // 41978
 
@@ -72,8 +73,8 @@ fun QuestionOne(listOne: Questions) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(2.dp)
-            .height(25.dp)
-            .background(color = texttitlewhite)
+            .height(35.dp)
+            .background(color = white)
 
 
 
@@ -119,8 +120,8 @@ fun QuestionTwo(lisTwo: Questions) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(2.dp)
-            .height(25.dp)
-            .background(color = texttitlewhite)
+            .height(35.dp)
+            .background(color = white)
     ) {
         Row(
             modifier = Modifier
@@ -164,8 +165,8 @@ fun QuestionThree(listThree: Questions) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(2.dp)
-            .height(25.dp)
-            .background(color = texttitlewhite)
+            .height(35.dp)
+            .background(color = white)
     ) {
         Row(
             modifier = Modifier
@@ -208,8 +209,8 @@ fun QuestionFour(listFour: Questions) {
         modifier = Modifier
             .fillMaxWidth()
             .padding(2.dp)
-            .height(25.dp)
-            .background(color = texttitlewhite)
+            .height(35.dp)
+            .background(color = white)
     ) {
         Row(
             modifier = Modifier

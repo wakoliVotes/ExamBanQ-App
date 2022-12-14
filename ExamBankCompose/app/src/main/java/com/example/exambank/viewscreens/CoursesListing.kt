@@ -23,6 +23,7 @@ import com.example.exambank.R
 
 @Composable
 fun CoursesListing() {
+
     Column {
         // TRIMESTER 1
         LazyColumn {
