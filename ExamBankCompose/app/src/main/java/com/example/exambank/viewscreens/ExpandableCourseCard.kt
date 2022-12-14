@@ -29,10 +29,6 @@ import com.example.exambank.ui.theme.Shapes
 fun ExpandableCourseCard(
     titleFontSize: TextUnit = MaterialTheme.typography.h6.fontSize,
     titleFontWeight: FontWeight = FontWeight.Bold,
-    description: String,
-    descriptionFontSize: TextUnit = MaterialTheme.typography.subtitle1.fontSize,
-    descriptionFontWeight: FontWeight = FontWeight.Normal,
-    descriptionMaxLines: Int = 4,
     shape: Shape = Shapes.medium,
     padding: Dp = 12.dp,
 ) {
@@ -57,7 +53,7 @@ fun ExpandableCourseCard(
         if (expandedStateThree) 180f else 0f
     )
 
-Column() {
+Column {
     // TRI-1
     Card(
         modifier = Modifier
@@ -251,11 +247,5 @@ Column() {
 @Composable
 @Preview
 fun ExpandableCourseCardPreview() {
-    ExpandableCourseCard(
-        description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit," +
-                "sed do eiusmod tempor incididunt ut labore et dolore magna " +
-                "aliqua. Ut enim ad minim veniam, quis nostrud exercitation " +
-                "ullamco laboris nisi ut aliquip ex ea commodo consequat."
-
-    )
+    ExpandableCourseCard()
 }
