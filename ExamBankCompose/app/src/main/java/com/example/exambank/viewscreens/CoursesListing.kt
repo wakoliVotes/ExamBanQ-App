@@ -19,6 +19,7 @@ import com.example.exambank.modeldatautils.CourseList
 import com.example.exambank.modeldatautils.TrimesterOneData
 import com.example.exambank.modeldatautils.TrimesterThreeData
 import com.example.exambank.modeldatautils.TrimesterTwoData
+import com.example.exambank.R
 
 @Composable
 fun CoursesListing() {
@@ -82,7 +83,7 @@ fun TrimesterTemplate(courseList: CourseList) {
                 .fillMaxWidth()
         ) {
             Image(
-                painter = painterResource(id = R.drawable.ic_launcher_foreground),
+                painter = painterResource(id = R.drawable.ic_launcher_background),
                 contentDescription = "user icon",
                 modifier = Modifier
                     .padding(horizontal = 2.dp)

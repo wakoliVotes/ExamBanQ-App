@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "ExamBankCompose"
+rootProject.name = "ExamBank"
 include ':app'

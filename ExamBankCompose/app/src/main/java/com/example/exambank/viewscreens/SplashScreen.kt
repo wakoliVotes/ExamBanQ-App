@@ -15,6 +15,7 @@ import com.airbnb.lottie.compose.rememberLottieComposition
 import com.example.exambank.R
 import com.example.exambank.navigation.Routes
 
+
 @Composable
 fun SplashScreen(navController: NavHostController) {
     Box(

@@ -1,4 +1,4 @@
-package com.example.exambank.component
+package com.example.exambank.common
 
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton

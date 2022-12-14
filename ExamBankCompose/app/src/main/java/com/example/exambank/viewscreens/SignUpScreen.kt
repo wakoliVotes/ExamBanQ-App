@@ -6,7 +6,10 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.*
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
+import androidx.compose.material.OutlinedTextField
+import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Email
@@ -27,12 +30,12 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
-import com.example.exambank.component.GradientButton
+import com.example.exambank.common.GradientButton
 import com.example.exambank.navigation.Routes
 import com.example.exambank.ui.theme.Purple500
 import com.example.exambank.ui.theme.color1
 import com.example.exambank.ui.theme.color2
-import com.example.exambankcompose.R
+import com.example.exambank.R
 
 
 @Composable

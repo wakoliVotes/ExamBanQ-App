@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.exambank.modeldatautils.Years
 import com.example.exambank.modeldatautils.YearsData
+import com.example.exambank.R
 
 
 @Composable
@@ -43,8 +44,8 @@ private fun YearsCard(years: Years) {
         backgroundColor = Color.White,
         modifier = Modifier
             .padding(10.dp)
-            .width(180.dp)
-            .height(220.dp)
+            .width(150.dp)
+            .height(200.dp)
     ) {
         Column(
             modifier = Modifier
@@ -52,7 +53,7 @@ private fun YearsCard(years: Years) {
                 .padding(10.dp)
         ) {
             Image(
-                painter = painterResource(id = com.example.exambank.R.drawable.login_img),
+                painter = painterResource(id = years.image),
                 contentDescription = null,
                 modifier = Modifier.clip(RoundedCornerShape(4.dp))
             )
@@ -75,21 +76,21 @@ private fun YearsCard(years: Years) {
                         )
                     )
                 }
-                Box(
-                    modifier = Modifier.background(
-                        color = MaterialTheme.colors.primaryVariant,
-                        shape = RoundedCornerShape(10.dp)
-                )
-                ){
-                    Icon(
-                        Icons.Filled.ArrowForward,
-                        tint = Color.White,
-                        modifier = Modifier
-                            .padding(10.dp)
-                            .height(14.dp)
-                        ,
-                        contentDescription = null)
-                }
+//                Box(
+//                    modifier = Modifier.background(
+//                        color = MaterialTheme.colors.primaryVariant,
+//                        shape = RoundedCornerShape(10.dp)
+//                )
+//                ){
+//                    Icon(
+//                        Icons.Filled.ArrowForward,
+//                        tint = Color.White,
+//                        modifier = Modifier
+//                            .padding(10.dp)
+//                            .height(14.dp)
+//                        ,
+//                        contentDescription = null)
+//                }
             }
         }
     }
