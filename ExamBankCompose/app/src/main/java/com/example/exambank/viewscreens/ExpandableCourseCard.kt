@@ -37,6 +37,12 @@ fun ExpandableCourseCard(
     padding: Dp = 12.dp,
 ) {
     var expandedState by remember { mutableStateOf(false) }
+    var expandedStateTwo by remember {
+        mutableStateOf(false)
+    }
+    var expandedStateThree by remember {
+        mutableStateOf(false)
+    }
 
     val rotationState by animateFloatAsState(
         targetValue = if (expandedState) 180f else 0f
@@ -117,7 +123,7 @@ Column() {
             ),
         shape = shape,
         onClick = {
-            expandedState = !expandedState
+            expandedStateTwo = !expandedStateTwo
         }
     ) {
         Column(
@@ -145,7 +151,7 @@ Column() {
                         .alpha(ContentAlpha.medium)
                         .rotate(rotationState),
                     onClick = {
-                        expandedState = !expandedState
+                        expandedStateTwo = !expandedStateTwo
                     }
                 ) {
                     Icon(
@@ -154,7 +160,7 @@ Column() {
                     )
                 }
             }
-            if (expandedState) {
+            if (expandedStateTwo) {
                 LazyColumn {
                     items(TrimesterOneData.unitTriOneList.size) {
                         TrimesterTemplate(TrimesterOneData.unitTriOneList[it])
@@ -179,7 +185,7 @@ Column() {
             ),
         shape = shape,
         onClick = {
-            expandedState = !expandedState
+            expandedStateThree = !expandedStateThree
         }
     ) {
         Column(
@@ -207,7 +213,7 @@ Column() {
                         .alpha(ContentAlpha.medium)
                         .rotate(rotationState),
                     onClick = {
-                        expandedState = !expandedState
+                        expandedStateThree = !expandedStateThree
                     }
                 ) {
                     Icon(
@@ -216,7 +222,7 @@ Column() {
                     )
                 }
             }
-            if (expandedState) {
+            if (expandedStateThree) {
                 LazyColumn {
                     items(TrimesterOneData.unitTriOneList.size) {
                         TrimesterTemplate(TrimesterOneData.unitTriOneList[it])

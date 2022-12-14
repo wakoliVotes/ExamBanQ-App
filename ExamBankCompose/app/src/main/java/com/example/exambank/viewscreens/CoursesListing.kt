@@ -83,7 +83,7 @@ fun TrimesterTemplate(courseList: CourseList) {
                 .fillMaxWidth()
         ) {
             Image(
-                painter = painterResource(id = R.drawable.ic_launcher_background),
+                painter = painterResource(id = R.drawable.ic_launcher_foreground),
                 contentDescription = "user icon",
                 modifier = Modifier
                     .padding(horizontal = 2.dp)
