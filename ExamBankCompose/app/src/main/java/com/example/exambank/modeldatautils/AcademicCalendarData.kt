@@ -70,27 +70,27 @@ object AcademicCalendarData {
             academicMonths = "Sept-Dec"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2018",
             academicMonths = "Jan-April"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2018",
             academicMonths = "May-August"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2018",
             academicMonths = "sEPT-Dec"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2019",
             academicMonths = "Jan-April"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2019",
             academicMonths = "May-August"
         )
