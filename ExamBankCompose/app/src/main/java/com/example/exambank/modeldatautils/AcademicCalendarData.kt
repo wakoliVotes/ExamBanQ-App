@@ -5,57 +5,57 @@ import com.example.exambank.R
 object AcademicCalendarData {
     val academicList = listOf(
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2011",
             academicMonths = "May-August"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2012",
             academicMonths = "Jan-April"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2012",
             academicMonths = "May-August"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2012",
             academicMonths = "Sept-Dec"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2013",
             academicMonths = "May-August"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2014",
             academicMonths = "Jan-April"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2014",
             academicMonths = "May-August"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2014",
             academicMonths = "Sept-Dec"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2015",
             academicMonths = "Jan-April"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2016",
             academicMonths = "Sept-Dec"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2017",
             academicMonths = "Jan-April"
         ),
@@ -65,7 +65,7 @@ object AcademicCalendarData {
             academicMonths = "May-August"
         ),
         AcademicCalendar(
-            folderImg = R.drawable.login_img,
+            folderImg = R.drawable.folder_round,
             academicPeriodYear = "2017",
             academicMonths = "Sept-Dec"
         ),
