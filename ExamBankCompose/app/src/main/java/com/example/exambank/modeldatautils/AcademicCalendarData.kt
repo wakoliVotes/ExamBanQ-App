@@ -61,38 +61,38 @@ object AcademicCalendarData {
         ),
         AcademicCalendar(
             folderImg = R.drawable.login_img,
-            academicPeriodYear = "2019",
+            academicPeriodYear = "2017",
             academicMonths = "May-August"
+        ),
+        AcademicCalendar(
+            folderImg = R.drawable.login_img,
+            academicPeriodYear = "2017",
+            academicMonths = "Sept-Dec"
+        ),
+        AcademicCalendar(
+            folderImg = R.drawable.login_img,
+            academicPeriodYear = "2018",
+            academicMonths = "Jan-April"
+        ),
+        AcademicCalendar(
+            folderImg = R.drawable.login_img,
+            academicPeriodYear = "2018",
+            academicMonths = "May-August"
+        ),
+        AcademicCalendar(
+            folderImg = R.drawable.login_img,
+            academicPeriodYear = "2018",
+            academicMonths = "sEPT-Dec"
+        ),
+        AcademicCalendar(
+            folderImg = R.drawable.login_img,
+            academicPeriodYear = "2019",
+            academicMonths = "Jan-April"
         ),
         AcademicCalendar(
             folderImg = R.drawable.login_img,
             academicPeriodYear = "2019",
             academicMonths = "May-August"
-        ),
-        AcademicCalendar(
-            folderImg = R.drawable.login_img,
-            academicPeriodYear = "2019",
-            academicMonths = "May-August"
-        ),
-        AcademicCalendar(
-            folderImg = R.drawable.login_img,
-            academicPeriodYear = "2019",
-            academicMonths = "May-August"
-        ),
-        AcademicCalendar(
-            folderImg = R.drawable.login_img,
-            academicPeriodYear = "2019",
-            academicMonths = "May-August"
-        ),
-        AcademicCalendar(
-            folderImg = R.drawable.login_img,
-            academicPeriodYear = "2019",
-            academicMonths = "May-August"
-        ),
-        AcademicCalendar(
-            folderImg = R.drawable.login_img,
-            academicPeriodYear = "2019",
-            academicMonths = "May-August"
-        ),
+        )
     )
 }
