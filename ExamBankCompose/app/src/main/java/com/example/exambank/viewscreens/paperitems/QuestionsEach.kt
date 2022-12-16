@@ -75,9 +75,6 @@ fun QuestionOne(listOne: Questions) {
             .padding(2.dp)
             .height(35.dp)
             .background(color = white)
-
-
-
     ) {
         Row(
             modifier = Modifier

@@ -26,21 +26,21 @@ import com.example.exambank.R
 fun HeaderSection(){
 MaterialTheme(){
     Box {
-        HeaderItems()
-    }
+        HeaderItems(
+            academicYear = "2017/18",
+            unitCodeName = "BIT 2303 BBIT 305 DISTRIBUTED SYSTEMS",
+            monthYear = "DECEMBER, 2017"
+        )
+     }
+   }
 }
-
-}
-
-
 
 
 @Composable
 private fun HeaderItems(
-//    calendarYear: String,
-//    unitCode: String,
-//    unitName: String,
-//    monthYear: String,
+    academicYear: String,
+    unitCodeName: String,
+    monthYear: String,
 ){
     Card(
 
@@ -74,7 +74,7 @@ private fun HeaderItems(
                     modifier = Modifier.weight(1f)
                 ) {
                     Text(
-                        text = "UNIVERSITY EXAMINATIONS 2017/2018",
+                        text = "UNIVERSITY EXAMINATIONS $academicYear",
                         style = TextStyle(
                             color = Color.Black,
                             fontSize = 14.sp,
@@ -96,7 +96,7 @@ private fun HeaderItems(
                     )
                     Spacer(modifier = Modifier.height(5.dp))
                     Text(
-                        text = "BIT2303 BBIT305 DISTRIBUTED SYSTEMS",
+                        text = unitCodeName,
                         style = TextStyle(
                             color = Color.Black,
                             fontSize = 14.sp,
@@ -120,7 +120,7 @@ private fun HeaderItems(
                         horizontalArrangement = Arrangement.SpaceAround
                     ) {
                         Text(
-                            text = "DATE: DECEMBER, 2017",
+                            text = "DATE: $monthYear",
                             style = TextStyle(
                                 color = Color.Black,
                                 fontSize = 14.sp,
@@ -172,6 +172,7 @@ private fun HeaderItems(
                             )
                         )
                     }
+                    Spacer(modifier = Modifier.height(5.dp))
                     // 2nd Divider
                     Box(
 

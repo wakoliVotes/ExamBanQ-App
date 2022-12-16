@@ -1,9 +1,12 @@
 package com.example.exambank.viewscreens
 
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
@@ -11,6 +14,7 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.example.exambank.common.CustomTopAppBar
 import com.example.exambank.navigation.BottomBarScreen
 import com.example.exambank.navigation.BottomNavGraph
 
@@ -18,9 +22,10 @@ import com.example.exambank.navigation.BottomNavGraph
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
-    Scaffold(bottomBar = { BottomBar(navController = navController) }) {
-        BottomNavGraph(navController = navController)
-
+    Scaffold(bottomBar = { BottomBar(navController = navController) }) { paddingValues ->
+        Row(modifier = Modifier.padding(paddingValues)) {
+            BottomNavGraph(navController = navController)
+        }
     }
 }
 
