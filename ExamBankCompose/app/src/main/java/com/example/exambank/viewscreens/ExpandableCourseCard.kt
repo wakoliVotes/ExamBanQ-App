@@ -109,11 +109,8 @@ Column {
                         TrimesterTemplate(TrimesterOneData.unitTriOneList[it])
                     }
                 }
-
             }
-
         }
-
     }
     // TRI-2
     Spacer(modifier = Modifier.height(10.dp))
@@ -171,11 +168,8 @@ Column {
                         TrimesterTemplate(TrimesterOneData.unitTriOneList[it])
                     }
                 }
-
             }
-
         }
-
     }
     // TRI-3
     Spacer(modifier = Modifier.height(10.dp))
@@ -233,13 +227,10 @@ Column {
                         TrimesterTemplate(TrimesterOneData.unitTriOneList[it])
                     }
                 }
-
             }
-
         }
-
     }
-}
+   }
 }
 
 @ExperimentalMaterialApi
