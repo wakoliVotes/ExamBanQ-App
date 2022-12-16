@@ -1829,3 +1829,307 @@ object BISF1101Five {
         )
     )
 }
+
+// BIT2105  APPLICATION PROGRAMMING
+object BIT2105One {
+    val bacListOne = listOf(
+        Questions(
+            quizNumber = "a)",
+            quizContent = "Differentiate between the following:",
+            quizMarks = "[2 Marks]"
+        ),
+        Questions(
+            quizNumber = "b)",
+            quizContent = "Discuss four drawbacks of distributed systems",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "c)",
+            quizContent = "Briefly explain the mechanisms for implementing Remote IPC.",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "d)",
+            quizContent = "Discuss the services common to middleware models. ",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "e)",
+            quizContent = "Describe using diagrams three algorithms for achieving mutual exclusion.",
+            quizMarks = "[6 Marks]"
+        )
+    )
+}
+
+object BIT2105Two {
+    val bacListTwo = listOf(
+        Questions(
+            quizNumber = "a)",
+            quizContent = "Differentiate between the following:",
+            quizMarks = "[2 Marks]"
+        ),
+        Questions(
+            quizNumber = "b)",
+            quizContent = "Discuss four drawbacks of distributed systems",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "c)",
+            quizContent = "Briefly explain the mechanisms for implementing Remote IPC.",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "d)",
+            quizContent = "Discuss the services common to middleware models. ",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "e)",
+            quizContent = "Describe using diagrams three algorithms for achieving mutual exclusion.",
+            quizMarks = "[6 Marks]"
+        )
+    )
+}
+
+object BIT2105Three {
+    val baclistThree = listOf(
+        Questions(
+            quizNumber = "a)",
+            quizContent = "Differentiate between the following:",
+            quizMarks = "[2 Marks]"
+        ),
+        Questions(
+            quizNumber = "b)",
+            quizContent = "Discuss four drawbacks of distributed systems",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "c)",
+            quizContent = "Briefly explain the mechanisms for implementing Remote IPC.",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "d)",
+            quizContent = "Discuss the services common to middleware models. ",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "e)",
+            quizContent = "Describe using diagrams three algorithms for achieving mutual exclusion.",
+            quizMarks = "[6 Marks]"
+        )
+    )
+}
+
+
+object BIT2105Four {
+    val bacListFour = listOf(
+        Questions(
+            quizNumber = "a)",
+            quizContent = "Differentiate between the following:",
+            quizMarks = "[2 Marks]"
+        ),
+        Questions(
+            quizNumber = "b)",
+            quizContent = "Discuss four drawbacks of distributed systems",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "c)",
+            quizContent = "Briefly explain the mechanisms for implementing Remote IPC.",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "d)",
+            quizContent = "Discuss the services common to middleware models. ",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "e)",
+            quizContent = "Describe using diagrams three algorithms for achieving mutual exclusion.",
+            quizMarks = "[6 Marks]"
+        )
+    )
+}
+
+object BIT2105Five {
+    val bacListFive = listOf(
+        Questions(
+            quizNumber = "a)",
+            quizContent = "Differentiate between the following:",
+            quizMarks = "[2 Marks]"
+        ),
+        Questions(
+            quizNumber = "b)",
+            quizContent = "Discuss four drawbacks of distributed systems",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "c)",
+            quizContent = "Briefly explain the mechanisms for implementing Remote IPC.",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "d)",
+            quizContent = "Discuss the services common to middleware models. ",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "e)",
+            quizContent = "Describe using diagrams three algorithms for achieving mutual exclusion.",
+            quizMarks = "[6 Marks]"
+        )
+    )
+}
+
+// BIT2204A  JAVA PROGRAMMING
+object BIT2204One {
+    val bacListOne = listOf(
+        Questions(
+            quizNumber = "a)",
+            quizContent = "Differentiate between the following:",
+            quizMarks = "[2 Marks]"
+        ),
+        Questions(
+            quizNumber = "b)",
+            quizContent = "Discuss four drawbacks of distributed systems",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "c)",
+            quizContent = "Briefly explain the mechanisms for implementing Remote IPC.",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "d)",
+            quizContent = "Discuss the services common to middleware models. ",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "e)",
+            quizContent = "Describe using diagrams three algorithms for achieving mutual exclusion.",
+            quizMarks = "[6 Marks]"
+        )
+    )
+}
+
+object BIT2204Two {
+    val bacListTwo = listOf(
+        Questions(
+            quizNumber = "a)",
+            quizContent = "Differentiate between the following:",
+            quizMarks = "[2 Marks]"
+        ),
+        Questions(
+            quizNumber = "b)",
+            quizContent = "Discuss four drawbacks of distributed systems",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "c)",
+            quizContent = "Briefly explain the mechanisms for implementing Remote IPC.",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "d)",
+            quizContent = "Discuss the services common to middleware models. ",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "e)",
+            quizContent = "Describe using diagrams three algorithms for achieving mutual exclusion.",
+            quizMarks = "[6 Marks]"
+        )
+    )
+}
+
+object BIT2204Three {
+    val baclistThree = listOf(
+        Questions(
+            quizNumber = "a)",
+            quizContent = "Differentiate between the following:",
+            quizMarks = "[2 Marks]"
+        ),
+        Questions(
+            quizNumber = "b)",
+            quizContent = "Discuss four drawbacks of distributed systems",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "c)",
+            quizContent = "Briefly explain the mechanisms for implementing Remote IPC.",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "d)",
+            quizContent = "Discuss the services common to middleware models. ",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "e)",
+            quizContent = "Describe using diagrams three algorithms for achieving mutual exclusion.",
+            quizMarks = "[6 Marks]"
+        )
+    )
+}
+
+
+object BIT2204Four {
+    val bacListFour = listOf(
+        Questions(
+            quizNumber = "a)",
+            quizContent = "Differentiate between the following:",
+            quizMarks = "[2 Marks]"
+        ),
+        Questions(
+            quizNumber = "b)",
+            quizContent = "Discuss four drawbacks of distributed systems",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "c)",
+            quizContent = "Briefly explain the mechanisms for implementing Remote IPC.",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "d)",
+            quizContent = "Discuss the services common to middleware models. ",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "e)",
+            quizContent = "Describe using diagrams three algorithms for achieving mutual exclusion.",
+            quizMarks = "[6 Marks]"
+        )
+    )
+}
+
+object BIT2204Five {
+    val bacListFive = listOf(
+        Questions(
+            quizNumber = "a)",
+            quizContent = "Differentiate between the following:",
+            quizMarks = "[2 Marks]"
+        ),
+        Questions(
+            quizNumber = "b)",
+            quizContent = "Discuss four drawbacks of distributed systems",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "c)",
+            quizContent = "Briefly explain the mechanisms for implementing Remote IPC.",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "d)",
+            quizContent = "Discuss the services common to middleware models. ",
+            quizMarks = "[6 Marks]"
+        ),
+        Questions(
+            quizNumber = "e)",
+            quizContent = "Describe using diagrams three algorithms for achieving mutual exclusion.",
+            quizMarks = "[6 Marks]"
+        )
+    )
+}
