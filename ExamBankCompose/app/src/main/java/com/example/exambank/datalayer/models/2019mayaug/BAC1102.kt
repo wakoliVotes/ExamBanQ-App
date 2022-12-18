@@ -1,6 +1,6 @@
-package com.example.exambank.modeldatautils.`2019mayaug`
+package com.example.exambank.datalayer.models.`2019mayaug`
 
-import com.example.exambank.modeldatautils.Questions
+import com.example.exambank.datalayer.models.Questions
 
 
 // BAC 1102 Operating Systems

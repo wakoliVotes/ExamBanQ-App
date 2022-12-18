@@ -21,7 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
-import com.example.exambank.modeldatautils.TrimesterOneData
+import com.example.exambank.datalayer.models.TrimesterOneData
 import com.example.exambank.ui.theme.Shapes
 
 @ExperimentalMaterialApi

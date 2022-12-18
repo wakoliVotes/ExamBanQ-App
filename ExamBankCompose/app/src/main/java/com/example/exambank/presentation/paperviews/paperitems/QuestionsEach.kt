@@ -1,4 +1,4 @@
-package com.example.exambank.viewscreens.paperitems
+package com.example.exambank.presentation.paperviews.paperitems
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -10,7 +10,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.exambank.modeldatautils.*
+import com.example.exambank.datalayer.models.Questions
+import com.example.exambank.models.*
 import com.example.exambank.ui.theme.black
 import com.example.exambank.ui.theme.texttitlewhite
 import com.example.exambank.ui.theme.white
@@ -30,8 +31,8 @@ fun QuestionEach() {
                     quizMarks = "30 Marks (Compulsory)"
                 )
             }
-                items(QuestionOne.listOne.size) {
-                QuestionOne(QuestionOne.listOne[it])
+                items(com.example.exambank.datalayer.models.QuestionOne.listOne.size) {
+                QuestionOne(com.example.exambank.datalayer.models.QuestionOne.listOne[it])
             }
             item {
                 QuestionNumberTemplate(
@@ -39,8 +40,8 @@ fun QuestionEach() {
                     quizMarks = "20 Marks"
                 )
             }
-            items(QuestionTwo.listTwo.size) {
-                QuestionTwo(QuestionTwo.listTwo[it])
+            items(com.example.exambank.datalayer.models.QuestionTwo.listTwo.size) {
+                QuestionTwo(com.example.exambank.datalayer.models.QuestionTwo.listTwo[it])
             }
             item {
                 QuestionNumberTemplate(
@@ -48,8 +49,8 @@ fun QuestionEach() {
                     quizMarks = "20 Marks"
                 )
             }
-            items(QuestionThree.listThree.size) {
-                QuestionThree(QuestionThree.listThree[it])
+            items(com.example.exambank.datalayer.models.QuestionThree.listThree.size) {
+                QuestionThree(com.example.exambank.datalayer.models.QuestionThree.listThree[it])
             }
             item {
                 QuestionNumberTemplate(
@@ -57,8 +58,8 @@ fun QuestionEach() {
                     quizMarks = "20 Marks"
                 )
             }
-            items(QuestionFour.listFour.size) {
-                QuestionFour(QuestionFour.listFour[it])
+            items(com.example.exambank.datalayer.models.QuestionFour.listFour.size) {
+                QuestionFour(com.example.exambank.datalayer.models.QuestionFour.listFour[it])
             }
 //            items(QuestionOne.listOne.size) {
 //                QuestionFive(QuestionFive.listFive[it])

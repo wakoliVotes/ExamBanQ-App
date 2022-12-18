@@ -1,4 +1,4 @@
-package com.example.exambank.modeldatautils
+package com.example.exambank.datalayer.models
 
 object QuestionData {
     val listQuestions = listOf(
@@ -249,7 +249,7 @@ object TrimesterThreeData{
         CourseList(
             unitId = 5,
             unitCodeAndName = "BSD 3105 MultimediaProgramming"
-        ),CourseList(
+        ), CourseList(
             unitId = 5,
             unitCodeAndName = "BSD 3106 FinalYearProject"
         ),

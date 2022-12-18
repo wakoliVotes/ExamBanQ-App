@@ -1,4 +1,4 @@
-package com.example.exambank.viewscreens.paperitems
+package com.example.exambank.presentation.paperviews.paperitems
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*

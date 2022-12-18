@@ -15,10 +15,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.exambank.modeldatautils.CourseList
-import com.example.exambank.modeldatautils.TrimesterOneData
-import com.example.exambank.modeldatautils.TrimesterThreeData
-import com.example.exambank.modeldatautils.TrimesterTwoData
+import com.example.exambank.datalayer.models.CourseList
+import com.example.exambank.datalayer.models.TrimesterOneData
+import com.example.exambank.datalayer.models.TrimesterThreeData
+import com.example.exambank.datalayer.models.TrimesterTwoData
 import com.example.exambank.R
 
 @Composable

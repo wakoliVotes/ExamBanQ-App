@@ -1,4 +1,4 @@
-package com.example.exambank.modeldatautils
+package com.example.exambank.datalayer.models
 
 object QuestionOne {
     val listOne = listOf(
