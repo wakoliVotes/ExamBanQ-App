@@ -1,5 +1,5 @@
 ## Exam Bank Android
-- A step-by-step development process for an Exam Bank Android Application, using [Kotlin]()
+- A step-by-step development process for an Exam Bank Android Application, using [Kotlin](https://kotlinlang.org/)
 - The app is to allow students have a user-friendly way to access previous year's examination materials
 
 
