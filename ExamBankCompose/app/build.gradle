@@ -69,5 +69,5 @@ dependencies {
     // Sign in with google dependency
     implementation 'com.google.android.gms:play-services-auth:20.4.0'
     // Flow row
-//    implementation "com.google.accompanist:accompanist-flowlayout:<version>"
+    implementation "com.google.accompanist:accompanist-flowlayout:0.28.0"
 }

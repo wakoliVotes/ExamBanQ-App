@@ -97,7 +97,7 @@ object AcademicCalendarData {
         AcademicCalendar(
             folderImg = R.drawable.folder_round,
             academicPeriodYear = "2018",
-            academicMonths = "sEPT-Dec",
+            academicMonths = "Sept-Dec",
             itsStatus = "Coming Soon"
         ),
         AcademicCalendar(
@@ -110,7 +110,7 @@ object AcademicCalendarData {
             folderImg = R.drawable.folder_round,
             academicPeriodYear = "2019",
             academicMonths = "May-August",
-            itsStatus = "Coming Soon"
+            itsStatus = "Available"
         )
     )
 }
