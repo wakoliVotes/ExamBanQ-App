@@ -8,6 +8,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.KeyboardArrowRight
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -26,7 +28,9 @@ import com.example.exambank.datalayer.models.AcademicCalendar
 import com.example.exambank.datalayer.models.AcademicCalendarData.academicList
 import com.example.exambank.datalayer.models.Years
 import com.example.exambank.datalayer.models.YearsData
+import com.example.exambank.ui.theme.color1
 import com.example.exambank.ui.theme.paleBlack
+import com.example.exambank.ui.theme.white
 import com.google.accompanist.flowlayout.FlowRow
 
 
@@ -150,7 +154,8 @@ private fun WelcomeBanner(
         }
         // Call to Action
         Column(
-            modifier = Modifier.padding(top = 0.dp)
+            modifier = Modifier.padding(top = 0.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Text(
                 text = "*Explore\n *Learn\n   *Grow",
@@ -158,7 +163,7 @@ private fun WelcomeBanner(
                 fontSize = 35.sp,
                 modifier = Modifier
                     .padding(all = 10.dp)
-                    .offset(100.dp, (-100).dp)
+                    .offset(40.dp, (-100).dp)
             )
             Row(
                 modifier = Modifier.offset(20.dp, (-80).dp),
@@ -207,20 +212,26 @@ private fun WelcomeBanner(
             Box(
                 modifier = Modifier
                     .padding(10.dp)
-                    .height(1.dp)
-                    .width(140.dp)
+                    .height(150.dp)
+                    .fillMaxWidth()
                     .clip(RoundedCornerShape(8.dp))
-                    .background(color = Color.DarkGray)
+                    .background(color = Color.White)
             )
             {
                 Text(
-                    text = "One",
+                    text = "Explore",
                     style = TextStyle(
                         fontFamily = FontFamily.Monospace,
-                        fontWeight = FontWeight.SemiBold,
-                        color = Color.White
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 20.sp,
+                        color = Color.Black
                     ),
                     modifier = Modifier.align(Alignment.Center)
+                )
+                Image(
+                    imageVector = Icons.Default.KeyboardArrowRight,
+                    contentDescription = "Arrow",
+                    modifier = Modifier.align(Alignment.CenterEnd),
                 )
             }
         }
