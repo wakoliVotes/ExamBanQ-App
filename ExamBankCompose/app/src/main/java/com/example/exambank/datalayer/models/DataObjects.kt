@@ -11,6 +11,7 @@ object AboutObject {
             aboutTitle = "KCAExamBank",
             aboutOne = "Current Version 1.0",
             aboutTwo = "KCAExamBank offers students a flexible and easy to use platform to access examination papers and associated services on the go.",
+            aboutThree = "Commitment, Innovativeness, Reliability"
         )
     )
 
