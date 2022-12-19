@@ -23,7 +23,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.exambank.R
 import com.example.exambank.datalayer.models.AcademicCalendar
-import com.example.exambank.datalayer.models.AcademicCalendarData
 import com.example.exambank.datalayer.models.AcademicCalendarData.academicList
 import com.example.exambank.datalayer.models.Years
 import com.example.exambank.datalayer.models.YearsData
@@ -156,7 +155,7 @@ private fun WelcomeBanner(
             Text(
                 text = "*Explore\n *Learn\n   *Grow",
                 fontWeight = FontWeight.W900,
-                fontSize = 40.sp,
+                fontSize = 35.sp,
                 modifier = Modifier
                     .padding(all = 10.dp)
                     .offset(100.dp, (-100).dp)
@@ -187,7 +186,7 @@ private fun WelcomeBanner(
                 Box(
                     modifier = Modifier
                         .padding(10.dp)
-                        .height(160.dp)
+                        .height(140.dp)
                         .width(140.dp)
                         .clip(RoundedCornerShape(8.dp))
                         .background(color = Color.DarkGray)
@@ -203,26 +202,26 @@ private fun WelcomeBanner(
                         modifier = Modifier.align(Alignment.Center)
                     )
                 }
-                Spacer(modifier = Modifier.height(10.dp))
-                Box(
-                    modifier = Modifier
-                        .padding(10.dp)
-                        .height(160.dp)
-                        .width(140.dp)
-                        .clip(RoundedCornerShape(8.dp))
-                        .background(color = Color.DarkGray)
+            }
+            Spacer(modifier = Modifier.height(0.dp))
+            Box(
+                modifier = Modifier
+                    .padding(10.dp)
+                    .height(1.dp)
+                    .width(140.dp)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(color = Color.DarkGray)
+            )
+            {
+                Text(
+                    text = "One",
+                    style = TextStyle(
+                        fontFamily = FontFamily.Monospace,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.White
+                    ),
+                    modifier = Modifier.align(Alignment.Center)
                 )
-                {
-                    Text(
-                        text = "Fourth",
-                        style = TextStyle(
-                            fontFamily = FontFamily.Monospace,
-                            fontWeight = FontWeight.SemiBold,
-                            color = Color.White
-                        ),
-                        modifier = Modifier.align(Alignment.Center)
-                    )
-                }
             }
         }
     }
