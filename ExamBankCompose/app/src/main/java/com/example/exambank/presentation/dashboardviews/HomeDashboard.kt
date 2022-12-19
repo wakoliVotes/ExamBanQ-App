@@ -1,4 +1,4 @@
-package com.example.exambank.viewscreens
+package com.example.exambank.presentation.dashboardviews
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -14,15 +14,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.exambank.R
 import com.example.exambank.datalayer.models.Years
 import com.example.exambank.datalayer.models.YearsData
 
 
 @Composable
-fun HomeDashboard (
+fun HomeDashboard(
     modifier: Modifier = Modifier.fillMaxSize(),
 ) {
     LazyRow(modifier = Modifier.fillMaxWidth()) {
@@ -31,6 +33,45 @@ fun HomeDashboard (
         }
     }
 }
+
+
+@Preview
+@Composable
+private fun TopItems() {
+    // Header
+    // Search
+    //
+    Column(
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.Center
+    ) {
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(5.dp)
+                .height(40.dp)
+        ) {
+            Text(
+                text = "Browse",
+                style = TextStyle(
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+            )
+            Image(painter = painterResource(id = R.drawable.workspaces),
+                contentDescription = "workspaces"
+            )
+
+        }
+
+    }
+}
+
+// MAIN / TOP ITEMS / CORE ITEMS
+
+
+// CATEGORIES
 
 @Composable
 private fun YearsCard(years: Years) {
@@ -93,6 +134,6 @@ private fun YearsCard(years: Years) {
 
 @Composable
 @Preview
-fun HomePreview(){
+fun HomePreview() {
     HomeDashboard()
 }

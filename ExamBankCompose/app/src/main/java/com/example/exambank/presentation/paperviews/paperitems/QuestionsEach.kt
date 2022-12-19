@@ -11,7 +11,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.exambank.datalayer.models.Questions
-import com.example.exambank.models.*
 import com.example.exambank.ui.theme.black
 import com.example.exambank.ui.theme.texttitlewhite
 import com.example.exambank.ui.theme.white
