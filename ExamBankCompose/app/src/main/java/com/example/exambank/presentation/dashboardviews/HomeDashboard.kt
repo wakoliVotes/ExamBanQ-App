@@ -97,12 +97,12 @@ private fun WelcomeBanner(
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = "Find Your \nUnit's Revision Papers \nOn the Go",
+                    text = "Start Revising \nOn the Go",
                     modifier = Modifier
                         .padding(start = 10.dp, bottom = 40.dp),
                     style = TextStyle(
                         fontWeight = FontWeight.Bold,
-                        fontSize = 24.sp
+                        fontSize = 36.sp
                     )
                 )
                 Image(
@@ -154,7 +154,7 @@ private fun WelcomeBanner(
             modifier = Modifier.padding(top = 0.dp)
         ) {
             Text(
-                text = "*Explore\n *Get Learning\n   *Grow",
+                text = "*Explore\n *Learn\n   *Grow",
                 fontWeight = FontWeight.W900,
                 fontSize = 40.sp,
                 modifier = Modifier
@@ -184,6 +184,26 @@ private fun WelcomeBanner(
                         modifier = Modifier.align(Alignment.Center)
                     )
                 }
+                Box(
+                    modifier = Modifier
+                        .padding(10.dp)
+                        .height(160.dp)
+                        .width(140.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(color = Color.DarkGray)
+                )
+                {
+                    Text(
+                        text = "Fourth",
+                        style = TextStyle(
+                            fontFamily = FontFamily.Monospace,
+                            fontWeight = FontWeight.SemiBold,
+                            color = Color.White
+                        ),
+                        modifier = Modifier.align(Alignment.Center)
+                    )
+                }
+                Spacer(modifier = Modifier.height(10.dp))
                 Box(
                     modifier = Modifier
                         .padding(10.dp)
