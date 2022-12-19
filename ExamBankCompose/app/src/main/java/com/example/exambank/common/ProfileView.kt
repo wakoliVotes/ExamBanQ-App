@@ -228,6 +228,21 @@ private fun MoreInfo() {
                     .background(Color.LightGray)
             )
             Text(
+                text = "Settings",
+                style = TextStyle(
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                ),
+                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
+            )
+            // Divider line
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(1.dp)
+                    .background(Color.LightGray)
+            )
+            Text(
                 text = "Logout",
                 style = TextStyle(
                     fontWeight = FontWeight.Bold,
