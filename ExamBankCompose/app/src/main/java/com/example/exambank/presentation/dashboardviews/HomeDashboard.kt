@@ -28,9 +28,7 @@ import com.example.exambank.datalayer.models.AcademicCalendar
 import com.example.exambank.datalayer.models.AcademicCalendarData.academicList
 import com.example.exambank.datalayer.models.Years
 import com.example.exambank.datalayer.models.YearsData
-import com.example.exambank.ui.theme.color1
 import com.example.exambank.ui.theme.paleBlack
-import com.example.exambank.ui.theme.white
 import com.google.accompanist.flowlayout.FlowRow
 
 
@@ -81,7 +79,7 @@ private fun TopItems() {
 
 @Preview
 @Composable
-private fun WelcomeBanner(
+fun WelcomeBanner(
 //    imagePainter: Painter,
 //    title: String = "",
 //    price: String = "",
