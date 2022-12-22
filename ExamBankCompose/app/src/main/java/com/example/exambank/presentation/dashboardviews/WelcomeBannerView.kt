@@ -19,7 +19,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -64,7 +66,8 @@ fun CreateWelcomeBanner(
                         .padding(start = 10.dp, bottom = 40.dp),
                     style = TextStyle(
                         fontWeight = FontWeight.Bold,
-                        fontSize = 36.sp
+                        fontSize = 36.sp,
+                        fontFamily = FontFamily.Monospace
                     )
                 )
                 Image(
@@ -92,9 +95,13 @@ fun CreateWelcomeBanner(
                 verticalArrangement = Arrangement.Bottom
             ) {
                 Text(
-                    text = "Exam Bank", color = paleBlack
+                    text = "Exam Bank", color = paleBlack,
+                    fontFamily = FontFamily.Monospace
                 )
-                Text(text = "Home of Best Materials", fontWeight = FontWeight.Bold)
+                Text(
+                    text = "Home of Best Materials", fontWeight = FontWeight.Bold,
+                    fontFamily = FontFamily.Monospace
+                )
             }
         }
         Box(
@@ -119,6 +126,7 @@ fun CreateWelcomeBanner(
             Text(
                 text = "*Explore\n *Learn\n   *Grow",
                 fontWeight = FontWeight.W900,
+                fontFamily = FontFamily.Monospace,
                 fontSize = 35.sp,
                 modifier = Modifier
                     .padding(all = 10.dp)
