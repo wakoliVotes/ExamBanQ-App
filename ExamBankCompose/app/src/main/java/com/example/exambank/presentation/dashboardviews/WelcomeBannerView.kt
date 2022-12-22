@@ -130,9 +130,9 @@ fun CreateWelcomeBanner(
                 Box(
                     modifier = Modifier
                         .padding(5.dp)
-                        .height(120.dp)
-                        .width(180.dp)
-                        .clip(RoundedCornerShape(16.dp))
+                        .height(100.dp)
+                        .width(150.dp)
+                        .clip(RoundedCornerShape(36.dp, 0.dp))
                         .background(color = Color.Red),
                 )
 
@@ -152,10 +152,10 @@ fun CreateWelcomeBanner(
                 }
                 Box(
                     modifier = Modifier
-                        .padding(5.dp)
-                        .height(120.dp)
-                        .width(140.dp)
-                        .clip(RoundedCornerShape(8.dp))
+                        .padding(top = 30.dp)
+                        .height(100.dp)
+                        .width(150.dp)
+                        .clip(RoundedCornerShape(0.dp, 36.dp))
                         .background(color = Color.DarkGray)
                 )
                 {
@@ -203,7 +203,9 @@ fun CreateWelcomeBanner(
                     Image(
                         imageVector = Icons.Default.KeyboardArrowRight,
                         contentDescription = "Arrow",
-                        modifier = Modifier.align(Alignment.CenterEnd),
+                        modifier = Modifier
+                            .align(Alignment.CenterEnd)
+                            .padding(end = 80.dp),
                     )
                 }
             }
