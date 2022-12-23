@@ -21,7 +21,7 @@
 > - Create an interactive platform with added features to support engagement
 #### Tech Tools Used
 > - Android Studio/Android Software Development Kit (**SDK**)
-> - Jetpack Compose - Android UI Toolkit
+> - Jetpack Compose - Modern Android UI Toolkit
 > - Kotlin - Made with **Kotlin** programming language
 > - Android Virtual Device (**AVD**) Manager
 > - Java Development Kit (**JDK**)
