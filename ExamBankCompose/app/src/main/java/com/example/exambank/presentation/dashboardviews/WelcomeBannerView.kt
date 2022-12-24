@@ -202,7 +202,7 @@ fun CreateWelcomeBanner(
                             fontFamily = FontFamily.Monospace,
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
-                            color = Color.Black
+                            color = Color.White
                         ),
                         modifier = Modifier.align(Alignment.Center)
                     )
