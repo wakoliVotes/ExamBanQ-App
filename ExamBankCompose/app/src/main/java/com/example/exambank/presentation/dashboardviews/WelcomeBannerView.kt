@@ -212,6 +212,7 @@ fun CreateWelcomeBanner(
                         modifier = Modifier
                             .align(Alignment.CenterEnd)
                             .padding(end = 80.dp),
+                        color = Color.White
                     )
                 }
             }
