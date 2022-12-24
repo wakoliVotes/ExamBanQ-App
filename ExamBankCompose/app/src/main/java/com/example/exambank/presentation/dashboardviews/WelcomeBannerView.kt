@@ -193,7 +193,7 @@ fun CreateWelcomeBanner(
                         .height(20.dp)
                         .width(80.dp)
                         .clip(RoundedCornerShape(30.dp))
-                        .background(color = Color.Green)
+                        .background(color = Color.Blue)
                 )
                 {
                     Text(
