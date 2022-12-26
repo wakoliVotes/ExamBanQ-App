@@ -277,25 +277,25 @@ fun AcademicCalendarRow(academicCalendar: AcademicCalendar) {
                 contentDescription = "",
                 modifier = Modifier
                     .height(60.dp)
-                    .offset(20.dp, (5).dp)
+                    .offset(40.dp, (8).dp)
                     .clip(CircleShape),
             )
             Text(
                 text = academicCalendar.academicPeriodYear,
-                fontSize = 18.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.W700,
                 modifier = Modifier.padding(top = 5.dp),
             )
             Text(
                 text = academicCalendar.academicMonths,
-                fontSize = 14.sp,
+                fontSize = 12.sp,
                 fontWeight = FontWeight.W600,
                 modifier = Modifier.padding(),
                 color = Color.Gray
             )
             Text(
                 text = academicCalendar.itsStatus,
-                fontSize = 12.sp,
+                fontSize = 10.sp,
                 fontWeight = FontWeight.W400,
                 modifier = Modifier
                     .padding()
