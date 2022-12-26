@@ -263,7 +263,7 @@ fun AcademicCalendarRow(academicCalendar: AcademicCalendar) {
         modifier = Modifier
             .padding(all = 8.dp)
             .width(115.dp)
-            .clip(RoundedCornerShape(20.dp, 8.dp)),
+            .clip(RoundedCornerShape(8.dp)),
         elevation = 5.dp
     ) {
         Column(
@@ -276,8 +276,8 @@ fun AcademicCalendarRow(academicCalendar: AcademicCalendar) {
                 painter = painterResource(id = R.drawable.owner),
                 contentDescription = "",
                 modifier = Modifier
-                    .height(60.dp)
-                    .offset(40.dp, (8).dp)
+                    .height(50.dp)
+                    .offset(50.dp, (8).dp)
                     .clip(CircleShape),
             )
             Text(
