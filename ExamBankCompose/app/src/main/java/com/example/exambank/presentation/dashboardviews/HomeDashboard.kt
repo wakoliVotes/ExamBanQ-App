@@ -261,8 +261,8 @@ fun CategoryItemsList(academicList: List<AcademicCalendar>) {
 fun AcademicCalendarRow(academicCalendar: AcademicCalendar) {
     Card(
         modifier = Modifier
-            .padding(all = 10.dp)
-            .width(105.dp)
+            .padding(all = 8.dp)
+            .width(115.dp)
             .clip(RoundedCornerShape(20.dp, 8.dp)),
         elevation = 5.dp
     ) {
@@ -276,8 +276,8 @@ fun AcademicCalendarRow(academicCalendar: AcademicCalendar) {
                 painter = painterResource(id = R.drawable.owner),
                 contentDescription = "",
                 modifier = Modifier
-                    .height(100.dp)
-                    .offset(30.dp, (5).dp)
+                    .height(60.dp)
+                    .offset(20.dp, (5).dp)
                     .clip(CircleShape),
             )
             Text(
@@ -288,7 +288,7 @@ fun AcademicCalendarRow(academicCalendar: AcademicCalendar) {
             )
             Text(
                 text = academicCalendar.academicMonths,
-                fontSize = 16.sp,
+                fontSize = 14.sp,
                 fontWeight = FontWeight.W600,
                 modifier = Modifier.padding(),
                 color = Color.Gray
