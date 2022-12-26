@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.exambank.R
 import com.example.exambank.ui.theme.paleBlack
+import com.example.exambank.ui.theme.white
 
 @Preview
 @Composable
@@ -211,8 +212,10 @@ fun CreateWelcomeBanner(
                         contentDescription = "Arrow",
                         modifier = Modifier
                             .align(Alignment.CenterEnd)
-                            .padding(end = 80.dp),
-                        color = Color.White
+                            .padding(end = 80.dp)
+                            .background(white)
+                        ,
+
                     )
                 }
             }

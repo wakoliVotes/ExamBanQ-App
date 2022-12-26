@@ -262,7 +262,7 @@ fun AcademicCalendarRow(academicCalendar: AcademicCalendar) {
     Card(
         modifier = Modifier
             .padding(all = 10.dp)
-            .width(175.dp)
+            .width(105.dp)
             .clip(RoundedCornerShape(20.dp, 8.dp)),
         elevation = 5.dp
     ) {
@@ -277,7 +277,7 @@ fun AcademicCalendarRow(academicCalendar: AcademicCalendar) {
                 contentDescription = "",
                 modifier = Modifier
                     .height(100.dp)
-                    .offset(70.dp, (18).dp)
+                    .offset(30.dp, (5).dp)
                     .clip(CircleShape),
             )
             Text(
