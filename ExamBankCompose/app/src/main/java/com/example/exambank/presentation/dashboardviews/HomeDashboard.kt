@@ -77,7 +77,7 @@ private fun TopItems() {
     }
 }
 
-@Preview
+
 @Composable
 fun WelcomeBanner(
 //    imagePainter: Painter,
@@ -276,8 +276,8 @@ fun AcademicCalendarRow(academicCalendar: AcademicCalendar) {
                 painter = painterResource(id = R.drawable.owner),
                 contentDescription = "",
                 modifier = Modifier
-                    .height(50.dp)
-                    .offset(50.dp, (8).dp)
+                    .height(60.dp)
+                    .offset(40.dp, (8).dp)
                     .clip(CircleShape),
             )
             Text(
