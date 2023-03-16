@@ -1,4 +1,4 @@
-package com.example.exambank.viewscreens
+package com.example.exambank.presentation.dashboardviews
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
@@ -42,7 +42,7 @@ fun BottomBar(navController: NavHostController) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
 
-    BottomNavigation() {
+    BottomNavigation {
         screens.forEach { screen ->
             AddItem(screen = screen,
                 currentDestination = currentDestination,

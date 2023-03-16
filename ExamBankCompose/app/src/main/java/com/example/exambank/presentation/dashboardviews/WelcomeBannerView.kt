@@ -31,12 +31,11 @@ import com.example.exambank.ui.theme.white
 
 @Preview
 @Composable
-fun WelcomeBannerView(){
+fun WelcomeBannerView() {
     MaterialTheme {
 //        CreateWelcomeBanner()
     }
 }
-
 
 
 @Preview
@@ -60,7 +59,7 @@ fun CreateWelcomeBanner(
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
                 Text(
-                    text = "Start Revising \nOn the Go",
+                    text = "Revise\nOn the Go",
                     modifier = Modifier
                         .padding(start = 10.dp, bottom = 40.dp),
                     style = TextStyle(
@@ -77,7 +76,6 @@ fun CreateWelcomeBanner(
 
             }
         }
-
         Card(
             modifier = Modifier
                 .fillMaxWidth()
@@ -98,7 +96,7 @@ fun CreateWelcomeBanner(
                     fontFamily = FontFamily.Monospace
                 )
                 Text(
-                    text = "Home of Best Materials", fontWeight = FontWeight.Bold,
+                    text = "Right Resources", fontWeight = FontWeight.Bold,
                     fontFamily = FontFamily.Monospace
                 )
             }
@@ -117,107 +115,101 @@ fun CreateWelcomeBanner(
 
                 )
         }
+        Text(
+            text = "*Explore\n *Learn\n   *Grow",
+            fontWeight = FontWeight.W900,
+            fontFamily = FontFamily.Monospace,
+            fontSize = 35.sp,
+            modifier = Modifier
+                .padding(all = 10.dp)
+                .offset(40.dp, (-100).dp)
+        )
         // Call to Action
-        Column(
-            modifier = Modifier.padding(top = 0.dp),
-            horizontalAlignment = Alignment.CenterHorizontally
+
+        Row(
+            modifier = Modifier.offset(20.dp, (-100).dp),
         ) {
-            Text(
-                text = "*Explore\n *Learn\n   *Grow",
-                fontWeight = FontWeight.W900,
-                fontFamily = FontFamily.Monospace,
-                fontSize = 35.sp,
+            Box(
                 modifier = Modifier
-                    .padding(all = 10.dp)
-                    .offset(40.dp, (-100).dp)
+                    .padding(5.dp)
+                    .height(100.dp)
+                    .width(150.dp)
+                    .clip(RoundedCornerShape(36.dp, 0.dp))
+                    .background(color = Color.Red),
             )
-            Row(
-                modifier = Modifier.offset(20.dp, (-100).dp),
-            ) {
-                Box(
-                    modifier = Modifier
-                        .padding(5.dp)
-                        .height(100.dp)
-                        .width(150.dp)
-                        .clip(RoundedCornerShape(36.dp, 0.dp))
-                        .background(color = Color.Red),
-                )
 
-                {
-                    Text(
-                        text = "Access Revision Materials",
-                        style = TextStyle(
-                            fontFamily = FontFamily.Monospace,
-                            fontWeight = FontWeight.SemiBold,
-                            color = Color.White
-                        ),
-                        modifier = Modifier
-                            .align(Alignment.Center)
-                            .padding(10.dp),
-                        textAlign = TextAlign.Center
-                    )
-                }
-                Box(
+            {
+                Text(
+                    text = "Access Revision Materials",
+                    style = TextStyle(
+                        fontFamily = FontFamily.Monospace,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.White
+                    ),
                     modifier = Modifier
-                        .padding(top = 30.dp)
-                        .height(100.dp)
-                        .width(150.dp)
-                        .clip(RoundedCornerShape(0.dp, 36.dp))
-                        .background(color = Color.DarkGray)
+                        .align(Alignment.Center)
+                        .padding(10.dp),
+                    textAlign = TextAlign.Center
                 )
-                {
-                    Text(
-                        text = "Propel your learning journey with ease",
-                        style = TextStyle(
-                            fontFamily = FontFamily.Monospace,
-                            fontWeight = FontWeight.SemiBold,
-                            color = Color.White
-                        ),
-                        modifier = Modifier
-                            .align(Alignment.Center)
-                            .padding(10.dp),
-                        textAlign = TextAlign.Center
-                    )
-                }
             }
-            Spacer(modifier = Modifier.height(0.dp))
-            Card(
+            Box(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(30.dp, 30.dp, 0.dp, 0.dp))
-                    .background(Color.Green)
-                    .height(120.dp)
-            ) {
-                Box(
+                    .padding(top = 30.dp)
+                    .height(100.dp)
+                    .width(150.dp)
+                    .clip(RoundedCornerShape(0.dp, 36.dp))
+                    .background(color = Color.DarkGray)
+            )
+            {
+                Text(
+                    text = "Propel your learning journey with ease",
+                    style = TextStyle(
+                        fontFamily = FontFamily.Monospace,
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.White
+                    ),
                     modifier = Modifier
-                        .padding(10.dp)
-                        .height(20.dp)
-                        .width(80.dp)
-                        .clip(RoundedCornerShape(30.dp))
-                        .background(color = Color.Blue)
+                        .align(Alignment.Center)
+                        .padding(10.dp),
+                    textAlign = TextAlign.Center
                 )
-                {
-                    Text(
-                        text = "Explore",
-                        style = TextStyle(
-                            fontFamily = FontFamily.Monospace,
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 20.sp,
-                            color = Color.White
-                        ),
-                        modifier = Modifier.align(Alignment.Center)
+            }
+        }
+        Spacer(modifier = Modifier.height(0.dp))
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .clip(RoundedCornerShape(30.dp, 30.dp, 0.dp, 0.dp))
+                .background(Color.Green)
+                .height(120.dp)
+        ) {
+            Box(
+                modifier = Modifier
+                    .padding(10.dp)
+                    .height(20.dp)
+                    .width(80.dp)
+                    .clip(RoundedCornerShape(30.dp))
+                    .background(color = Color.Blue)
+            )
+            {
+                Text(
+                    text = "Explore",
+                    style = TextStyle(
+                        fontFamily = FontFamily.Monospace,
+                        fontWeight = FontWeight.Bold,
+                        fontSize = 20.sp,
+                        color = Color.White
+                    ),
+                    modifier = Modifier.align(Alignment.Center)
+                )
+                Image(
+                    imageVector = Icons.Default.KeyboardArrowRight,
+                    contentDescription = "Arrow",
+                    modifier = Modifier
+                        .align(Alignment.CenterEnd)
+                        .padding(end = 80.dp)
+                        .background(white),
                     )
-                    Image(
-                        imageVector = Icons.Default.KeyboardArrowRight,
-                        contentDescription = "Arrow",
-                        modifier = Modifier
-                            .align(Alignment.CenterEnd)
-                            .padding(end = 80.dp)
-                            .background(white)
-                        ,
-
-                    )
-                }
             }
         }
     }
