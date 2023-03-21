@@ -4,7 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.exambank.presentation.dashboardviews.AcademicYearView
 import com.example.exambank.presentation.dashboardviews.HomeDashboard
+import com.example.exambank.presentation.paperviews.ExamPaperView
 import com.example.exambank.viewscreens.*
 
 @Composable
@@ -13,21 +15,19 @@ fun BottomNavGraph(navController: NavHostController) {
         startDestination = BottomBarScreen.Home.route
     ){
         composable(route = BottomBarScreen.Home.route){
-            HomeDashboard()
+            HomeDashboard(navController = navController)
         }
-        composable(route = BottomBarScreen.Settings.route){
-            SettingsView()
+        composable(route = BottomBarScreen.Papers.route){
+            AcademicYearView(navController = navController)
         }
-        composable(route = BottomBarScreen.Explore.route){
-            ExploreView()
+        composable(route = BottomBarScreen.Account.route){
+           AccountView(navController = navController)
         }
-
-        composable(route = BottomBarScreen.Notifications.route){
-            NotificationView()
+        composable(route = Routes.AcademicYearView.route){
+            AcademicYearView(navController = navController)
         }
-
-        composable(route = BottomBarScreen.Profile.route){
-            ProfileView()
+        composable(route = Routes.FullExamPaper.route){
+            ExamPaperView()
         }
     }
 

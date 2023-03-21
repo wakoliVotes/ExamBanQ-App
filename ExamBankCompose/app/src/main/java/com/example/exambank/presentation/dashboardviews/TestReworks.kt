@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.KeyboardArrowRight
@@ -29,30 +28,19 @@ import com.example.exambank.R
 import com.example.exambank.ui.theme.paleBlack
 import com.example.exambank.ui.theme.white
 
-@Preview
-@Composable
-fun WelcomeBannerView() {
-    MaterialTheme {
-//        CreateWelcomeBanner()
-    }
-}
-
 
 @Preview
 @Composable
-fun CreateWelcomeBanner(
-//    imagePainter: Painter,
-//    title: String = "",
-//    price: String = "",
+fun WelcomeBanner(
 ) {
     Column(modifier = Modifier
         .padding(10.dp)
-        .wrapContentHeight()
+        .fillMaxSize()
     ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(20.dp)
+                .padding(8.dp)
         ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -61,7 +49,7 @@ fun CreateWelcomeBanner(
                 Text(
                     text = "Revise\nOn the Go",
                     modifier = Modifier
-                        .padding(start = 10.dp, bottom = 40.dp),
+                        .padding(start = 10.dp, bottom = 20.dp),
                     style = TextStyle(
                         fontWeight = FontWeight.Bold,
                         fontSize = 36.sp,
@@ -73,13 +61,12 @@ fun CreateWelcomeBanner(
                     contentDescription = null,
                     modifier = Modifier.height(30.dp)
                 )
-
             }
         }
         Card(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(150.dp)
+                .height(200.dp)
                 .clickable { },
             elevation = 10.dp,
             shape = RoundedCornerShape(10.dp)
@@ -88,9 +75,22 @@ fun CreateWelcomeBanner(
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(16.dp),
+                    .padding(start = 16.dp, bottom = 16.dp),
                 verticalArrangement = Arrangement.Bottom
             ) {
+                Box(
+                    modifier = Modifier
+                        .offset(140.dp, 0.dp)
+                        .height(140.dp)
+                        .clip(CircleShape)
+
+                ) {
+                    Image(
+                        contentScale = ContentScale.Fit,
+                        painter = painterResource(id = R.drawable.owner),
+                        contentDescription = "",
+                    )
+                }
                 Text(
                     text = "Exam Bank", color = paleBlack,
                     fontFamily = FontFamily.Monospace
@@ -101,33 +101,20 @@ fun CreateWelcomeBanner(
                 )
             }
         }
-        Box(
-            modifier = Modifier
-                .offset(140.dp, (-190).dp)
-                .height(140.dp)
-                .clip(CircleShape)
-
-        ) {
-            Image(
-                contentScale = ContentScale.Fit,
-                painter = painterResource(id = R.drawable.owner),
-                contentDescription = "",
-
-                )
-        }
         Text(
             text = "*Explore\n *Learn\n   *Grow",
             fontWeight = FontWeight.W900,
             fontFamily = FontFamily.Monospace,
             fontSize = 35.sp,
             modifier = Modifier
-                .padding(all = 10.dp)
-                .offset(40.dp, (-100).dp)
+                .padding(all = 24.dp)
         )
         // Call to Action
 
         Row(
-            modifier = Modifier.offset(20.dp, (-100).dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(10.dp),
         ) {
             Box(
                 modifier = Modifier
@@ -175,13 +162,13 @@ fun CreateWelcomeBanner(
                 )
             }
         }
-        Spacer(modifier = Modifier.height(0.dp))
+        Spacer(modifier = Modifier.height(16.dp))
         Card(
             modifier = Modifier
                 .fillMaxWidth()
                 .clip(RoundedCornerShape(30.dp, 30.dp, 0.dp, 0.dp))
                 .background(Color.Green)
-                .height(120.dp)
+                .height(80.dp)
         ) {
             Box(
                 modifier = Modifier
@@ -209,7 +196,7 @@ fun CreateWelcomeBanner(
                         .align(Alignment.CenterEnd)
                         .padding(end = 80.dp)
                         .background(white),
-                    )
+                )
             }
         }
     }

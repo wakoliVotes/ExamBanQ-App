@@ -38,6 +38,8 @@ import com.example.exambank.ui.theme.color2
 import com.example.exambank.R
 
 
+
+
 @Composable
 fun SignUp( navController: NavHostController ){
 
@@ -55,6 +57,9 @@ fun SignUp( navController: NavHostController ){
         }
     }
     */
+
+
+
 
     Column(modifier = Modifier
         .fillMaxSize()

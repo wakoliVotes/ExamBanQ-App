@@ -1,14 +1,15 @@
 package com.example.exambank.navigation
 
 sealed class Routes( val route: String) {
-    object Splash: Routes("Splash_screen")
+    object SplashScreen: Routes("SplashScreen")
     object Login: Routes("Login")
     object SignUp: Routes("SignUp")
     object ForgotPassword: Routes("ForgotPassword")
     object Home : Routes("Home_Screen")
+    object MainScreen: Routes("MainScreen")
+    object Account: Routes("Account")
     object AcademicYearView: Routes("academicyearview")
     object FullExamPaper: Routes("FullExamPaper")
-    object CourseListing: Routes("CourseListing")
     object JanApril2023: Routes("JanApril2023")
     object SeptDec2022: Routes("SeptDec2022")
     object MayAug2022: Routes("MayAug2022")

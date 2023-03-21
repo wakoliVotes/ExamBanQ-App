@@ -19,10 +19,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.example.exambank.R
 
 @Composable
-fun ProfileView() {
+fun AccountView(
+    navController: NavHostController
+) {
     Column(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -45,7 +49,6 @@ fun ProfileView() {
             Spacer(modifier = Modifier.height(10.dp))
             GeneralInfo()
             Spacer(modifier = Modifier.height(10.dp))
-            MoreInfo()
         }
     }
 }
@@ -56,7 +59,7 @@ private fun OwnerInfo() {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 30.dp)
+            .padding(top = 30.dp, start = 10.dp, end = 10.dp)
     )
     {
         Image(
@@ -93,7 +96,9 @@ private fun OwnerInfo() {
                     text = AnnotatedString(
                         "Sign Out",
                     ),
-                    onClick = {},
+                    onClick = {
+                        // TO DO - Sign out
+                    },
                     style = TextStyle(
                         color = Color.Red,
                         fontWeight = FontWeight.Bold,
@@ -118,58 +123,12 @@ private fun GeneralInfo() {
                 .padding(10.dp)
         ) {
             Text(
-                text = "General",
+                text = "More",
                 style = TextStyle(
                     fontWeight = FontWeight.ExtraLight,
                     fontSize = 16.sp
                 ),
                 modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
-            )
-            Text(
-                text = "Ratings & Review",
-                style = TextStyle(
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp
-                ),
-                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
-            )
-            // Divider line
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(1.dp)
-                    .background(Color.LightGray)
-            )
-
-            Text(
-                text = "Customer Support",
-                style = TextStyle(
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp
-                ),
-                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
-            )
-            // Divider line
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(1.dp)
-                    .background(Color.LightGray)
-            )
-            Text(
-                text = "Help & Feedback",
-                style = TextStyle(
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp
-                ),
-                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
-            )
-            // Divider line
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(1.dp)
-                    .background(Color.LightGray)
             )
             Text(
                 text = "About",
@@ -185,29 +144,6 @@ private fun GeneralInfo() {
                     .fillMaxWidth()
                     .height(1.dp)
                     .background(Color.LightGray)
-            )
-        }
-    }
-}
-
-@Preview
-@Composable
-private fun MoreInfo() {
-    Box(
-        modifier = Modifier.padding(start = 10.dp)
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(10.dp)
-        ) {
-            Text(
-                text = "More",
-                style = TextStyle(
-                    fontWeight = FontWeight.ExtraLight,
-                    fontSize = 16.sp
-                ),
-                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
             )
             Text(
                 text = "Privacy Policy",
@@ -238,29 +174,6 @@ private fun MoreInfo() {
                     .fillMaxWidth()
                     .height(1.dp)
                     .background(Color.LightGray)
-            )
-            Text(
-                text = "Settings",
-                style = TextStyle(
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp
-                ),
-                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
-            )
-            // Divider line
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(1.dp)
-                    .background(Color.LightGray)
-            )
-            Text(
-                text = "Logout",
-                style = TextStyle(
-                    fontWeight = FontWeight.Bold,
-                    fontSize = 16.sp
-                ),
-                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
             )
         }
     }

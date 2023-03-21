@@ -19,7 +19,8 @@ import com.example.exambank.navigation.BottomNavGraph
 
 @Preview
 @Composable
-fun MainScreen() {
+fun MainScreen(
+) {
     val navController = rememberNavController()
     Scaffold(bottomBar = { BottomBar(navController = navController) }) { paddingValues ->
         Row(modifier = Modifier.padding(paddingValues)) {
@@ -33,10 +34,13 @@ fun MainScreen() {
 fun BottomBar(navController: NavHostController) {
     val screens = listOf(
         BottomBarScreen.Home,
-        BottomBarScreen.Settings,
+        BottomBarScreen.Papers,
+        BottomBarScreen.Account,
+        /*
         BottomBarScreen.Explore,
         BottomBarScreen.Notifications,
         BottomBarScreen.Profile
+         */
     )
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()

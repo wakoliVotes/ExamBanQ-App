@@ -67,6 +67,8 @@ User Interface (UX) features | Importance
 - **Splash screen, Login Page, Register/Sign Up Page**
  
 <img width="218" height="420" alt="splash screen" src="https://user-images.githubusercontent.com/77758884/153352238-53ecc3bb-ce49-450a-a2e7-503def032c87.png" ><img width="218" height="420" alt="login page" src="https://user-images.githubusercontent.com/77758884/156889586-8ce0b5b2-3ed2-489c-9725-50d3f061cb63.png" ><img width="218" height="420" alt="register page" src="https://user-images.githubusercontent.com/77758884/156889515-356937f2-c1f6-4b46-b225-ebefcbbea38f.png" >
+<img width="218" height="420" alt="dashboard" src="https://user-images.githubusercontent.com/77758884/226309340-ac563fd0-1274-4d49-8462-fb1cd94e6167.png" ><img width="218" height="420" alt="dashboard" src="https://user-images.githubusercontent.com/77758884/225637911-55fd3fa6-dfbf-4a5b-a294-36869417db38.png" >
+
 
 
 ### External Resources

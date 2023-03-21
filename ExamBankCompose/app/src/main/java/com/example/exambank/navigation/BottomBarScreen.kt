@@ -14,25 +14,14 @@ sealed class BottomBarScreen(
         title = "Home",
         icon = Icons.Default.Home
     )
-    object Settings: BottomBarScreen(
-        route = "settings",
-        title = "Settings",
-        icon = Icons.Default.Settings
-    )
-    object Explore: BottomBarScreen(
-        route = "explore",
-        title = "Explore",
+    object Papers: BottomBarScreen(
+        route = "papers",
+        title = "Papers",
         icon = Icons.Default.List
     )
-    object Notifications: BottomBarScreen(
-        route = "notifications",
-        title = "Notification",
-        icon = Icons.Default.Notifications
-    )
-    object Profile: BottomBarScreen(
-        route = "profile",
-        title = "Profile",
+    object Account: BottomBarScreen(
+        route = "account",
+        title = "Account",
         icon = Icons.Default.Person
     )
-
 }
