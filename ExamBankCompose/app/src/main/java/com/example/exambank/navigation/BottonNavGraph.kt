@@ -30,5 +30,4 @@ fun BottomNavGraph(navController: NavHostController) {
             ExamPaperView()
         }
     }
-
 }

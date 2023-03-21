@@ -8,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -22,8 +23,13 @@ import com.example.exambank.navigation.BottomNavGraph
 fun MainScreen(
 ) {
     val navController = rememberNavController()
-    Scaffold(bottomBar = { BottomBar(navController = navController) }) { paddingValues ->
-        Row(modifier = Modifier.padding(paddingValues)) {
+    // add paddingvalues bottom to the bottom bar
+
+    Scaffold(
+        bottomBar = { BottomBar(navController = navController) }) { paddingValues ->
+        Row(modifier = Modifier
+            .padding(paddingValues)
+        ) {
             BottomNavGraph(navController = navController)
         }
     }
@@ -36,11 +42,6 @@ fun BottomBar(navController: NavHostController) {
         BottomBarScreen.Home,
         BottomBarScreen.Papers,
         BottomBarScreen.Account,
-        /*
-        BottomBarScreen.Explore,
-        BottomBarScreen.Notifications,
-        BottomBarScreen.Profile
-         */
     )
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()
@@ -66,7 +67,6 @@ fun RowScope.AddItem(
     BottomNavigationItem(
         label = {
             Text(text = screen.title)
-
         },
         icon = {
             Icon(imageVector = screen.icon,
@@ -83,7 +83,6 @@ fun RowScope.AddItem(
                 popUpTo(navController.graph.findStartDestination().id)
                 launchSingleTop = true
             }
-
         }
     )
 }

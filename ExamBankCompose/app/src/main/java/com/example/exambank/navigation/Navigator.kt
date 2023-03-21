@@ -29,7 +29,7 @@ fun Navigator (
 ) {
     NavHost(
         navController =  navController,
-        startDestination = LoginRoutes.SignIn.name
+        startDestination = LoginRoutes.SignIn.name,
     ){
         composable(route = LoginRoutes.SignIn.name){
             LoginScreen(onNavToHomePage = {
@@ -69,7 +69,6 @@ fun Navigator (
                 loginViewModel = loginViewModel
             ) {
                 navController.navigate(LoginRoutes.SignIn.name)
-
             }
         }
         composable(route = Routes.SplashScreen.route){
