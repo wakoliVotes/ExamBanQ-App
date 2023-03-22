@@ -80,6 +80,7 @@ fun HomeDashboard(
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
+                        .background(Color.White)
                         .padding(start = 16.dp, bottom = 16.dp),
                     verticalArrangement = Arrangement.Bottom
                 ) {
@@ -97,12 +98,13 @@ fun HomeDashboard(
                         )
                     }
                     Text(
-                        text = "Exam Bank", color = paleBlack,
+                        text = "ReviSquare", color = paleBlack,
                         fontFamily = FontFamily.Monospace
                     )
                     Text(
-                        text = "Right Resources", fontWeight = FontWeight.Bold,
-                        fontFamily = FontFamily.Monospace
+                        text = "Exam Bank:Right Resources", fontWeight = FontWeight.Bold,
+                        fontFamily = FontFamily.Monospace,
+                        color = Color.Black
                     )
                 }
             }
@@ -200,9 +202,9 @@ fun HomeDashboard(
                 ) {
                     Icon(
                         imageVector = Icons.Default.KeyboardArrowRight,
-                        contentDescription = null
+                        contentDescription = null,
+                        tint = Color.White
                     )
-
                 }
             }
         }

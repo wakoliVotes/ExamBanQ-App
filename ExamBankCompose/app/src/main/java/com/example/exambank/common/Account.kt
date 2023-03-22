@@ -5,6 +5,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
+import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,6 +23,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.example.exambank.R
+import com.example.exambank.ui.theme.Teal200
 
 @Composable
 fun AccountView(
@@ -32,23 +34,29 @@ fun AccountView(
         horizontalAlignment = Alignment.CenterHorizontally,
     )
     {
-        // TO DO
-        /* Image Name + email next line
-        * General
-        * Ratings and Reviews
-        * Customer Support
-        * Help and Feedback
-        * About
-        * More
-        * Privacy Policy
-        * Terms of Use
-        * Logout
-        * */
         Column(modifier = Modifier.padding(10.dp)) {
             OwnerInfo()
             Spacer(modifier = Modifier.height(10.dp))
             GeneralInfo()
             Spacer(modifier = Modifier.height(10.dp))
+            Text(
+                text = "Thanks for checking out ReviSquare. Account Section Coming Soon. Reach me on email above",
+                style = TextStyle(
+                    fontWeight = FontWeight.Medium,
+                    fontSize = 30.sp,
+                    textAlign = TextAlign.Center,
+                    color = Teal200
+                ),
+                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
+            )
+            // Divider line
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(1.dp)
+                    .background(Color.LightGray)
+            )
+
         }
     }
 }
@@ -83,14 +91,17 @@ private fun OwnerInfo() {
                         fontSize = 18.sp
                     )
                 )
-                Text(
-                    text = "danielle@yahoo.com",
-                    style = TextStyle(
-                        fontWeight = FontWeight.ExtraLight,
-                        fontSize = 14.sp
-                    ),
-                    modifier = Modifier.padding(top = 5.dp)
-                )
+                SelectionContainer() {
+                    Text(
+                        text = "getintouchdesk@gmail.com",
+                        style = TextStyle(
+                            fontWeight = FontWeight.ExtraLight,
+                            fontSize = 14.sp
+                        ),
+                        modifier = Modifier.padding(top = 5.dp)
+                    )
+                }
+
                 Spacer(modifier = Modifier.height(5.dp))
                 ClickableText(
                     text = AnnotatedString(

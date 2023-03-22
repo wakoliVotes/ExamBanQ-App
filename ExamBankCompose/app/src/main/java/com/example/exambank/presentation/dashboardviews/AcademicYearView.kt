@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.exambank.R
+import com.example.exambank.ui.theme.water
 import com.google.accompanist.flowlayout.FlowRow
 
 
@@ -28,7 +29,9 @@ fun AcademicYearView(
     navController: NavHostController,
 ) {
     FlowRow(
-        modifier = Modifier.verticalScroll(rememberScrollState())  // allow scrolling
+        modifier = Modifier
+            .background(water)
+        .verticalScroll(rememberScrollState())  // allow scrolling
     ) {
         // Top Item
         Column(
@@ -74,7 +77,7 @@ fun AcademicYearView(
             modifier = Modifier
                 .padding(all = 8.dp)
                 .width(115.dp)
-                .clip(RoundedCornerShape(8.dp))
+            .clip(RoundedCornerShape(8.dp))
                 .clickable {
                            navController.navigate("FullExamPaper")
                 }
@@ -83,9 +86,7 @@ fun AcademicYearView(
         ) {
             Column(
                 modifier = Modifier
-                    .padding(all = 8.dp),
-//            horizontalAlignment = Alignment.CenterHorizontally
-
+                    .padding(all = 8.dp)
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.owner),
