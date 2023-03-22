@@ -98,11 +98,11 @@ fun HomeDashboard(
                         )
                     }
                     Text(
-                        text = "ReviSquare", color = paleBlack,
+                        text = "ExamBanQ", color = paleBlack,
                         fontFamily = FontFamily.Monospace
                     )
                     Text(
-                        text = "Exam Bank:Right Resources", fontWeight = FontWeight.Bold,
+                        text = "Right Resources", fontWeight = FontWeight.Bold,
                         fontFamily = FontFamily.Monospace,
                         color = Color.Black
                     )

@@ -40,10 +40,10 @@ fun AccountView(
             GeneralInfo()
             Spacer(modifier = Modifier.height(10.dp))
             Text(
-                text = "Thanks for checking out ReviSquare. Account Section Coming Soon. Reach me on email above",
+                text = "Thanks for checking out ExamBanQ. Account Section Coming Soon. Reach me on email above",
                 style = TextStyle(
                     fontWeight = FontWeight.Medium,
-                    fontSize = 30.sp,
+                    fontSize = 28.sp,
                     textAlign = TextAlign.Center,
                     color = Teal200
                 ),
