@@ -12,6 +12,7 @@ import com.example.exambank.presentation.dashboardviews.AcademicYearView
 import com.example.exambank.presentation.dashboardviews.HomeDashboard
 import com.example.exambank.presentation.dashboardviews.MainScreen
 import com.example.exambank.presentation.paperviews.ExamPaperView
+import com.example.exambank.presentation.welcomeviews.OnBoardScreen
 import com.example.exambank.viewscreens.AccountView
 import com.example.exambank.viewscreens.SplashScreen
 
@@ -29,7 +30,7 @@ fun Navigator (
 ) {
     NavHost(
         navController =  navController,
-        startDestination = LoginRoutes.SignIn.name,
+        startDestination = Routes.OnBoardScreen.route,
     ){
         composable(route = LoginRoutes.SignIn.name){
             LoginScreen(onNavToHomePage = {
@@ -73,6 +74,9 @@ fun Navigator (
         }
         composable(route = Routes.SplashScreen.route){
             SplashScreen(navController = navController)
+        }
+        composable(route = Routes.OnBoardScreen.route){
+            OnBoardScreen(navController = navController)
         }
         composable(route = Routes.MainScreen.route){
             MainScreen()

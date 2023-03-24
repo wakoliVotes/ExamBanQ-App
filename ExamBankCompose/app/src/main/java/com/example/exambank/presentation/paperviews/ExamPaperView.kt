@@ -419,8 +419,9 @@ fun PaperExpanded(
                                     modifier = Modifier
                                         .padding(bottom = 5.dp)
                                         .fillMaxWidth()
-                                        .height(30.dp),
-                                    horizontalArrangement = Arrangement.SpaceAround
+                                        .height(40.dp),
+                                    horizontalArrangement = Arrangement.SpaceAround,
+                                    verticalAlignment = Alignment.CenterVertically
                                 ) {
                                     Text(
                                         text = "INSTRUCTIONS: ",
