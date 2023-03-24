@@ -58,10 +58,11 @@ fun HomeDashboard(
                         )
                     )
                     Image(
-                        painter = painterResource(id = R.drawable.kcau_logo),
+                        painter = painterResource(id = R.drawable.logo),
                         contentDescription = null,
                         modifier = Modifier
                             .height(30.dp)
+                            .clip(CircleShape)
                             .clickable {
                                 navController.navigate("Account")
                             }
@@ -102,9 +103,10 @@ fun HomeDashboard(
                         fontFamily = FontFamily.Monospace
                     )
                     Text(
-                        text = "Right Resources", fontWeight = FontWeight.Bold,
+                        text = "Resources in Only 3 Clicks",
+                        fontWeight = FontWeight.Bold,
                         fontFamily = FontFamily.Monospace,
-                        color = Color.Black
+                        color = MaterialTheme.colors.onSecondary
                     )
                 }
             }
@@ -134,7 +136,7 @@ fun HomeDashboard(
 
                 {
                     Text(
-                        text = "Access Revision Materials",
+                        text = "Access Revision Materials in 1-2-3",
                         style = TextStyle(
                             fontFamily = FontFamily.Monospace,
                             fontWeight = FontWeight.SemiBold,

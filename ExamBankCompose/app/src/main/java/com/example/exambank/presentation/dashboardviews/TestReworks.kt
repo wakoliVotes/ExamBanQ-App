@@ -57,7 +57,7 @@ fun WelcomeBanner(
                     )
                 )
                 Image(
-                    painter = painterResource(id = R.drawable.kcau_logo),
+                    painter = painterResource(id = R.drawable.logo),
                     contentDescription = null,
                     modifier = Modifier.height(30.dp)
                 )

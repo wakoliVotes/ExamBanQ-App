@@ -9,6 +9,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
@@ -22,6 +23,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
@@ -223,7 +225,7 @@ fun ExamPaperView() {
                         )
                     )
                     Image(
-                        painter = painterResource(id = R.drawable.kcau_logo),
+                        painter = painterResource(id = R.drawable.workspaces),
                         contentDescription = null,
                         modifier = Modifier
                             .height(30.dp)
@@ -316,11 +318,14 @@ fun PaperExpanded(
 
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.kcau_logo1),
+                            painter = painterResource(id = R.drawable.logo),
                             contentDescription = null,
                             modifier = Modifier
-                                .clip(RoundedCornerShape(4.dp))
-                                .height(100.dp),
+                                .clip(CircleShape)
+                                .height(80.dp)
+                                .width(80.dp)
+                            ,
+                            contentScale = ContentScale.Crop
 
                             )
                         Row(

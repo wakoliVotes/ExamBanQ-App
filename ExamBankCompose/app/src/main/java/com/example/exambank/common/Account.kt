@@ -1,7 +1,10 @@
 package com.example.exambank.viewscreens
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.ClickableText
@@ -12,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
@@ -20,6 +24,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.core.content.ContextCompat.startActivity
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.example.exambank.R
@@ -40,7 +45,7 @@ fun AccountView(
             GeneralInfo()
             Spacer(modifier = Modifier.height(10.dp))
             Text(
-                text = "Thanks for checking out ExamBanQ. Account Section Coming Soon. Reach me on email above",
+                text = "Thanks for checking out ExamBanQ. We hope you enjoy using our app.",
                 style = TextStyle(
                     fontWeight = FontWeight.Medium,
                     fontSize = 28.sp,
@@ -128,6 +133,7 @@ private fun GeneralInfo() {
     Box(
         modifier = Modifier.padding(start = 10.dp)
     ) {
+        val context = LocalContext.current
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -141,13 +147,23 @@ private fun GeneralInfo() {
                 ),
                 modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
             )
-            Text(
-                text = "About",
+            ClickableText(
+                text = AnnotatedString(
+                    "About",
+                ),
+                onClick = {
+                    // Add go to Privacy Policy using external website link
+                    val uri = Uri.parse("https://exambanq.vercel.app/")
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    context.startActivity(intent)
+                },
                 style = TextStyle(
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp
                 ),
-                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
+                modifier = Modifier
+                    .padding(top = 10.dp, bottom = 10.dp)
+
             )
             // Divider line
             Box(
@@ -156,13 +172,23 @@ private fun GeneralInfo() {
                     .height(1.dp)
                     .background(Color.LightGray)
             )
-            Text(
-                text = "Privacy Policy",
+            ClickableText(
+                text = AnnotatedString(
+                    "Privacy Policy",
+                ),
+                onClick = {
+                    // Add go to Privacy Policy using external website link
+                    val uri = Uri.parse("https://exambanq.vercel.app/legal/privacypolicy.html")
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    context.startActivity(intent)
+                },
                 style = TextStyle(
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp
                 ),
-                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
+                modifier = Modifier
+                    .padding(top = 10.dp, bottom = 10.dp)
+
             )
             // Divider line
             Box(
@@ -171,13 +197,23 @@ private fun GeneralInfo() {
                     .height(1.dp)
                     .background(Color.LightGray)
             )
-            Text(
-                text = "Terms of Use",
+            ClickableText(
+                text = AnnotatedString(
+                    "Terms of Use",
+                ),
+                onClick = {
+                    // Add go to Privacy Policy using external website link
+                    val uri = Uri.parse("https://exambanq.vercel.app/legal/terms-of-use.html")
+                    val intent = Intent(Intent.ACTION_VIEW, uri)
+                    context.startActivity(intent)
+                },
                 style = TextStyle(
                     fontWeight = FontWeight.Bold,
                     fontSize = 16.sp
                 ),
-                modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
+                modifier = Modifier
+                    .padding(top = 10.dp, bottom = 10.dp)
+
             )
             // Divider line
             Box(
