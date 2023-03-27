@@ -11,12 +11,11 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.Text
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -28,15 +27,53 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.exambank.R
 import com.example.exambank.ui.theme.black
 import com.example.exambank.ui.theme.white
+import kotlinx.coroutines.flow.*
+
+
+class ExamPapersViewModel: ViewModel(){
+
+    private val _searchText = MutableStateFlow("")
+    val searchText = _searchText.asStateFlow()
+
+    private val _isSearching = MutableStateFlow(false)
+    val isSearching = _isSearching.asStateFlow()
+
+    private val _papers = MutableStateFlow(fullPaperData)
+
+    val papers = searchText
+        .combine(_papers) { text, papers ->
+            if (text.isBlank()) {
+                papers
+            } else {
+                papers.filter {
+                    it.doesMatchSearchuery(text)
+                }
+            }
+        }
+        .stateIn(
+            viewModelScope,
+            SharingStarted.WhileSubscribed(5000),
+            _papers.value
+        )
+
+    fun onSearchTermChange(text: String) {
+        _searchText.value = text
+    }
+}
 
 
 data class FullPaperData(
@@ -77,7 +114,20 @@ data class FullPaperData(
     var questionTwentySix: String,
     var questionTwentySeven: String,
     var questionTwentyEight: String,
-)
+) {
+    fun doesMatchSearchuery(query: String): Boolean {
+        val matchingCombinations = listOf(
+            "${unitName}",
+            "${unitCode}",
+            "$unitName$unitCode",
+            "$unitName $unitCode",
+            "${unitName.first()} ${unitCode.first()}"
+        )
+        return matchingCombinations.any{
+            it.contains(query, ignoreCase = true)
+        }
+    }
+}
 
 val fullPaperData = listOf(
     FullPaperData(
@@ -203,6 +253,11 @@ val fullPaperData = listOf(
 @Preview
 @Composable
 fun ExamPaperView() {
+    val viewModel = viewModel<ExamPapersViewModel>()
+    val papers = viewModel.papers.collectAsState()
+    val searchText = viewModel.searchText.collectAsState()
+    val isSearching = viewModel.isSearching.collectAsState()
+
     LazyColumn() {
         item {
             Box(
@@ -233,6 +288,51 @@ fun ExamPaperView() {
                     )
                 }
             }
+        }
+        item {
+            // Search TextField
+            OutlinedTextField(
+                value = searchText.value,
+                colors = TextFieldDefaults.outlinedTextFieldColors(
+                    focusedBorderColor = Color.Gray,
+                    unfocusedBorderColor = Color.LightGray,
+                    focusedLabelColor = Color.Gray,
+                    unfocusedLabelColor = Color.Gray,
+                    cursorColor = Color.LightGray,
+                ),
+                onValueChange = { /*TODO*/
+                    viewModel.onSearchTermChange(it)
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 8.dp, end = 8.dp, bottom = 4.dp)
+//                    .align(Alignment.CenterHorizontally)
+                    .size(55.dp),
+                textStyle = TextStyle(
+                    color = MaterialTheme.colors.onSecondary
+                ),
+                label = {
+                    Text(
+                        text = "Search",
+                        style = TextStyle(
+                            fontWeight = FontWeight.Normal,
+                            fontSize = 12.sp
+                        )
+                    )
+                },
+                trailingIcon = {
+                    Icon(
+                        imageVector = Icons.Default.Search,
+                        contentDescription = "search",
+                        tint = Color.Gray
+                    )
+                },
+                keyboardOptions = KeyboardOptions(
+                    imeAction = ImeAction.Done,
+                    keyboardType = KeyboardType.Text
+                ),
+            )
+            // End of Search TextField
         }
         items(fullPaperData) { fullPaperData ->
             PaperExpanded(fullPaperData = fullPaperData,
@@ -936,13 +1036,13 @@ fun PaperExpanded(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(bottom = 0.dp, start = 4.dp, end = 4.dp, top = 0.dp)
+                        .padding(bottom = 8.dp, start = 4.dp, end = 4.dp, top = 8.dp)
                         .background(color = white)
                 ) {
                     Text(
                         modifier = Modifier
                             .padding(8.dp),
-                        text = "---------END OF QUESTION PAPER---------------",
+                        text = "---------THE END--------------",
                         color = black,
                         style = TextStyle(
                             fontSize = 15.sp,
