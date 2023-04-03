@@ -324,7 +324,7 @@ val fullPaperData = listOf(
         questionTwentySix = "21. What is the difference between a class and an object?",
         questionTwentySeven = "22. What is the difference between a class and an object?",
         questionTwentyEight = "23. What is the difference between a class and an object?",
-    ),
+    )
 )
 
 
