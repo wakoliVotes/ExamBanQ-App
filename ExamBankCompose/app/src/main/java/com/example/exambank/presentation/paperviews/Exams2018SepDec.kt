@@ -44,7 +44,7 @@ import com.example.exambank.ui.theme.white
 import kotlinx.coroutines.flow.*
 
 
-class ExamPapersViewModel: ViewModel(){
+class Exams2018SepDecViewModel: ViewModel(){
 
     private val _searchText = MutableStateFlow("")
     val searchText = _searchText.asStateFlow()
@@ -52,7 +52,7 @@ class ExamPapersViewModel: ViewModel(){
     private val _isSearching = MutableStateFlow(false)
     val isSearching = _isSearching.asStateFlow()
 
-    private val _papers = MutableStateFlow(fullPaperData)
+    private val _papers = MutableStateFlow(fullPaperData2018)
 
     val papers = searchText
         .combine(_papers) { text, papers ->
@@ -76,7 +76,7 @@ class ExamPapersViewModel: ViewModel(){
 }
 
 
-data class FullPaperData(
+data class FullPaperData2018(
     var unitName: String,
     var academicYear: String,
     var unitCode: String,
@@ -129,7 +129,7 @@ data class FullPaperData(
     }
 }
 
-val fullPaperData = listOf(
+val fullPaperData2018 = listOf(
     FullPaperData(
         unitName = "Operating Systems",
         academicYear = "2022",
@@ -247,90 +247,13 @@ val fullPaperData = listOf(
         questionTwentySeven = "22. What is the difference between a class and an object?",
         questionTwentyEight = "23. What is the difference between a class and an object?",
     ),
-    FullPaperData(
-        unitName = "Computer Networks",
-        academicYear = "2019",
-        unitCode = "BSC 201",
-        monthYear = "AUGUST, 2022",
 
-        questionOne = "QUESTION ONE [30 Marks]",
-        questionTwo = "1. What is the difference between a class and an object?",
-        questionThree = "2. What is the difference between a class and an object?",
-        questionFour = "3. What is the difference between a class and an object?",
-        questionFive = "4. What is the difference between a class and an object?",
-        questionSix = "5. What is the difference between a class and an object?",
-        questionSeven = "6. What is the difference between a class and an object?",
-        questionEight = "7. What is the difference between a class and an object?",
-
-        questionNine = "QUESTION TWO [20 Marks]",
-        questionTen = "8. What is the difference between a class and an object?",
-        questionEleven = "9. What is the difference between a class and an object?",
-        questionTwelve = "10. What is the difference between a class and an object?",
-        questionThirteen = "11. What is the difference between a class and an object?",
-
-        questionFourteen = "QUESTION THREE [20 Marks]",
-        questionFifteen = "12. What is the difference between a class and an object?",
-        questionSixteen = "13. What is the difference between a class and an object?",
-        questionSeventeen = "14. What is the difference between a class and an object?",
-        questionEighteen = "15. What is the difference between a class and an object?",
-
-        questionNineteen = "QUESTION FOUR [20 Marks]",
-        questionTwenty = "16. What is the difference between a class and an object?",
-        questionTwentyOne = "17. What is the difference between a class and an object?",
-        questionTwentyTwo = "18. What is the difference between a class and an object?",
-        questionTwentyThree = "19. What is the difference between a class and an object?",
-
-        questionTwentyFour = "QUESTION FIVE [10 Marks]",
-        questionTwentyFive = "20. What is the difference between a class and an object?",
-        questionTwentySix = "21. What is the difference between a class and an object?",
-        questionTwentySeven = "22. What is the difference between a class and an object?",
-        questionTwentyEight = "23. What is the difference between a class and an object?",
-    ),
-    FullPaperData(
-        unitName = "Computer Architecture",
-        academicYear = "2019",
-        unitCode = "BSC 201",
-        monthYear = "AUGUST, 2022",
-
-        questionOne = "QUESTION ONE [30 Marks]",
-        questionTwo = "1. What is the difference between a class and an object?",
-        questionThree = "2. What is the difference between a class and an object?",
-        questionFour = "3. What is the difference between a class and an object?",
-        questionFive = "4. What is the difference between a class and an object?",
-        questionSix = "5. What is the difference between a class and an object?",
-        questionSeven = "6. What is the difference between a class and an object?",
-        questionEight = "7. What is the difference between a class and an object?",
-
-        questionNine = "QUESTION TWO [20 Marks]",
-        questionTen = "8. What is the difference between a class and an object?",
-        questionEleven = "9. What is the difference between a class and an object?",
-        questionTwelve = "10. What is the difference between a class and an object?",
-        questionThirteen = "11. What is the difference between a class and an object?",
-
-        questionFourteen = "QUESTION THREE [20 Marks]",
-        questionFifteen = "12. What is the difference between a class and an object?",
-        questionSixteen = "13. What is the difference between a class and an object?",
-        questionSeventeen = "14. What is the difference between a class and an object?",
-        questionEighteen = "15. What is the difference between a class and an object?",
-
-        questionNineteen = "QUESTION FOUR [20 Marks]",
-        questionTwenty = "16. What is the difference between a class and an object?",
-        questionTwentyOne = "17. What is the difference between a class and an object?",
-        questionTwentyTwo = "18. What is the difference between a class and an object?",
-        questionTwentyThree = "19. What is the difference between a class and an object?",
-
-        questionTwentyFour = "QUESTION FIVE [10 Marks]",
-        questionTwentyFive = "20. What is the difference between a class and an object?",
-        questionTwentySix = "21. What is the difference between a class and an object?",
-        questionTwentySeven = "22. What is the difference between a class and an object?",
-        questionTwentyEight = "23. What is the difference between a class and an object?",
-    ),
 )
 
 
 @Preview
 @Composable
-fun ExamPaperView() {
+fun ExamPaperView2018() {
     val viewModel = viewModel<ExamPapersViewModel>()
     val papers = viewModel.papers.collectAsState()
     val searchText = viewModel.searchText.collectAsState()
@@ -422,7 +345,7 @@ fun ExamPaperView() {
 
 @Composable
 fun PaperExpanded(
-    fullPaperData: FullPaperData,
+    fullPaperData: FullPaperData2018,
     navHostController: NavHostController,
 ) {
     var isExpanded by remember { mutableStateOf(false) }
