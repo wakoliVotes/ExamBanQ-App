@@ -71,5 +71,16 @@ User Interface (UX) features | Importance
 
 
 
+<img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/Screenshot_20230321_231749.png" >
+<img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/Screenshot_20230321_231801.png" >
+<img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/Screenshot_20230321_231823.png" >
+<img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/Screenshot_20230321_231855.png" >
+<img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/Screenshot_20230321_231936.png" >
+<img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/Screenshot_20230403_104130.png" >
+<img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/Screenshot_20230403_104222.png" >
+
+
+
+
 ### External Resources
 <!-- - You can check and download the application on Google Play [here](https://play.google.com/store/games?hl=en&gl=US) -->
