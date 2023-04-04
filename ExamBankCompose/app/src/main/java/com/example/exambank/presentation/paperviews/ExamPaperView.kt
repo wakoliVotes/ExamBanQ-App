@@ -44,7 +44,7 @@ import com.example.exambank.ui.theme.white
 import kotlinx.coroutines.flow.*
 
 
-class ExamPapersViewModel: ViewModel(){
+class ExamPapersViewModel : ViewModel() {
 
     private val _searchText = MutableStateFlow("")
     val searchText = _searchText.asStateFlow()
@@ -112,18 +112,21 @@ data class FullPaperData(
     var questionTwentyFour: String,
     var questionTwentyFive: String,
     var questionTwentySix: String,
-    var questionTwentySeven: String,
-    var questionTwentyEight: String,
-) {
+    var questionTwentySeven: String? = null,
+    var questionTwentyEight: String? = null,
+
+    var questionTwentyNine: String? = null,
+    var questionTwentyThirty: String? = null,
+
+    ) {
     fun doesMatchSearchuery(query: String): Boolean {
         val matchingCombinations = listOf(
-            "${unitName}",
-            "${unitCode}",
+            "QUESTION TWO", "QUESTION THREE", "QUESTION FOUR", "QUESTION FIVE",
             "$unitName$unitCode",
             "$unitName $unitCode",
             "${unitName.first()} ${unitCode.first()}"
         )
-        return matchingCombinations.any{
+        return matchingCombinations.any {
             it.contains(query, ignoreCase = true)
         }
     }
@@ -170,6 +173,138 @@ val fullPaperData = listOf(
         questionTwentyEight = "d) Discuss the advantages and disadvantages of user level threads. (6 Marks)",
     ),
     FullPaperData(
+        unitName = "Installation and Customization",
+        academicYear = "2018",
+        unitCode = "BAC 1105/BISF 1105/BSD 1106",
+        monthYear = "DEC, 2018",
+
+        questionOne = "a) Describe each of the following types of hard disk interfaces:\n" +
+                "i) IDE (2 Marks)\n" +
+                "ii) SATA (2 Marks)\n",
+        questionTwo = "b) Discuss any FOUR factors that one should consider before purchasing software (4 Marks)",
+        questionThree = "c) i) Explain FOUR reasons why we should maintain computers (4 Marks)\n" +
+                "ii) State THREE computer hardware maintenance practices. (3 Marks)\n",
+        questionFour = "b) Discuss TWO causes of ‘out of memory’ error in relation to computers. (2 Marks)",
+        questionFive = "c) Differentiate between a surge protector and a UPS (2 Marks)\n",
+        questionSix = "d) Define the term malware as used in computer. Describe any FOUR ways of preventing computer malware. (5 Marks)",
+        questionSeven = "e) Peter replaced a printer cartridge with a new one, but the printer produced distorted printouts. Explain three possible causes for this problem (6 Marks)",
+
+        questionEight = "QUESTION TWO [20 MARKS]",
+        questionNine = "a) What is computer Motherboard? List any TWO components attached to it. (3 Marks)",
+        questionTen = "b) Mary intends to use a USB port instead of a parallel port to connect peripheral devices on her\n" +
+                "computer. Outline any FOUR advantages of USB port that could be influencing her choice\n" +
+                " (4 Marks)\n",
+        questionEleven = "c) Differentiate between on-board devices and peripheral devices giving TWO examples for each case. (4 Marks)",
+        questionTwelve = "d) i) Define the term software and mention TWO main categories of software. (3 Marks)\n" +
+                "ii) State and explain THREE ways of fixing software problems in a computer. (6 Marks)\n",
+        questionThirteen = "QUESTION THREE [20 MARKS]\n",
+        questionFourteen = "a) Define the following terms and give an example:\n" +
+                "i) System software (2 Marks)\n" +
+                "ii) Utility software (2 Marks)\n" +
+                "iii) Application software (2 Marks)\n",
+        questionFifteen = "b) State and explain FOUR factors that one should consider before purchasing a laptop\n" +
+                " (4 Marks)\n",
+        questionSixteen = "c) Explain the use of the following types of computer ports: (5 Marks)\n" +
+                "i) VGA port\n" +
+                "ii) Ethernet port\n" +
+                "iii) DVI port\n" +
+                "iv) FireWire port\n" +
+                "v) PS/2 port\n",
+        questionSeventeen = "d) Philomena recently noted that some critical documents in her computer were encrypted and\n" +
+                "she was forced to pay a certain fee through the Internet to decrypt her files\n" +
+                "Required:\n" +
+                "i) Identify this type of attack (1 Mark)\n" +
+                "ii) Outline any FOUR possible causes for the attack (4 Marks)\n",
+
+        questionEighteen = "QUESTION FOUR [20 MARKS]",
+        questionNineteen = "a) What is the boot order? Briefly Explain (2 Marks)\n",
+        questionTwenty = "b) Explain the process and implication of setting the boot order (4 Marks)\n",
+        questionTwentyOne = "c) Explain the function of each of the following keys during POST process in a computer\n" +
+                "system:\n" +
+                "i) Esc (2 Marks)\n" +
+                "ii) F10 (2 Marks)\n" +
+                "iii) F12 (2 Marks)\n",
+        questionTwentyTwo = "d) Computer technicians experience several challenges when carrying out routine maintenance.\n" +
+                "Outline any FOUR challenges that can be experienced (4 Marks)\n",
+        questionTwentyThree = "e) Explain what is BIOS and describe any THREE kinds of BIOS. (4 Marks)\n",
+
+        questionTwentyFour = "QUESTION FIVE [20 MARKS]\n",
+        questionTwentyFive = "a) Briefly explain the difference between a Graphical User Interface (GUI) and a CommandLine Interface-based operating system. (2 Marks)",
+        questionTwentySix = "b) While trying to use MS DOS you encounter the COPY and XCOPY commands. Clearly\n" +
+                "explain when the use of these commands is appropriate. (2 Marks)\n",
+        questionTwentySeven = "c) Explain the difference between installing an operating system and installing an Office\n" +
+                "production suite such as MS Office. (6 Marks)\n",
+        questionTwentyEight = "d) What do the following shortcuts or combination keys do while working on a Windowsbased system?\n" +
+                " i) Ctrl + Shift + Down Arrow Key (2 Marks)\n" +
+                " ii) Windows Key + L (2 Marks)\n" +
+                " iii) Ctrl + Alt + Del (2 Marks)\n" +
+                " iv) Alt + F4 (2 Marks)\n",
+        questionTwentyNine = "e) Write a simple batch file that will create INST_CUST as a sub-directory in your Desktop\n" +
+                "folder, then create TIZI as sub-directory in INST_CUST. After this, copy word document\n" +
+                "files from Documents to TIZI (2 Marks)\n"
+    ),
+    FullPaperData(
+        unitName = "Network Programming/Client-Server Comp",
+        academicYear = "2018",
+        unitCode = "BAC 2303/BIT 3105/BCT 2203\n",
+        monthYear = "DEC 2018",
+
+        questionOne = "QUESTION ONE [30 MARKS]",
+        questionTwo = "(a) Briefly explain why heterogeneity caused by different operating systems and hardware present challenges to distributed application programming. [4 Marks]",
+        questionThree = "(b) Identify and briefly discuss any two (2) computing resources that an operating system\n" +
+                "manages. [4 Marks]\n",
+        questionFour = "(c) List and briefly explain three (3) benefits of middleware to network applications.\n" +
+                "[6 Marks]\n",
+        questionFive = "(d) Explain why it is necessary to have the source address on an Ethernet frame. [4 Marks]\n",
+        questionSix = "(e) (i) State the similarity between physical and logical addresses. [2 Marks]\n" +
+                " (ii) What is the difference between the two? [2 Marks]\n",
+        questionSeven = "(f) Define the following terms as they relate to network programming:\n" +
+                " (i) port [1 Mark]\n" +
+                " (ii) host [1 Mark]\n" +
+                " (iii) child process [1 Mark]\n" +
+                " (iv) transparency [1 Mark]\n",
+        questionEight = "(g) List and briefly explain any two (2) things a child process inherits from a parent process.\n" +
+                "[4 Marks]\n",
+
+        questionNine = "QUESTION TWO [20 MARKS]",
+        questionTen = "(a) (i) With an aid of a simple program, explain the concept of tiers. [6 Marks]\n" +
+                " (ii) Is your program a “1-Tier”, “2-Tier” or “3-Tier”? Explain. [4 Marks]\n",
+        questionEleven = "(b) What are the entries that make up a half association? Describe them. [6 Marks]\n",
+        questionTwelve = "(c) It has been said that flow control and congestion control are equivalent. Is this true for the\n" +
+                "Internet’s connection-oriented service? Are the objectives of flow control and congestion\n" +
+                "control the same? [4 Marks]\n",
+
+        questionThirteen = "QUESTION THREE [20 MARKS]",
+        questionFourteen = "(a) A middleware provides two (2) forms of distribution transparency. List and discuss them.\n" +
+                "[4 Marks]\n",
+        questionFifteen = "(b) Extensibility as an attribute of a middleware refers to the ease with which a system can be\n" +
+                "adapted to meet new requirements. List and explain the three (3) types of extensibility.\n" +
+                "[6 Marks]\n",
+        questionSixteen = "(c) One can not discuss a real data link layer implementation without Ethernet featuring in the\n" +
+                "discussion. Explain the three (3) perspectives of Ethernet in this discussion. [6 Marks]\n",
+        questionSeventeen = "(d) Type of Service and Time-To-Live are two of the many fields of an IP datagram. Briefly\n" +
+                "explain their function. [4 Marks]\n",
+
+
+        questionEighteen = "QUESTION FOUR [20 MARKS]",
+        questionNineteen = "KCA University has purchased the Class B IP address 150.5.0.0. The Network Engineer has\n" +
+                "discovered that he needs to create subnets with 100 hosts for the University. You have been assigned\n" +
+                "the task of implementing these subnetworks using the purchased Class B address.\n",
+        questionTwenty = "(a) What is the number of hosts in binary? [2 Marks]",
+        questionTwentyOne = "(b) What is the subnet mask for entire network? Show your working. [4 Marks]\n",
+        questionTwentyTwo = "(c) Determine the increment and list the IP address ranges for the first six subnetworks.\n" +
+                "[6 Marks]\n",
+        questionTwentyThree = "(d) Discuss any four (4) merits of using VLANs in your network. [4 Marks]\n",
+        questionTwentyFour = "(e) Briefly discuss why subnetting is important in distributed systems deployment. [4 Marks]\n",
+
+        questionTwentyFive = "QUESTION FIVE [20 MARKS]",
+        questionTwentySix = "(a) Using the appropriate Network APIs, differentiate between a Client program and a Server\n" +
+                "program. [6 Marks]\n",
+        questionTwentySeven = "(b) List and breifly explain the two (2) types of TCP segements. [4 Marks]\n",
+        questionTwentyEight = "(c) Using an appropriate diagram, explain how RPC is implemented. [10 Marks]\n"
+    ),
+
+    FullPaperData(
         unitName = "Java Programming",
         academicYear = "2022",
         unitCode = "BSC 301",
@@ -208,6 +343,748 @@ val fullPaperData = listOf(
         questionTwentySeven = "22. What is the difference between a class and an object?",
         questionTwentyEight = "23. What is the difference between a class and an object?",
     ),
+    FullPaperData(
+        unitName = "Internet Application Programming",
+        academicYear = "2018",
+        unitCode = "BBIT 201",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "a) Describe the steps followed in developing a web application. [4 Marks]",
+        questionThree = "b) Discuss the two-tier architecture for a web application. [4 Marks]",
+        questionFour = "c) Describe any three web technologies\n" +
+                "6 Marks\n",
+        questionFive = "d) Explain the difference between the following CSS rules.\n [4 Marks]",
+        questionSix = "i. .odd { border: dashed; color:red }\n" +
+                "ii. #x { border: dashed; color:blue }\n",
+        questionSeven = "e) Write sample HTML code to create the document below\n" +
+                "8 Marks\n",
+
+        questionEight = "QUESTION TWO [20 MARKS]\n",
+        questionNine = "a) Write a javaScript program that uses two functions. The first function receives two integers\n" +
+                "from the user using dialog boxes then passes the values to another function that calculates the\n" +
+                "product of the two numbers and returns the correct answer to the calling function.\n" +
+                "10 Marks\n",
+        questionTen = "b) Describe THREE uses of a form in an online application.\n" +
+                "6 Marks\n",
+        questionEleven = "c) Differentiate between GET and POST method values in a form.\n" +
+                "4 Marks\n",
+
+        questionTwelve = "QUESTION THREE [20 MARKS]",
+        questionThirteen = "a) Define the concepts of a well-formed XML document, and a valid XML document.\n" +
+                "6 Marks\n",
+        questionFourteen = "b) Differentiate between an attribute and an element in HTML.\n" +
+                "4 Marks\n",
+        questionFifteen = "c) Write the HTML code to make the word kca an absolute hyperlink to www.kca.ac.ke\n" +
+                "5 Marks\n",
+        questionSixteen = "d) Write the CSS code to add a pink background color to a class selector called “drivein”\n" +
+                "5 Marks\n",
+
+        questionSeventeen = "QUESTION FOUR [20 MARKS]",
+        questionEighteen = "a) Write a JavaScript program to receive ten floating point values, store them in an array, then\n" +
+                "calculate and display their average. 8 Marks\n",
+        questionNineteen = "b) Write a JavaScript program to get the user input for the floor the user wants to go using a lift\n" +
+                "and displays the appropriate remark using switch case. 8 Marks\n",
+        questionTwenty = "c) Describe TWO uses of graphics in a web page.\n" +
+                "2 Marks\n",
+        questionTwentyOne = "d) Write html tags to display an image stored in the path c:\\Documents\\Folder2\\mypic.gif\n" +
+                "2 Marks\n",
+
+
+        questionTwentyTwo = "QUESTION FIVE [20 MARKS]",
+        questionTwentyThree = "a) Explain the use of marquee element in a web page.\n" +
+                "2 Marks\n",
+        questionTwentyFour = "a) Discuss the importance of a DBMS as used in online applications. Hence give two examples\n" +
+                "of open source DBMS products apart from mySQL. 4 Marks\n",
+        questionTwentyFive = "b) Write a PHP program to calculate and display cost of the products using the formula:\n" +
+                "Cost=TAX * (quantity*unit price). Assume the TAX is a constant 0.16. The values of\n" +
+                "quantity and unit price are send as form values to the backend for server side processing.\n" +
+                "10 Marks\n",
+        questionTwentySix = "c) Write a PHP program to print even numbers greater than 1 and less than 100 on a web page\n" +
+                "the browser opens. 4 Marks\n",
+    ),
+    FullPaperData(
+        unitName = "System Development Methodology",
+        academicYear = "2018",
+        unitCode = "BBIT207",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "a) Discuss the key drivers of knowledge management (6 Marks)\n",
+        questionThree = "b) Describe the approaches to addressing competitive effectiveness using IS/IT (6 Marks)\n",
+        questionFour = "c) Describe the potential benefits and the potential blocks to problem cognition when using\n" +
+                "techniques in system development (2 Marks)\n",
+        questionFive = "d) Describe THREE barriers to a new business entering an established market according to\n" +
+                "Michael Porter. (6 Marks)\n",
+        questionSix = "e) Explain what is meant by “iterative prototyping” in the context of systems analysis and\n" +
+                "design (2 Marks)\n",
+        questionSeven = "f) Define the term information systems development (2 Marks)",
+        questionEight = "g) The Human Resources and Finance departments of an organization both use the payroll\n" +
+                "system. Employees can access the system to look at their pay details and to change their\n" +
+                "home address. In this context, explain the importance of the qualities of: (6 Marks)\n",
+        questionNine = "i) accessibility\n" +
+                "ii) privacy\n" +
+                "iii) security\n",
+
+
+
+        questionTen = "QUESTION TWO",
+        questionEleven = "a) Compare and contrast any two of the following systems development methodologies based\n" +
+                "on advantages, disadvantages and phases (provide relevant methodology for each\n" +
+                "classification ) (14 Marks)\n",
+        questionTwelve = "i. Blended methodologies\n" +
+                "ii. Object oriented methodologies\n" +
+                "iii. People oriented methodologies\n" +
+                "iv. Organisation oriented methodologies\n",
+        questionThirteen = "b) Discuss the view that modern life cycle models with their emphasis on prototyping,\n" +
+                "create systems that are often fragmented and difficult to integrate; of unsatisfactory\n" +
+                "reliability, performance, and functionality; and of limited longevity. (6 Marks)\n",
+
+
+        questionFourteen = "QUESTION THREE",
+        questionFifteen = "a) Describe a methodology which can be considered to reflect the \"science\" paradigm and a\n" +
+                "methodology which can be considered to reflect the \"systems\" paradigm. Refer to the main\n" +
+                "objectives, phases/activities, and deliverables of the methodology in your description.\n" +
+                "Justify your classification of the methodologies. (10 Marks)\n",
+        questionSixteen = "b) A systematic approach to practice, should be used by the ISD professional when\n" +
+                "developing information systems.\n",
+        questionSeventeen = "i) List and explain THREE overall objectives that should form the framework for\n" +
+                "systematic practice in the development of an information system. (6 Marks)\n",
+        questionEighteen = "ii) Briefly explain TWO areas where lack of focus by the ISD professional might have\n" +
+                "undesirable effects on the development of an information system. (4 Marks)\n",
+
+
+        questionNineteen = "QUESTION FOUR",
+        questionTwenty = "Explain and compare the implications of choosing Object Oriented Systems Development, as\n" +
+                "opposed to Structured Systems Development, for the following challenges in developing\n" +
+                "software. Your answer should include discussion of the advantages and disadvantages of each\n" +
+                "approach for each challenge.\n",
+        questionTwentyOne = "a) Designing the software. (5 Marks)",
+        questionTwentyTwo = "b) Producing the software code. (5 Marks)",
+        questionTwentyThree = "c) Testing the software product. (5 Marks)",
+        questionTwentyFour = "d) Documenting the software process. (5 Marks)",
+
+
+        questionTwentyFive = "QUESTION FIVE",
+        questionTwentySix = "A company has over the years used software development methods that rely on documented\n" +
+                "specifications and designs. Agile methods are being considered seriously in the pursuit of growth and internationalisation of the business.\n",
+        questionTwentySeven = "a) Explain the agile principles for rapid software development and justify its appropriateness as a method for adoption. (12 Marks)",
+        questionTwentyEight = "b) Discuss the view that modern life cycle models with their emphasis on prototyping, create\n" +
+                "systems that are often fragmented and difficult to integrate; of unsatisfactory reliability,\n" +
+                "performance, and functionality; and of limited longevity. (8 Marks)\n",
+    ),
+    FullPaperData(
+        unitName = "Data Warehousing And Data Mining",
+        academicYear = "2018",
+        unitCode = "BBIT300 BIT3201A",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "a) Define the concept of data warehouse.\n" +
+                "2 Marks\n",
+        questionThree = "b) In the context of data warehousing what is data transformation?\n" +
+                "2 Marks\n",
+        questionFour = "c) Differentiate between slice and dice operations in OLAP.\n" +
+                "4 Marks\n",
+        questionFive = "d) Discuss the characteristics of a data ware house.\n" +
+                "4 Marks\n",
+        questionSix = "e) Explain the use of the knowledge base in a data mining system.\n" +
+                "4 Marks\n",
+        questionSeven = "f) Differentiate fact table and dimension table.\n" +
+                "4 Marks\n",
+        questionEight = "g) Briefly discuss THREE schemas for OLAP systems.\n" +
+                "6 Marks\n",
+        questionNine = "h) Differentiate between descriptive and predictive data mining tasks. Give two examples for each.\n" +
+                "4 Marks\n",
+
+
+        questionTen = "QUESTION TWO [20 MARKS]",
+        questionEleven = "a) Briefly describe the cluster analysis as used in data mining.\n" +
+                "4 Marks\n",
+        questionTwelve = "b) Explain SIX requirements for cluster analysis.\n" +
+                "6 Marks\n",
+        questionThirteen = "c) Discuss any FIVE fields where cluster analysis can be applied\n" +
+                "5 Marks\n",
+        questionFourteen = "d) Discuss any FOUR cluster analysis techniques as used in data mining.\n" +
+                "5 Marks\n",
+
+
+        questionFifteen = "QUESTION THREE [20 MARKS]",
+        questionSixteen = "a) Discuss the concept of classification as used in data mining.\n" +
+                "4 Marks\n",
+        questionSeventeen = "b) Briefly describe the steps followed classification data mining task.\n" +
+                "4 Marks\n",
+        questionEighteen = "c) Discuss any THREE classification techniques in data mining.\n" +
+                "9 Marks\n",
+        questionNineteen = "d) Differentiate between data warehouse and operational databases?\n" +
+                "3 Marks \n",
+
+
+        questionTwenty = "QUESTION FOUR [20 MARKS]",
+        questionTwentyOne = "a) Briefly describe the concept of business intelligence.\n" +
+                "3 Marks\n",
+        questionTwentyTwo = "b) Explain THREE differences between the OLTP (On-Line Transaction Processing) systems and OLAP (Online Analytical Processing) systems.\n" +
+                "6 Marks\n",
+        questionTwentyThree = "c) Discuss at least SIX steps involved in data warehousing.\n" +
+                "6 Marks\n",
+        questionTwentyFour = "d) Briefly explain the FIVE primitives for specifying a data mining task.\n" +
+                "5 Marks.\n",
+
+        questionTwentyFive = "QUESTION FIVE [20 MARKS]",
+        questionTwentySix = "a) Briefly explain the concept of data scrubbing.\n" +
+                "2 Marks\n",
+        questionTwentySeven = "b) Association rules analysis is a technique to uncover how items are associated to each other. There are three common ways to measure association: confidence, support and lift. Study the following transaction table and answer the questions that follow.",
+        questionTwentyEight = "TID |  ITEMS\n" +
+                "1 |  Apples,Beer,Rice,chicken\n" +
+                "2 |  Apples,Beer,Rice\n" +
+                "3 |  Apples, Beer\n" +
+                "4 |  Apples, Mangoes\n" +
+                "5 |  Milk, Beer,Rice,chicken\n" +
+                "6 |  Milk,Beer,Rice\n" +
+                "7 |  Milk,Beer\n" +
+                "8 |  Milk, Mangoes\n",
+        questionTwentyNine = "i. Calculate and explain the confidence of {Apples->Beer}\n" +
+                " 3 Marks\n" +
+                "ii. Calculate and explain the support for apple.\n" +
+                "3 Marks\n" +
+                "iii. Calculate and explain the lift of {Apple->Beer}\n" +
+                "3 Marks\n",
+        questionTwentyThirty = "c) Discuss the role of Apriori principle in association rule mining.\n" +
+                "5 Marks\n\n\n" +
+                "d) Discuss any FOUR dimensions of data quality.\n" +
+                "4 Marks\n ",
+    ),
+    FullPaperData(
+        unitName = "Information System Management",
+        academicYear = "2018",
+        unitCode = "BBIT307",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "a) Distinguish between financial audit and IS audit. [4 Marks]",
+        questionThree = "b) Describe Standards, Procedures and Guidelines in ISACA.\n" +
+                "[6 Marks]\n",
+        questionFour = "c) Discuss the following types of IT audit.\n",
+        questionFive = "i. Integrated Audit\n" +
+                "ii. Compliance Audit [4 Marks]\n",
+        questionSix = "d) Explain the following in relation to audit risks.\n" +
+                "i. Detection risk\n" +
+                "ii. Operational risk [4 Marks]\n",
+        questionSeven = "e) Distinguish between circumstantial and direct types of evidence.\n" +
+                "i Direct evidence\n" +
+                "ii Indirect evidence [4 Marks]\n",
+        questionEight = "f) Discuss the concept of IT governance and explain any two of its functions.\n" +
+                "[4 Marks]\n",
+        questionNine = "g) As an IT auditor discuss the main interests you would have in the following\n" +
+                "phases of systems development.\n" +
+                "i. Analysis\n" +
+                "ii. Development phase [4 Marks]\n",
+
+
+
+        questionTen = "QUESTION TWO",
+        questionEleven = "a) Distinguish the terms Computer forensics and information forensics.\n" +
+                "[2 Marks]\n",
+        questionTwelve = "b) With the aid of a suitable diagram discuss the general IT audit evidence life cycle\n" +
+                "which may be adopted when auditing systems. [8 Marks]\n",
+        questionThirteen = "c) Explain the importance of ISACA in IT auditing [4 Mark]",
+        questionFourteen = "d) Briefly describe the structure of the COBIT framework. [6 Marks]\n",
+
+
+        questionFifteen = "QUESTION THREE",
+        questionSixteen = "a) Explain the term Computer Assisted Auditing Techniques (CAATs). [2 Marks]",
+        questionSeventeen = "b) Explain the main software tools and techniques available in most CAATs. [4 Marks]\n",
+        questionEighteen = "c) Discuss any three main types of CAATs used in IS auditing procedures. [6 Marks]\n",
+        questionNineteen = "d) Briefly explain the functions of the following online CAATTs.\n" +
+                "i. SCARF\n" +
+                "ii. BEAST [4 Marks]\n",
+        questionTwenty = "e) Discuss any two code of ethics provided by ISACA [4 Marks]\n",
+
+
+        questionTwentyOne = "QUESTION FOUR",
+        questionTwentyTwo = "a) Distinguish between dead and live data analysis. [4 Marks]",
+        questionTwentyThree = "b) Discuss the following terms used in business criterion in COBIT.\n" +
+                "i. Compliance\n" +
+                "ii. Integrity\n" +
+                "iii. Efficiency [6 Marks]\n",
+        questionTwentyFour = "c) Explain the concept of CSA. [2 Marks]",
+        questionTwentyFive = "d) Explain the term work papers and state their relevance in IS auditing. [2 Marks]\n",
+        questionTwentySix = "e) Explain the following types of controls indicating the technical, administrative and\n" +
+                "physical mechanisms which would be used to realize them in server platforms.\n" +
+                "i. Preventative\n" +
+                "ii. Detective\n" +
+                "iii. Corrective [6 Marks]\n",
+
+
+        questionTwentySeven = "QUESTION FIVE",
+        questionTwentyEight = "(a) Describe and give an example of each of the following: Contingency planning,\n" +
+                "Incident response, Disaster Recovery and Business Continuity\n" +
+                "With a well labeled diagram, relate the three given above [4 Marks]\n",
+        questionTwentyNine = "b). Discuss in detail the information system audit process. [10 Marks]\n",
+        questionTwentyThirty = "c) An Information system auditor encounters several computer forensic scenarios in the\n" +
+                "course of his work. Discus two common scenarios in the field [2 Marks]\n",
+    ),
+    FullPaperData(
+        unitName = "Network Installation And Maintenance",
+        academicYear = "2018",
+        unitCode = "BCT2304",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "(a) Explain how a Virtual Private Network is implemented. [4 Marks]\n",
+        questionThree = "(b) (i) What are the functions of the Transport and Network Layers of the OSI Model? [4 Marks]\n",
+        questionFour = " (ii) There are three (3) types of domains that a network administrator should worry about namely collision, broadcast and bandwith. Briefly explain what each of these domains are and which devices addresses them. [9 Marks]",
+        questionFive = "(c) Routers within the networks of large organisations often learn about connectivity using linkstate protocols. Describe the general behaviour of link-state protocols. [6 Marks]",
+        questionSix = "(d) Explain briefly the difference in functionality between the following network troubleshooting\n" +
+                "commands:\n" +
+                "i. Nslookup and Tracert [2 Marks]\n" +
+                "ii. ipconfig /all and getmac [2 Marks]\n",
+        questionSeven = "(e) Which of the following devices can an administrator use to segment their LAN? Choose all that apply and explain the reason for your choice. [3 Marks]\n" +
+                "A. Hubs\n" +
+                "B. Repeaters\n" +
+                "C. Switches\n" +
+                "D. Bridges\n" +
+                "E. Routers\n" +
+                "F. Media Converters\n",
+
+
+
+        questionEight = "QUESTION TWO [20 MARKS]",
+        questionNine = "(a) Which of the following are private IP addresses? 10.1.1.1, 172.32.20.55, 192.167.10.10,\n" +
+                "172.25.197.250, 224.6.6.6, 192.168.5.5 [3 Marks]\n",
+        questionTen = "(b) State the classes to which IP addresses can be grouped and give the ranges for the first octet decimal values. [5 Marks]",
+        questionEleven = "(c) Calculate the number of networks that can be found in Class A, Class B and Class C.\n" +
+                "[3 Marks]\n",
+        questionTwelve = "(d) Calculate the number of hosts in each Class A network, Class B network. [4 Marks]\n",
+        questionThirteen = "(e) Write the network and broadcast addresses for the IP Address 210.189.137.100 with Subnet\n" +
+                "Mask – 255.255.255.240 [2 Marks]\n",
+        questionFourteen = "(f) State the ranges of private addresses for Class A, Class B and Class C. [3 Marks]\n",
+
+
+        questionFifteen = "QUESTION THREE [20 MARKS]",
+        questionSixteen = "(a) (i) Explain the difference that exists between installing a local printer and a network printer.\n" +
+                "[6 Marks]\n" +
+                " (ii) Describe the procedure for installing a network printer in a Windows environment.\n" +
+                "[6 Marks]\n",
+        questionSeventeen = "(b) Explain how data is transmitted along a fibre optic cable. [6 Marks]\n",
+        questionEighteen = "(c) Briefly explain the difference between Legacy and EFI partition manager. [2 Marks]\n",
+        questionTwenty = "QUESTION FOUR [20 MARKS]",
+        questionNineteen = "(a) Give one example of a device on a network that is required to operate all seven layers of the\n" +
+                "OSI Reference Model. [2 Marks]\n",
+        questionTwentyOne = "(b) The data link layer in the IEEE standard is divided into two sublayers: LLC and MAC.\n" +
+                "Indicate the functions performed by each sublayer. [6 Marks]\n",
+        questionTwentyTwo = "(c) A host was given the IP addresses 192.168.3.219 /27. Consider this address and indicate:\n" +
+                "i. The network address to which the host belongs. [2 Mark]\n" +
+                "ii. The network broadcast address to which the host belongs. [2 Mark]\n" +
+                "iii. The total number of hosts available in the network [2 Mark]\n",
+        questionTwentyThree = "(d) Identify three (3) physical characteristics of fibre optic cables that make them more suitable for high speed digital data transmission than copper cables. [6 Marks]\n",
+
+
+        questionTwentyFour = "QUESTION FIVE [20 MARKS]",
+        questionTwentyFive = "(a) (i) With regard to Windows Server installation, licensing is a vital component. Explain the two (2) main licensing approaches. [4 Marks]",
+        questionTwentySix = " (ii) What is the difference between “Role-Based” and “Remote Desktop Management”\n" +
+                "servers. [4 Marks]\n",
+        questionTwentySeven = "(b) List and briefly discuss any four (4) functions of the NIC. [8 Marks]\n",
+        questionTwentyEight = "(c) What do the following commands do in Linux: [4 Marks]\n" +
+                "i. ls -l /etc/samba\n" +
+                "ii. ifconfig\n" +
+                "iii. ps\n" +
+                "iv. grep\n",
+    ),
+    FullPaperData(
+        unitName = "Computer Organisation And Architecture",
+        academicYear = "2018",
+        unitCode = "BISF& BSD 1102",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "a) Distinguish between Computer organization and computer architecture (2 Marks)\n",
+        questionThree = "b) What are the essential differences between an assembly language and a high-level\n" +
+                "language (4 Marks)\n",
+        questionFour = "c) Explain what the role of the operating system is and why it is needed (6 Marks)\n",
+        questionFive = "d) Explain the meaning of the following terms used when describing a computer’s\n" +
+                "hardware:\n" +
+                "i) Temporary memory storage (4 Marks)\n" +
+                "ii) Permanent disk storage (4 Marks)\n",
+        questionSix = "e) Perform the following hexadecimal computation\n" +
+                "i) 3Fx7E (5 Marks)\n" +
+                "ii) FE17+89AB (5 Marks)\n",
+
+
+
+        questionSeven = "QUESTION TWO",
+        questionEight = "a) State the importance of the virtual memory in a computer (2 Marks)\n",
+        questionNine = "b) Briefly explain the meaning of the following two technologies and provide examples of\n" +
+                "their application:\n" +
+                "i) Bluetooth (3 Marks)\n" +
+                "ii) WiFi (3 Marks)\n",
+        questionTen = "c) Describe the following devices:\n" +
+                "i) HDMI cable (3 Marks)\n" +
+                "ii) USB cable (3 Marks)\n" +
+                "iii) LCD projector (3 Marks)\n" +
+                "iv) Bar code Scanner (3 Marks)\n",
+
+
+
+        questionEleven = "QUESTION THREE [20 MARKS]",
+        questionTwelve = "a) Describe THREE malwares and explain their effects on computer systems (6 Marks)\n",
+        questionThirteen = "b) Explain the attributes found in Fourth generation languages (8 Marks)\n",
+        questionFourteen = "c) Microsoft word has successfully edged out the typewriter. State the functionalities that\n" +
+                "have made this possible (6 Marks)\n",
+
+
+        questionFifteen = "QUESTION FOUR [20 MARKS]",
+        questionSixteen = "a) Distinguish between\n" +
+                "i) Interpreter and compiler (2 Marks)\n" +
+                "ii) Loader and linker (2 Marks)\n" +
+                "iii) Accumulator and register (2 Marks)\n" +
+                "iv) Utility software and application software (2 Marks)\n" +
+                "v) Inkjet and dot matrix printer (2 Marks)\n",
+        questionSeventeen = "b) i) Draw a schematic diagram of a hard disk, naming all the essential components\n" +
+                "(6 Marks)\n" +
+                "iii) Compute the capacity of a hard disk with the following specifications: 5 platters\n" +
+                "with all sides recordable, 80 tracks per surface of the disk, 128 sectors per surface\n" +
+                "of the disk and storage density of 512 bytes per sector per track. (Show your\n" +
+                "workings clearly) (4 Marks)\n",
+
+
+
+        questionEighteen = "QUESTION FIVE [20 MARKS]",
+        questionNineteen = "a) Define the term ergonomics and used in computer systems design (2 Marks)\n",
+        questionTwenty = "b) State THREE functions of the CPU (3 Marks)\n",
+        questionTwentyOne = "c) Name THREE main buses found in computer systems (3 Marks)\n",
+        questionTwentyTwo = "d) Distinguish between a graphical user interface and a command line interface and give\n" +
+                "examples of each (6 Marks)\n",
+        questionTwentyThree = "e) Describe the characteristics of the ROM and give its use (6 Marks)\n",
+        questionTwentyFour = "",
+        questionTwentyFive = "",
+        questionTwentySix = "",
+    ),
+    FullPaperData(
+        unitName = "Internet Technology",
+        academicYear = "2018",
+        unitCode = "BIT1102A",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "a) TCP/IP protocols had several important features that allowed them to meet the need for worldwide data communication. Explain briefly any three of these features. 3 Marks",
+        questionThree = "b) Internet access is the ability of individuals and organizations to connect to the Internet using computers and other devices. There are many ways a computer or a terminal can connect to the internet. From this background, compare the following Internet connection types\n" +
+                "i. DSL and ISDN\n" +
+                "ii. Cable connection and leased line\n",
+        questionFour = "c) Briefly discuss the history of the Internet. 5 Marks",
+        questionFive = "d) Describe how a computer using DNS resolves the IP address of a domain name. 6 Marks\n",
+        questionSix = "e) Internet is a global network of networks through which computers communicate worldwide. How then does data move around through this global network? The answer is switching. Switching is a process used to forward packets coming in from one port to a port leading towards the destination. From this background discuss the following switching techniques. 4 Marks\n" +
+                "i. Circuit switching\n" +
+                "ii. Packet switching\n",
+        questionSeven = "f) Internet governance is the development and application of shared principles, norms, rules, decisionmaking procedures, and programs that shape the evolution and use of the Internet. In this context, discuss the main role for each of the following internet governance bodies: 6 Marks\n" +
+                "i. the Internet Engineering Task Force (IETF),\n" +
+                "ii. the Internet Research Steering Group (IRSG),\n" +
+                "iii. the Internet Research Task Force (IRTF.\n",
+        questionEight = "g) Describe three problems that were experienced while using hosts.txt for that mapping host names to the numerical addresses of computers on the ARPANET 6 Marks",
+
+
+        questionNine = "QUESTION TWO [20 MARKS]",
+        questionTen = "a) Discuss the following communication services as used on the Internet: (4Marks)\n" +
+                "(i) Weblogs\n" +
+                "(ii) Wikis\n",
+        questionEleven = "b) Discuss the difference between classful and classless IP addressing (4 Marks)\n",
+        questionTwelve = "c) State the security challenges of having mobile phones accessing the internet (4 Marks)\n",
+        questionThirteen = "d) Discuss how Network address translation works (4 Marks)\n",
+        questionFourteen = "e) Explain why two different search engines may provide different results when provided with the same search term. (4 Marks)",
+
+
+
+        questionFifteen = "QUESTION THREE [20 MARKS]",
+        questionSixteen = "a) Describe four Windows TCP/IP utilities used in troubleshooting the internet (include their use)\n" +
+                "(8 Marks)\n",
+        questionSeventeen = "b) Explain Three-Way Handshake Mechanism used by TCP to terminate a Session reliably.\n" +
+                "(6 Marks)\n",
+        questionEighteen = "c) Describe the components of the URL using a suitable example (4 Marks)",
+        questionNineteen = "d) Identify atleast four port numbers that are useful on the Internet (2 Marks)\n",
+
+
+        questionTwenty = "QUESTION FOUR [20 MARKS]",
+        questionTwentyOne = "a) Outline the role of protocols as applied to the Internet and name three protocols frequently used on the Internet. (4 Marks)",
+        questionTwentyTwo = "b) Explain how the Domain Name System allows computers to contact each other to exchange email or display web pages. (6 Marks)",
+        questionTwentyThree = "c) Briefly explain the roles of the following devices (4 Marks)\n" +
+                "i. Switch\n" +
+                "ii. Router\n" +
+                "iii. Hub\n" +
+                "iv. Bridge\n",
+        questionTwentyFour = "d) HTTP error codes are three digit numbers with the first digit defining the class of the status code. Explain the following status codes (6 Marks)\n" +
+                "i) 2xx\n" +
+                "ii) 4xx\n" +
+                "iii) 5xx\n",
+
+
+
+        questionTwentyFive = "QUESTION FIVE [20 MARKS]",
+        questionTwentySix = "a) Explain the term “ Internet of things”. (4 Marks)\n",
+        questionTwentySeven = "b) Why is the internet based on the client server architecture? (3 Marks)\n",
+        questionTwentyEight = "c) How does the Dynamic host configuration protocol give the IP addresses? (4 Marks)\n",
+        questionTwentyNine = "d) What are the ranges in IPv4 IP classful addressing (5 Marks)\n",
+        questionTwentyThirty = "e) Why is the TCP better than UDP in internetworking (4 Marks)\n",
+    ),
+    FullPaperData(
+        unitName = "Computer Organisation And Architecture/Applications",
+        academicYear = "2018",
+        unitCode = "BIT 1109/BBIT 102",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "a) Identify the various components of following email address:\n" +
+                "kansime@yahoo.com. (3 Marks)\n",
+        questionThree = "b) Explain the following disk management operations:\n" +
+                "i. Disk defragmentation (2 Marks)\n" +
+                "ii. Disk compression (2 Marks)\n" +
+                "iii. Disk partitioning (2 Marks)\n",
+        questionFour = "c) Outline FIVE features of first generation computers (5 Marks)",
+        questionFive = "d) With relevant examples, distinguish between multiuser and a single user operating system\n" +
+                " (4 Marks)\n",
+        questionSix = "e) Outline FIVE factors to consider when selecting secondary storage devices. (5 Marks)",
+        questionSeven = "f) Highlight THREE features of 3rd generation programming languages. (3 Marks)",
+        questionEight = "g) Distinguish between the internet and world wide web. (4 Marks)\n",
+
+
+        questionNine = "QUESTION TWO [20 MARKS]",
+        questionTen = "a) Table below is an extract of data in a spreadsheet program. Use it to answer the questions that Follow:",
+        questionEleven = "1     |       A       |       B       |       C       |       D       |E \n" +
+                "2      |       NAME        |       |       Basic salary        |       House Allowance     |       Medical Allowance       |       Tax \n" +
+                "3      |       Joseph      |       10000       |       3000        |       1000         \n" +
+                "4      |       Pius        |       5000        |       2000        |       500     \n" +
+                "5      |       Betty       |       7000        |       1000        |       400         \n" +
+                "6      |       Joyce       |       4500        |       500         |       300         |" +
+                "7      |       TAX         |       16%\n",
+        questionTwelve = "Using cell addresses only, write a formula that could be used to determine:\n" +
+                "i. Tax at 16% of gross pay for joseph (2 Marks)\n" +
+                "ii. Total for each column (3 Marks)\n" +
+                "iii. Lowest salary (2 Marks)\n" +
+                "iv. Highest Salary (1 Mark)\n" +
+                "v. Distinguish between relative referencing and absolute referencing. (2 Marks)",
+        questionThirteen = "b) Citing examples, discuss how the use of computers have impacted businesses in Kenya.\n" +
+                " (10 Marks)\n",
+
+
+
+        questionFourteen = "QUESTION THREE [20 MARKS]",
+        questionFifteen = "a) The Internet has revolutionized the way businesses are conducted in this century.\n",
+        questionSixteen = "i. Explain FIVE benefits of e-commerce to the business. (10 Marks)\n" +
+                "ii. Enumerate FOUR benefits of teleworking to an organization. (4 Marks)\n",
+        questionSeventeen = "b) Discuss the components of the central processing unit. (6 Marks)\n",
+
+
+        questionEighteen = "QUESTION FOUR\n [20 MARKS]",
+        questionNineteen = "a) Explain THREE difference between Read Only Memory (ROM) and Random Access Memory\n" +
+                "(RAM). (3 Marks)\n",
+        questionTwenty = "b) Discuss the THREE different types of user interfaces. (6 Marks)\n",
+        questionTwentyOne = "c) Varying requirements have led to the development of printers with different capabilities. Discuss the factors that would be considered when purchasing a printer. (10 Marks)\n",
+        questionTwentyTwo = "d) Define a peripheral device as used in computing. (1 Mark)\n",
+
+
+        questionTwentyThree = "QUESTION FIVE [20 MARKS]",
+        questionTwentyFour = "a) Convert the decimal number 9910 to:\n" +
+                "i. Binary (3 Marks)\n" +
+                "ii. Octal (2 Marks)\n" +
+                "iii. Hexadecimal systems. (2 Marks)\n",
+        questionTwentyFive = "b) Describe FIVE categories of application software indicating how they can be utilized in an\n" +
+                "organization. (10 Marks)\n",
+        questionTwentySix = "c) Define the following terms as used in word processors:\n" +
+                "i. Thesaurus (1 Mark)\n" +
+                "ii. Indentation (1 Mark)\n" +
+                "iii. Word wrap (1 Mark)\n",
+    ),
+    FullPaperData(
+        unitName = "System Development Methodology",
+        academicYear = "2018",
+        unitCode = "BBIT207",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "",
+        questionThree = "",
+        questionFour = "",
+        questionFive = "",
+        questionSix = "",
+        questionSeven = "",
+        questionEight = "",
+        questionNine = "",
+        questionTen = "",
+        questionEleven = "",
+        questionTwelve = "",
+        questionThirteen = "",
+        questionFourteen = "",
+        questionFifteen = "",
+        questionSixteen = "",
+        questionSeventeen = "",
+        questionEighteen = "",
+        questionNineteen = "",
+        questionTwenty = "",
+        questionTwentyOne = "",
+        questionTwentyTwo = "",
+        questionTwentyThree = "",
+        questionTwentyFour = "",
+        questionTwentyFive = "",
+        questionTwentySix = "",
+        questionTwentySeven = "",
+        questionTwentyEight = "",
+        questionTwentyNine = "",
+        questionTwentyThirty = "",
+    ),
+    FullPaperData(
+        unitName = "System Development Methodology",
+        academicYear = "2018",
+        unitCode = "BBIT207",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "",
+        questionThree = "",
+        questionFour = "",
+        questionFive = "",
+        questionSix = "",
+        questionSeven = "",
+        questionEight = "",
+        questionNine = "",
+        questionTen = "",
+        questionEleven = "",
+        questionTwelve = "",
+        questionThirteen = "",
+        questionFourteen = "",
+        questionFifteen = "",
+        questionSixteen = "",
+        questionSeventeen = "",
+        questionEighteen = "",
+        questionNineteen = "",
+        questionTwenty = "",
+        questionTwentyOne = "",
+        questionTwentyTwo = "",
+        questionTwentyThree = "",
+        questionTwentyFour = "",
+        questionTwentyFive = "",
+        questionTwentySix = "",
+        questionTwentySeven = "",
+        questionTwentyEight = "",
+        questionTwentyNine = "",
+        questionTwentyThirty = "",
+    ),
+    FullPaperData(
+        unitName = "System Development Methodology",
+        academicYear = "2018",
+        unitCode = "BBIT207",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "",
+        questionThree = "",
+        questionFour = "",
+        questionFive = "",
+        questionSix = "",
+        questionSeven = "",
+        questionEight = "",
+        questionNine = "",
+        questionTen = "",
+        questionEleven = "",
+        questionTwelve = "",
+        questionThirteen = "",
+        questionFourteen = "",
+        questionFifteen = "",
+        questionSixteen = "",
+        questionSeventeen = "",
+        questionEighteen = "",
+        questionNineteen = "",
+        questionTwenty = "",
+        questionTwentyOne = "",
+        questionTwentyTwo = "",
+        questionTwentyThree = "",
+        questionTwentyFour = "",
+        questionTwentyFive = "",
+        questionTwentySix = "",
+        questionTwentySeven = "",
+        questionTwentyEight = "",
+        questionTwentyNine = "",
+        questionTwentyThirty = "",
+    ),
+    FullPaperData(
+        unitName = "Mobile Computing",
+        academicYear = "2018",
+        unitCode = "BAC3115",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "a) Discuss the Wireless networks in comparison to fixed networks 8Marks\n",
+        questionThree = "b) Explain the effects of multipath propagation of signals 6Marks\n",
+        questionFour = "c) Elaborate some of the motivations of TDMA (Time Division Multiple Access)\n" +
+                "6Marks\n",
+        questionFive = "d) Discuss the characteristics of wireless LAN 6Marks\n",
+        questionSix = "e) Describe how CSMA/CA works 4Marks",
+
+        questionSeven = "QUESTION TWO\n",
+        questionEight = "a) What are the design goals of wireless LAN 8Marks\n",
+        questionNine = "b) Discuss the Euclidean Unit Disk Graph as used in mobile computing 6Marks\n",
+        questionTen = "c) What are the requirements for Mobile IP 6Marks\n",
+
+        questionEleven = "QUESTION THREE",
+        questionTwelve = "a) Discuss the characteristics of Dynamic Host Configuration Protocol (DHCP)\n" +
+                "6Marks\n",
+        questionThirteen = "b) Discuss the Advantages and Disadvantages Indirect TCP 6Marks\n",
+        questionFourteen = "c) Describe the following terms as used in mobile computing 8Marks\n",
+        questionFifteen = "i) Mobile Node (MN)",
+        questionSixteen = "ii) Home Agent (HA)",
+        questionSeventeen = "iii) Foreign Agent (FA)",
+        questionEighteen = "iv) Care-of Address (COA)",
+
+        questionNineteen = "QUESTION FOUR\n",
+        questionTwenty = "a). Using function examples, describe several types of WML Script main libraries\n" +
+                "8Marks\n",
+        questionTwentyOne = "b). Discuss some of application scenarios of mobile computing 8Marks\n",
+        questionTwentyTwo = "c). Discuss the properties of Inhibit Sense Multiple Access (ISMA) 4Marks\n",
+
+        questionTwentyThree = "QUESTION FIVE [20 MARKS]",
+        questionTwentyFour = "a) Discuss performance characteristics and disadvantages of GSM 8Marks\n",
+        questionTwentyFive = "b) Discuss Cocktail party as analogy for multiplexing 6Marks\n",
+        questionTwentySix = "c) Using a diagram describe format and content of a frame 6Marks",
+
+        ),
+    FullPaperData(
+        unitName = "Mobile Computing",
+        academicYear = "2018",
+        unitCode = "BAC3115",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "a) Discuss the Wireless networks in comparison to fixed networks 8Marks\n",
+        questionThree = "",
+        questionFour = "",
+        questionFive = "",
+        questionSix = "",
+        questionSeven = "",
+        questionEight = "",
+        questionNine = "",
+        questionTen = "",
+        questionEleven = "",
+        questionTwelve = "",
+        questionThirteen = "",
+        questionFourteen = "",
+        questionFifteen = "",
+        questionSixteen = "",
+        questionSeventeen = "",
+        questionEighteen = "",
+        questionNineteen = "",
+        questionTwenty = "",
+        questionTwentyOne = "",
+        questionTwentyTwo = "",
+        questionTwentyThree = "",
+        questionTwentyFour = "",
+        questionTwentyFive = "",
+        questionTwentySix = "",
+        questionTwentySeven = "",
+        questionTwentyEight = "",
+        questionTwentyNine = "",
+        questionTwentyThirty = "",
+
+
+        ),
+
     FullPaperData(
         unitName = "Operating Systems",
         academicYear = "2019",
@@ -496,16 +1373,15 @@ fun PaperExpanded(
 
                     ) {
                         Image(
-                            painter = painterResource(id = R.drawable.logo),
+                            painter = painterResource(id = R.drawable.kcau),
                             contentDescription = null,
                             modifier = Modifier
                                 .clip(CircleShape)
-                                .height(80.dp)
-                                .width(80.dp)
-                            ,
+                                .height(120.dp)
+                                .width(120.dp),
                             contentScale = ContentScale.Crop
 
-                            )
+                        )
                         Row(
 
                             modifier = Modifier.padding(top = 0.dp)
@@ -1083,16 +1959,18 @@ fun PaperExpanded(
                         .padding(bottom = 0.dp, start = 4.dp, end = 4.dp, top = 0.dp)
                         .background(color = white)
                 ) {
-                    Text(
-                        modifier = Modifier
-                            .padding(8.dp),
-                        text = fullPaperData.questionTwentySeven,
-                        color = black,
-                        style = TextStyle(
-                            fontSize = 15.sp,
-                            fontWeight = FontWeight.Normal
+                    fullPaperData.questionTwentySeven?.let {
+                        Text(
+                            modifier = Modifier
+                                .padding(8.dp),
+                            text = it,
+                            color = black,
+                            style = TextStyle(
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Normal
+                            )
                         )
-                    )
+                    }
                 }
                 Box(
                     modifier = Modifier
@@ -1100,16 +1978,56 @@ fun PaperExpanded(
                         .padding(bottom = 0.dp, start = 4.dp, end = 4.dp, top = 0.dp)
                         .background(color = white)
                 ) {
-                    Text(
-                        modifier = Modifier
-                            .padding(8.dp),
-                        text = fullPaperData.questionTwentyEight,
-                        color = black,
-                        style = TextStyle(
-                            fontSize = 15.sp,
-                            fontWeight = FontWeight.Normal
+                    fullPaperData.questionTwentyEight?.let {
+                        Text(
+                            modifier = Modifier
+                                .padding(8.dp),
+                            text = it,
+                            color = black,
+                            style = TextStyle(
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Normal
+                            )
                         )
-                    )
+                    }
+                }
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 0.dp, start = 4.dp, end = 4.dp, top = 0.dp)
+                        .background(color = white)
+                ) {
+                    fullPaperData.questionTwentyNine?.let {
+                        Text(
+                            modifier = Modifier
+                                .padding(8.dp),
+                            text = it,
+                            color = black,
+                            style = TextStyle(
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Normal
+                            )
+                        )
+                    }
+                }
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(bottom = 0.dp, start = 4.dp, end = 4.dp, top = 0.dp)
+                        .background(color = white)
+                ) {
+                    fullPaperData.questionTwentyThirty?.let {
+                        Text(
+                            modifier = Modifier
+                                .padding(8.dp),
+                            text = it,
+                            color = black,
+                            style = TextStyle(
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Normal
+                            )
+                        )
+                    }
                 }
                 Box(
                     modifier = Modifier
@@ -1120,11 +2038,12 @@ fun PaperExpanded(
                     Text(
                         modifier = Modifier
                             .padding(8.dp),
-                        text = "---------THE END--------------",
+                        text = "---------THE END----------",
                         color = black,
                         style = TextStyle(
                             fontSize = 15.sp,
-                            fontWeight = FontWeight.Normal
+                            fontWeight = FontWeight.Normal,
+                            textAlign = TextAlign.Center
                         )
                     )
                 }
