@@ -1320,6 +1320,7 @@ fun PaperExpanded(
     ) {
         Row(
             modifier = Modifier
+                .padding(start=4.dp, end=4.dp)
                 .fillMaxWidth()
                 .height(24.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
@@ -1328,7 +1329,7 @@ fun PaperExpanded(
         {
             Text(
                 text = fullPaperData.unitName,
-                modifier = Modifier.padding(start = 8.dp),
+                modifier = Modifier.padding(start = 4.dp),
                 style = TextStyle(
                     fontFamily = FontFamily.Monospace,
                 )
@@ -1348,7 +1349,7 @@ fun PaperExpanded(
                     imageVector = Icons.Filled.ArrowDropDown,
                     contentDescription = null,
                     modifier = Modifier
-                        .padding(end = 4.dp)
+                        .padding(2.dp)
                 )
             }
         }
