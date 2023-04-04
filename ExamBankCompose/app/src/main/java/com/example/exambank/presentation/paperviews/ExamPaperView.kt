@@ -1336,10 +1336,10 @@ fun PaperExpanded(
             )
             IconButton(
                 modifier = Modifier
-                    .size(28.dp)
+                    .size(24.dp)
                     .background(Color.White, CircleShape)
                     .clip(CircleShape)
-                    .padding(end = 4.dp)
+                    .padding()
                     .rotate(if (isExpanded) 180f else 0f),
                 onClick = {
                     /*TODO*/
