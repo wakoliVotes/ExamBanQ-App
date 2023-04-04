@@ -826,7 +826,7 @@ val fullPaperData = listOf(
         questionTwentyThirty = "e) Why is the TCP better than UDP in internetworking (4 Marks)\n",
     ),
     FullPaperData(
-        unitName = "Computer Organisation And Architecture/Applications",
+        unitName = "Computer Organisation And Architecture",
         academicYear = "2018",
         unitCode = "BIT 1109/BBIT 102",
         monthYear = "DEC, 2018",
@@ -1335,6 +1335,9 @@ fun PaperExpanded(
             )
             IconButton(
                 modifier = Modifier
+                    .size(28.dp)
+                    .background(Color.White, CircleShape)
+                    .clip(CircleShape)
                     .padding(end = 4.dp)
                     .rotate(if (isExpanded) 180f else 0f),
                 onClick = {
