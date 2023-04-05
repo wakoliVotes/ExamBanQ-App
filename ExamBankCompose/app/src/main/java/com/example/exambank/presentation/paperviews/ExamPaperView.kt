@@ -42,7 +42,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.exambank.R
-import com.example.exambank.ui.theme.Purple200
 import com.example.exambank.ui.theme.black
 import com.example.exambank.ui.theme.white
 import kotlinx.coroutines.flow.*
@@ -1420,7 +1419,7 @@ fun PaperExpanded(
                 .fillMaxWidth()
                 .height(24.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
+            verticalAlignment = Alignment.CenterVertically,
         )
         {
             Text(
@@ -1446,14 +1445,15 @@ fun PaperExpanded(
                     contentDescription = null,
                     modifier = Modifier
                         .padding(),
-                    tint = Color.White
+                    tint = if (isExpanded) Color.Red else Color.White
                 )
             }
         }
         if (isExpanded) {
             // start of column
             Column(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
             ) {
                 // Header items card
                 Card(
@@ -2133,13 +2133,14 @@ fun PaperExpanded(
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(bottom = 8.dp, start = 4.dp, end = 4.dp, top = 8.dp)
+                        .padding(bottom = 8.dp, start = 4.dp, end = 4.dp)
                         .background(color = white)
                 ) {
                     Text(
                         modifier = Modifier
-                            .padding(8.dp),
-                        text = "---------THE END----------",
+                            .padding(8.dp)
+                            .align(Alignment.Center),
+                        text = "...... END ......",
                         color = black,
                         style = TextStyle(
                             fontSize = 15.sp,
