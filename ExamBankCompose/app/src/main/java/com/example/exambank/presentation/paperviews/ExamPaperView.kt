@@ -836,13 +836,13 @@ val fullPaperData = listOf(
 
         questionNine = "QUESTION TWO [20 MARKS]",
         questionTen = "a) Table below is an extract of data in a spreadsheet program. Use it to answer the questions that Follow:",
-        questionEleven = "1     |       A       |       B       |       C       |       D       |E \n" +
-                "2      |       NAME        |       |       Basic salary        |       House Allowance     |       Medical Allowance       |       Tax \n" +
-                "3      |       Joseph      |       10000       |       3000        |       1000         \n" +
-                "4      |       Pius        |       5000        |       2000        |       500     \n" +
-                "5      |       Betty       |       7000        |       1000        |       400         \n" +
-                "6      |       Joyce       |       4500        |       500         |       300         |" +
-                "7      |       TAX         |       16%\n",
+        questionEleven = "1\t|A\t|B\t|C\t|D\t|E\t\n" +
+                "2\t|NAME\t|Basic salary\t|House Allowance\t|Medical Allowance\t|Tax\t\n" +
+                "3\t|Joseph\t|10000\t|3000|1000\t\n" +
+                "4\t|Pius|5000\t|2000\t|500\t\n" +
+                "5\t|Betty\t|7000\t|1000\t|400\t\n" +
+                "6\t|Joyce\t|4500\t|500\t|300\t|" +
+                "7\t|TAX\t|16%",
         questionTwelve = "Using cell addresses only, write a formula that could be used to determine:\n" +
                 "i. Tax at 16% of gross pay for joseph (2 Marks)\n" +
                 "ii. Total for each column (3 Marks)\n" +
@@ -877,6 +877,48 @@ val fullPaperData = listOf(
                 "i. Thesaurus (1 Mark)\n" +
                 "ii. Indentation (1 Mark)\n" +
                 "iii. Word wrap (1 Mark)",
+    ),
+    FullPaperData(
+        unitName = "Business Communication Skills",
+        academicYear = "2018",
+        unitCode = "BIT1104A",
+        monthYear = "DEC, 2018",
+
+        questionOne = "QUESTION ONE",
+        questionTwo = "a) Describe how technology affects managerial communication. (5Marks)",
+        questionThree = "b) State five active listening behaviors (5Marks)",
+        questionFour = "c) Explain the importance of communication in an educational institution. (8Marks)",
+        questionFive = "d) Explain how the steps to prepare for a job interview. (10Marks)",
+        questionSix = "f) Differentiate between verbal and non-verbal communication. (2Marks)",
+
+
+        questionSeven = "QUESTION TWO",
+        questionEight = "a) Discuss five ways to overcome the barriers to effective interpersonal communication. (10Marks)",
+        questionNine = "b) Explain the three benefits of using visual aids in a speech. (6Marks)",
+        questionTen = "c) Explain the functions of feedback. (4Marks)",
+
+
+
+        questionEleven = "QUESTION THREE",
+        questionTwelve = "a) Identify five characteristics of a good report. (5 Marks)",
+        questionThirteen = "b) State five qualities of a good meeting and explain how managers can use meetings to motivate staff. (8Marks)",
+        questionFourteen = "c) Differentiate between formal and informal channels of communication. (4 Marks)",
+        questionFifteen = "d) Explain the significance of sharing in our day to day life. (3 Marks)",
+
+
+        questionSixteen = "QUESTION FOUR",
+        questionSeventeen = "a) Explain the benefits that a manager derives from enhancing effective interpersonal relationships in the organization. (8 Marks)",
+        questionEighteen = "b) You are the manager of Classic Enterprises. One of your valued customers has written you a letter complaining about delivery of defective goods. Write a reply. (8 Marks)",
+        questionNineteen = "c) Explain a good or bad customer care experience you had at KCA University. (4 Marks)",
+
+
+        questionTwenty = "QUESTION FIVE",
+        questionTwentyOne = "a) Give any three methods that can be used in solving a conflict. (6 Marks)",
+        questionTwentyTwo = "b) Write an essay on the positive and negative effects of the social media among the youth. (10 Marks)",
+        questionTwentyThree = "c) Why is it important for managers to understand different cultural backgrounds of the employees? (4 Marks)",
+        questionTwentyFour = "",
+        questionTwentyFive = "",
+        questionTwentySix = "",
     ),
     FullPaperData(
         unitName = "System Development Methodology",
@@ -1203,43 +1245,45 @@ val fullPaperData = listOf(
         questionTwentyEight = "23. What is the difference between a class and an object?",
     ),
     FullPaperData(
-        unitName = "Computer Architecture",
-        academicYear = "2019",
-        unitCode = "BSC 201",
-        monthYear = "AUGUST, 2022",
+        unitName = "Cyber Security",
+        academicYear = "2018",
+        unitCode = "BAC2316",
+        monthYear = "AUGUST, 2018",
 
         questionOne = "QUESTION ONE [30 Marks]",
-        questionTwo = "1. What is the difference between a class and an object?",
-        questionThree = "2. What is the difference between a class and an object?",
-        questionFour = "3. What is the difference between a class and an object?",
-        questionFive = "4. What is the difference between a class and an object?",
-        questionSix = "5. What is the difference between a class and an object?",
-        questionSeven = "6. What is the difference between a class and an object?",
-        questionEight = "7. What is the difference between a class and an object?",
+        questionTwo = "a) Discuss how cryptanalysis techniques are facilitated (5 Marks)",
+        questionThree = "b) Discuss Secure Electronic Transaction(SET) process (6 Marks)",
+        questionFour = "c) Explain the challenges associated with intrusion detection systems (5 Marks)",
+        questionFive = "d) Elaborate on any the laws addressing cybercrime (6 Marks)",
+        questionSix = "e) Explain in detail how Secure Socket layer work (8 Marks)",
 
-        questionNine = "QUESTION TWO [20 Marks]",
-        questionTen = "8. What is the difference between a class and an object?",
-        questionEleven = "9. What is the difference between a class and an object?",
-        questionTwelve = "10. What is the difference between a class and an object?",
-        questionThirteen = "11. What is the difference between a class and an object?",
 
-        questionFourteen = "QUESTION THREE [20 Marks]",
-        questionFifteen = "12. What is the difference between a class and an object?",
-        questionSixteen = "13. What is the difference between a class and an object?",
-        questionSeventeen = "14. What is the difference between a class and an object?",
-        questionEighteen = "15. What is the difference between a class and an object?",
 
-        questionNineteen = "QUESTION FOUR [20 Marks]",
-        questionTwenty = "16. What is the difference between a class and an object?",
-        questionTwentyOne = "17. What is the difference between a class and an object?",
-        questionTwentyTwo = "18. What is the difference between a class and an object?",
-        questionTwentyThree = "19. What is the difference between a class and an object?",
+        questionSeven = "QUESTION TWO [20 MARKS]",
+        questionEight = "a) Describe the operating principles of malwares that attack cyber (6 Marks)",
+        questionNine = "b) Describe how the various types of firewalls work (8 Marks)",
+        questionTen = "c) What is war dialing for remote connectivity? Explain the software used for war dialing (8 Marks)",
 
-        questionTwentyFour = "QUESTION FIVE [10 Marks]",
-        questionTwentyFive = "20. What is the difference between a class and an object?",
-        questionTwentySix = "21. What is the difference between a class and an object?",
-        questionTwentySeven = "22. What is the difference between a class and an object?",
-        questionTwentyEight = "23. What is the difference between a class and an object?",
+
+        questionEleven = "QUESTION THREE [20 MARKS]",
+        questionTwelve = "a) Describe the concepts used in the Anomaly intrusion detection system (6 Marks)",
+        questionThirteen = "b) Explain the various tools and technologies used for hacking (8 Marks)",
+        questionFourteen = "c) Discuss how Advanced Persistent threats affects the web access (6 Marks)\n",
+
+        questionFifteen = "QUESTION FOUR",
+        questionSixteen = "a) Describe the different types of VPN indicating their importance (8 Marks)",
+        questionSeventeen = "b) List and explain any two password management practices (6 Marks)",
+        questionEighteen = "c) Describe the process of investigating cybercrime (6 Marks)",
+
+        questionNineteen = "QUESTION FIVE [20 Marks]",
+        questionTwenty = "a) Using examples discuss how cloud computing and mobile computing threats have become a challenge to cyber security (8 Marks)",
+        questionTwentyOne = "b) What is VOIP hacking? Explain the counter measures for it (8 Marks)",
+        questionTwentyTwo = "c) Explain any two tools used to check for cybercrime vulnerabilities (4 Marks)",
+        questionTwentyThree = "",
+
+        questionTwentyFour = "",
+        questionTwentyFive = "",
+        questionTwentySix = "",
     )
 )
 
