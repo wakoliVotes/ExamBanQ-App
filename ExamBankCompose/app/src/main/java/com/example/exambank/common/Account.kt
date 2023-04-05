@@ -108,6 +108,7 @@ private fun OwnerInfo() {
                 }
 
                 Spacer(modifier = Modifier.height(5.dp))
+                /*
                 ClickableText(
                     text = AnnotatedString(
                         "Sign Out",
@@ -121,6 +122,7 @@ private fun OwnerInfo() {
                         textAlign = TextAlign.Center
                     )
                 )
+                */
             }
         }
     }
@@ -147,6 +149,8 @@ private fun GeneralInfo() {
                 ),
                 modifier = Modifier.padding(top = 10.dp, bottom = 10.dp)
             )
+            
+            /*
             ClickableText(
                 text = AnnotatedString(
                     "About",
@@ -165,6 +169,8 @@ private fun GeneralInfo() {
                     .padding(top = 10.dp, bottom = 10.dp)
 
             )
+            */
+            
             // Divider line
             Box(
                 modifier = Modifier
