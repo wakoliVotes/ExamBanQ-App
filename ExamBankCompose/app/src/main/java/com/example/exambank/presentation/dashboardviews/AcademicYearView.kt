@@ -11,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -95,6 +96,7 @@ fun AcademicYearView(
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2018",
@@ -136,12 +138,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner1),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2022",
@@ -183,12 +186,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner2),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2022",
@@ -230,12 +234,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner3),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2022",
@@ -277,12 +282,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner4),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2021",
@@ -324,12 +330,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner5),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2021",
@@ -371,12 +378,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner6),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2021",
@@ -418,12 +426,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner7),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2020",
@@ -465,12 +474,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner8),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2020",
@@ -512,12 +522,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner9),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2020",
@@ -559,12 +570,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner10),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2019",
@@ -606,12 +618,13 @@ fun AcademicYearView(
 
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner11),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2019",
@@ -651,12 +664,13 @@ fun AcademicYearView(
                     .padding(all = 8.dp),
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner12),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2019",
@@ -703,7 +717,8 @@ fun AcademicYearView(
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
-                )
+                           contentScale = ContentScale.FillWidth
+               )
                 Text(
                     text = "2018",
                     fontSize = 16.sp,
@@ -744,12 +759,13 @@ fun AcademicYearView(
                     .padding(all = 8.dp),
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner13),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2018",
@@ -789,12 +805,13 @@ fun AcademicYearView(
                     .padding(all = 8.dp),
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner14),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2018",
@@ -834,12 +851,13 @@ fun AcademicYearView(
                     .padding(all = 8.dp),
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner15),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2017",
@@ -879,12 +897,13 @@ fun AcademicYearView(
                     .padding(all = 8.dp),
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner16),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2017",
@@ -924,12 +943,13 @@ fun AcademicYearView(
                     .padding(all = 8.dp),
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.owner),
+                    painter = painterResource(id = R.drawable.banner18),
                     contentDescription = "",
                     modifier = Modifier
                         .height(60.dp)
                         .offset(40.dp, (8).dp)
                         .clip(CircleShape),
+                    contentScale = ContentScale.FillWidth
                 )
                 Text(
                     text = "2017",
