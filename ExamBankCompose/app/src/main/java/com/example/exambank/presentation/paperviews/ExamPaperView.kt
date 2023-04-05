@@ -1375,7 +1375,7 @@ fun PaperExpanded(
             IconButton(
                 modifier = Modifier
                     .size(24.dp)
-                    .background(Purple200, CircleShape)
+                    .background(Color.Black, CircleShape)
                     .clip(CircleShape)
                     .padding()
                     .rotate(if (isExpanded) 180f else 0f),
@@ -1387,7 +1387,7 @@ fun PaperExpanded(
                     imageVector = Icons.Filled.ArrowDropDown,
                     contentDescription = null,
                     modifier = Modifier
-                        .padding(1.dp),
+                        .padding(),
                     tint = Color.White
                 )
             }

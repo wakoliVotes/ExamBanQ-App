@@ -34,39 +34,13 @@ User Interface (UX) features | Importance
  2.Register                  | Core
  3.Sign In/Login             | Core
  4.Home Menu/Dashboard       | Core
- 5.Per Trimester Papers List | Core
- 6.Navigation Buttons        | Core
- 7.Individual Paper          | Core
+ 5.Per Academic Year Papers  | Core
 
 
-#### Detailed Sections Description
-#### 1. User Categories
-     1. System User
-     2. Admin User
-     3. Guest User
-#### 2. Profile/Account
-**i. Sign Up**
-
-     a. Username
-     b. Password
-     c. Phone Number
-     d. Student Email
-     e. Done- Login
-**ii. Sign In**
-
-     a. Username
-     b. Password
-     c. Done - Login
-
-#### Documents Menu
-  > 1. Year 1
-  > 2. Year 2
-  > 3. Year 3
-  > 4. Year 4
 ### Core Layouts
 - **Splash screen, Login Page, Register/Sign Up Page**
  
-<img width="218" height="420" alt="splash screen" src="https://user-images.githubusercontent.com/77758884/153352238-53ecc3bb-ce49-450a-a2e7-503def032c87.png" ><img width="218" height="420" alt="login page" src="https://user-images.githubusercontent.com/77758884/156889586-8ce0b5b2-3ed2-489c-9725-50d3f061cb63.png" ><img width="218" height="420" alt="register page" src="https://user-images.githubusercontent.com/77758884/156889515-356937f2-c1f6-4b46-b225-ebefcbbea38f.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/welcome.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/home.png" ><img width="218" height="420" alt="dashboard" src="https://user-images.githubusercontent.com/77758884/226309340-ac563fd0-1274-4d49-8462-fb1cd94e6167.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/papers.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/paper0.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/paper1.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/paper2.png" >
+<img width="218" height="420" alt="splash screen" src="https://user-images.githubusercontent.com/77758884/153352238-53ecc3bb-ce49-450a-a2e7-503def032c87.png" ><img width="218" height="420" alt="login page" src="https://user-images.githubusercontent.com/77758884/156889586-8ce0b5b2-3ed2-489c-9725-50d3f061cb63.png" ><img width="218" height="420" alt="register page" src="https://user-images.githubusercontent.com/77758884/156889515-356937f2-c1f6-4b46-b225-ebefcbbea38f.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/welcome.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/home.png" ><img width="218" height="420" alt="dashboard" src="https://user-images.githubusercontent.com/77758884/226309340-ac563fd0-1274-4d49-8462-fb1cd94e6167.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/papers.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/paper0.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/paper1.png" ><img width="218" height="420" alt="screenshots" src="ExamBankCompose/screenshots/settings.png" >
 
 
 
