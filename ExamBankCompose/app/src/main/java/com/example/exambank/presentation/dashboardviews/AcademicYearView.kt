@@ -97,54 +97,7 @@ fun AcademicYearView(
                         .clip(CircleShape),
                 )
                 Text(
-                    text = "2023",
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.W700,
-                    modifier = Modifier.padding(top = 5.dp),
-                )
-                Text(
-                    text = "Jan - May",
-                    fontSize = 12.sp,
-                    fontWeight = FontWeight.W600,
-                    modifier = Modifier.padding(),
-                    color = Color.Gray
-                )
-                Text(
-                    text = "Soon",
-                    fontSize = 10.sp,
-                    fontWeight = FontWeight.W400,
-                    modifier = Modifier
-                        .padding()
-                        .align(Alignment.End),
-                    style = TextStyle(
-                        color = Color.Blue
-                    )
-                )
-            }
-        }
-        Card(
-            modifier = Modifier
-                .padding(all = 8.dp)
-                .width(115.dp)
-                .clip(RoundedCornerShape(8.dp)),
-            elevation = 5.dp
-        ) {
-            Column(
-                modifier = Modifier
-                    .padding(all = 8.dp),
-//            horizontalAlignment = Alignment.CenterHorizontally
-
-            ) {
-                Image(
-                    painter = painterResource(id = R.drawable.owner),
-                    contentDescription = "",
-                    modifier = Modifier
-                        .height(60.dp)
-                        .offset(40.dp, (8).dp)
-                        .clip(CircleShape),
-                )
-                Text(
-                    text = "2022",
+                    text = "2018",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.W700,
                     modifier = Modifier.padding(top = 5.dp),
@@ -197,6 +150,53 @@ fun AcademicYearView(
                     modifier = Modifier.padding(top = 5.dp),
                 )
                 Text(
+                    text = "Sept - Dec",
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.W600,
+                    modifier = Modifier.padding(),
+                    color = Color.Gray
+                )
+                Text(
+                    text = "Coming Soon",
+                    fontSize = 10.sp,
+                    fontWeight = FontWeight.W400,
+                    modifier = Modifier
+                        .padding()
+                        .align(Alignment.End),
+                    style = TextStyle(
+                        color = Color.Blue
+                    )
+                )
+            }
+        }
+        Card(
+            modifier = Modifier
+                .padding(all = 8.dp)
+                .width(115.dp)
+                .clip(RoundedCornerShape(8.dp)),
+            elevation = 5.dp
+        ) {
+            Column(
+                modifier = Modifier
+                    .padding(all = 8.dp),
+//            horizontalAlignment = Alignment.CenterHorizontally
+
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.owner),
+                    contentDescription = "",
+                    modifier = Modifier
+                        .height(60.dp)
+                        .offset(40.dp, (8).dp)
+                        .clip(CircleShape),
+                )
+                Text(
+                    text = "2022",
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.W700,
+                    modifier = Modifier.padding(top = 5.dp),
+                )
+                Text(
                     text = "May - Aug",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.W600,
@@ -204,7 +204,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -251,7 +251,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -298,7 +298,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -345,7 +345,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -392,7 +392,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -439,7 +439,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -486,7 +486,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -533,7 +533,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -580,7 +580,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -627,7 +627,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -672,7 +672,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -684,6 +684,7 @@ fun AcademicYearView(
                 )
             }
         }
+        /*
         Card(
             modifier = Modifier
                 .padding(all = 8.dp)
@@ -729,6 +730,8 @@ fun AcademicYearView(
                 )
             }
         }
+
+         */
         Card(
             modifier = Modifier
                 .padding(all = 8.dp)
@@ -762,7 +765,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -807,7 +810,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -852,7 +855,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -897,7 +900,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -942,7 +945,7 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Active",
+                    text = "Coming Soon",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
@@ -954,8 +957,6 @@ fun AcademicYearView(
                 )
             }
         }
-
-
     }
 }
 

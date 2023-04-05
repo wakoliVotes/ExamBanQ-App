@@ -24,12 +24,15 @@ import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -1050,23 +1053,21 @@ val fullPaperData = listOf(
         monthYear = "DEC, 2018",
 
         questionOne = "QUESTION ONE",
-        questionTwo = "a) Discuss the Wireless networks in comparison to fixed networks 8Marks\n",
-        questionThree = "b) Explain the effects of multipath propagation of signals 6Marks\n",
-        questionFour = "c) Elaborate some of the motivations of TDMA (Time Division Multiple Access)\n" +
-                "6Marks\n",
-        questionFive = "d) Discuss the characteristics of wireless LAN 6Marks\n",
-        questionSix = "e) Describe how CSMA/CA works 4Marks",
+        questionTwo = "a) Discuss the Wireless networks in comparison to fixed networks 8 Marks",
+        questionThree = "b) Explain the effects of multipath propagation of signals 6 Marks",
+        questionFour = "c) Elaborate some of the motivations of TDMA (Time Division Multiple Access) 6 Marks",
+        questionFive = "d) Discuss the characteristics of wireless LAN 6 Marks",
+        questionSix = "e) Describe how CSMA/CA works 4 Marks",
 
         questionSeven = "QUESTION TWO\n",
         questionEight = "a) What are the design goals of wireless LAN 8Marks\n",
-        questionNine = "b) Discuss the Euclidean Unit Disk Graph as used in mobile computing 6Marks\n",
-        questionTen = "c) What are the requirements for Mobile IP 6Marks\n",
+        questionNine = "b) Discuss the Euclidean Unit Disk Graph as used in mobile computing 6 Marks",
+        questionTen = "c) What are the requirements for Mobile IP 6 Marks",
 
         questionEleven = "QUESTION THREE",
-        questionTwelve = "a) Discuss the characteristics of Dynamic Host Configuration Protocol (DHCP)\n" +
-                "6Marks\n",
-        questionThirteen = "b) Discuss the Advantages and Disadvantages Indirect TCP 6Marks\n",
-        questionFourteen = "c) Describe the following terms as used in mobile computing 8Marks\n",
+        questionTwelve = "a) Discuss the characteristics of Dynamic Host Configuration Protocol (DHCP) 6Marks",
+        questionThirteen = "b) Discuss the Advantages and Disadvantages Indirect TCP 6 Marks",
+        questionFourteen = "c) Describe the following terms as used in mobile computing 8 Marks",
         questionFifteen = "i) Mobile Node (MN)",
         questionSixteen = "ii) Home Agent (HA)",
         questionSeventeen = "iii) Foreign Agent (FA)",
@@ -1083,6 +1084,7 @@ val fullPaperData = listOf(
         questionTwentySix = "c) Using a diagram describe format and content of a frame 6 Marks",
 
         ),
+    /*
     FullPaperData(
         unitName = "Mobile Computing",
         academicYear = "2018",
@@ -1119,9 +1121,8 @@ val fullPaperData = listOf(
         questionTwentyEight = "",
         questionTwentyNine = "",
         questionTwentyThirty = "",
-
-
         ),
+     */
 
     FullPaperData(
         unitName = "Operating Systems",
@@ -1263,14 +1264,27 @@ fun ExamPaperView() {
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Text(
-                        text = "Explore Papers",
-                        modifier = Modifier
-                            .padding(4.dp),
-                        style = TextStyle(
-                            fontWeight = FontWeight.Bold,
-                            fontSize = 20.sp,
-                            fontFamily = FontFamily.Monospace
-                        )
+                        text = buildAnnotatedString {
+                            withStyle(
+                                style = SpanStyle(
+                                    Color.Black,
+                                    fontWeight = FontWeight.Bold
+                                )
+                            ) {
+                                append("Explore ")
+                            }
+                            withStyle(
+                                style = SpanStyle(
+                                    Color.Red
+                                )
+                            ) {
+                                append("Papers")
+                            }
+                        },
+                        style = MaterialTheme.typography.subtitle1,
+                        modifier = Modifier.padding(start = 8.dp),
+                        fontSize = 24.sp,
+                        fontFamily = FontFamily.Monospace
                     )
                     Image(
                         painter = painterResource(id = R.drawable.workspaces),
@@ -1405,7 +1419,7 @@ fun PaperExpanded(
                     modifier = Modifier
                         .padding(4.dp)
                         .fillMaxWidth()
-                        .height(320.dp)
+                        .height(330.dp)
                 ) {
                     Column(
                         modifier = Modifier
@@ -1420,7 +1434,7 @@ fun PaperExpanded(
                             contentDescription = null,
                             modifier = Modifier
                                 .clip(CircleShape)
-                                .height(120.dp)
+                                .height(100.dp)
                                 .width(120.dp),
                             contentScale = ContentScale.Crop
 
@@ -1443,7 +1457,7 @@ fun PaperExpanded(
                                         fontWeight = FontWeight.Bold
                                     )
                                 )
-                                Spacer(modifier = Modifier.height(5.dp))
+                                Spacer(modifier = Modifier.height(4.dp))
                                 Text(
                                     text = "EXAMINATION FOR THE DEGREE OF BACHELOR OF\n" +
                                             "SCIENCE IN INFORMATION TECHNOLOGY/ BACHELOR \n" +
@@ -1455,7 +1469,7 @@ fun PaperExpanded(
                                         fontWeight = FontWeight.Bold
                                     )
                                 )
-                                Spacer(modifier = Modifier.height(5.dp))
+                                Spacer(modifier = Modifier.height(4.dp))
                                 Text(
                                     text = fullPaperData.unitCode + ": " + fullPaperData.unitName,
                                     style = TextStyle(
@@ -1466,7 +1480,7 @@ fun PaperExpanded(
                                         textAlign = TextAlign.Center
                                     )
                                 )
-                                Spacer(modifier = Modifier.height(5.dp))
+                                Spacer(modifier = Modifier.height(4.dp))
                                 Text(
                                     text = "FULL TIME/PART TIME/DISTANCE LEARNING",
                                     style = TextStyle(
@@ -1501,12 +1515,12 @@ fun PaperExpanded(
                                         )
                                     )
                                 }
-                                Spacer(modifier = Modifier.height(5.dp))
+                                Spacer(modifier = Modifier.height(4.dp))
                                 // 1st Divider
                                 Box(
 
                                     modifier = Modifier
-                                        .height(4.dp)
+                                        .height(2.dp)
                                         .fillMaxWidth()
                                         .background(color = Color.Black)
                                 )
@@ -1524,7 +1538,7 @@ fun PaperExpanded(
                                         text = "INSTRUCTIONS: ",
                                         style = TextStyle(
                                             color = Color.Black,
-                                            fontSize = 14.sp,
+                                            fontSize = 12.sp,
                                             fontFamily = FontFamily.SansSerif,
                                             fontWeight = FontWeight.Bold
                                         )
@@ -1534,7 +1548,7 @@ fun PaperExpanded(
                                         text = "Answer Question One & ANY OTHER TWO",
                                         style = TextStyle(
                                             color = Color.Black,
-                                            fontSize = 14.sp,
+                                            fontSize = 12.sp,
                                             fontFamily = FontFamily.SansSerif
                                         )
                                     )
