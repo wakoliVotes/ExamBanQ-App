@@ -12,6 +12,7 @@ import com.example.exambank.presentation.dashboardviews.AcademicYearView
 import com.example.exambank.presentation.dashboardviews.HomeDashboard
 import com.example.exambank.presentation.dashboardviews.MainScreen
 import com.example.exambank.presentation.paperviews.ExamPaperView
+import com.example.exambank.presentation.paperviews.ExamPaperView2019
 import com.example.exambank.presentation.welcomeviews.OnBoardScreen
 import com.example.exambank.viewscreens.AccountView
 import com.example.exambank.viewscreens.SplashScreen
@@ -95,6 +96,9 @@ fun Navigator (
         }
         composable(route = Routes.MayAug2017.route){
             ExamPaperView()
+        }
+        composable(route = Routes.SeptDec2019.route){
+            ExamPaperView2019()
         }
 
     }

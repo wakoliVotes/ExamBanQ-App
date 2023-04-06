@@ -128,7 +128,10 @@ fun AcademicYearView(
             modifier = Modifier
                 .padding(all = 8.dp)
                 .width(115.dp)
-                .clip(RoundedCornerShape(8.dp)),
+                .clip(RoundedCornerShape(8.dp))
+                .clickable {
+                    navController.navigate("SeptDec2019")
+                },
             elevation = 5.dp
         ) {
             Column(
@@ -147,7 +150,7 @@ fun AcademicYearView(
                     contentScale = ContentScale.FillWidth
                 )
                 Text(
-                    text = "2022",
+                    text = "2019",
                     fontSize = 16.sp,
                     fontWeight = FontWeight.W700,
                     modifier = Modifier.padding(top = 5.dp),

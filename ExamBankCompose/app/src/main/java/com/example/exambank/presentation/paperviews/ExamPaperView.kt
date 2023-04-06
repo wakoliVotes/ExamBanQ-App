@@ -1169,7 +1169,7 @@ val fullPaperData = listOf(
         unitName = "Operating Systems",
         academicYear = "2019",
         unitCode = "BSC 201",
-        monthYear = "AUGUST, 2022",
+        monthYear = "DEC, 2018",
 
         questionOne = "QUESTION ONE [30 Marks]",
         questionTwo = "1. What is the difference between a class and an object?",
@@ -1208,7 +1208,7 @@ val fullPaperData = listOf(
         unitName = "Computer Networks",
         academicYear = "2019",
         unitCode = "BSC 201",
-        monthYear = "AUGUST, 2022",
+        monthYear = "DEC, 2018",
 
         questionOne = "QUESTION ONE [30 Marks]",
         questionTwo = "1. What is the difference between a class and an object?",
@@ -1247,7 +1247,7 @@ val fullPaperData = listOf(
         unitName = "Cyber Security",
         academicYear = "2018",
         unitCode = "BAC2316",
-        monthYear = "AUGUST, 2018",
+        monthYear = "DEC, 2018",
 
         questionOne = "QUESTION ONE [30 Marks]",
         questionTwo = "a) Discuss how cryptanalysis techniques are facilitated (5 Marks)",
@@ -1321,7 +1321,14 @@ fun ExamPaperView() {
                                     Color.Red
                                 )
                             ) {
-                                append("Papers")
+                                append("Papers ")
+                            }
+                            withStyle(
+                                style = SpanStyle(
+                                    Color.DarkGray
+                                )
+                            ) {
+                                append("2018")
                             }
                         },
                         style = MaterialTheme.typography.subtitle1,
