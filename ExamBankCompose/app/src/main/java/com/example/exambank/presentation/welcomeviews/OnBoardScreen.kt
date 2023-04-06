@@ -96,8 +96,8 @@ fun OnBoardScreen(navController: NavHostController) {
                 )
             ) {
                 Text(
-                    text = "Explore",
-                    style = MaterialTheme.typography.h5,
+                    text = "Start",
+                    style = MaterialTheme.typography.h6,
                     color = MaterialTheme.colors.onPrimary,
                     fontWeight = FontWeight.ExtraBold
                 )

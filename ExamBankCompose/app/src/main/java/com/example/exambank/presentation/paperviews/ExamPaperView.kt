@@ -137,9 +137,9 @@ data class FullPaperData(
 
 val fullPaperData = listOf(
     FullPaperData(
-        unitName = "System Development Methodology",
-        academicYear = "2018",
-        unitCode = "BBIT207",
+        unitName = "Operating Systems",
+        academicYear = "2018/2019",
+        unitCode = "BAC 1102/ BISF 1102/ BSD 1105/ BIT 1106/ BBIT 108",
         monthYear = "DEC, 2018",
 
         questionOne = "QUESTION ONE",
@@ -197,45 +197,6 @@ val fullPaperData = listOf(
                 "iii) Drivers (2 Marks)",
         questionTwentySeven = "c) State and explain TWO types of file access methods. (4 Marks)",
         questionTwentyEight = "d) Discuss any THREE page replacement algorithms in memory management (6 Marks)",
-    ),
-    FullPaperData(
-        unitName = "Operating Systems",
-        academicYear = "2022",
-        unitCode = "BAC 1102/BISF 1102/BSD 1105/",
-        monthYear = "AUG, 2019",
-
-        questionOne = "QUESTION ONE [30 Marks]",
-        questionTwo = "a) Explain TWO main purposes of an operating system. (2 Marks)",
-        questionThree = "b) Describe any FOUR attributes that should be considered when designing the file structure for operating system. (4 Marks)",
-        questionFour = "c) Describe the following operating system related concepts:\n i) Device controller (2 Marks)\n ii) SMP (2 Marks)\n iii) Spooling (2 Marks)",
-        questionFive = "d) Describe the term ‘operating system utilities’ and highlight any FOUR such utilities. (6 Marks)",
-        questionSix = "e) Describe what is a ‘real-time system’. Offer its characteristics and where it is most applicable.(5 Marks)",
-        questionSeven = "f) Distinguish between logical and physical address space. (4 Marks)",
-        questionEight = "g) Outline any THREE advantages of multiprocessor systems over uniprocessor systems. (3 Marks)",
-
-        questionNine = "QUESTION TWO [20 Marks]",
-        questionTen = "a) Outline the basic function of paging. (2 Marks)",
-        questionEleven = "b) Explain what happens during demand paging. (3 Marks)",
-        questionTwelve = "c) i) What are the differences between internal fragmentation and external fragmentation? (4 Marks)\n ii) Explain the ways of overcoming both types of fragmentation in c(i) above. (4 Marks)",
-        questionThirteen = "d) Describe the process of dynamic loading and explain how it aids in better memory space utilization.(4 marks)\n \n \n e) Explain how swapping results in better memory management. (3 Marks)",
-
-        questionFourteen = "QUESTION THREE [20 Marks]",
-        questionFifteen = "a) What is a process and what are the attributes of a process? (4 Marks)",
-        questionSixteen = "b) Explain the following terms with respect to process management:\n i) Thread (2 Marks)\n ii) Interrupt (2 Marks)\n iii) Semaphore (2 Marks)\n iv) Context switching (2 Marks)",
-        questionSeventeen = "c) Describe any FIVE examples of process states. (5 Marks)",
-        questionEighteen = "d) Describe THREE types of CPU registers in a typical operating system design. (3 Marks)",
-
-        questionNineteen = "QUESTION FOUR [20 Marks]",
-        questionTwenty = "a) Explain how a file name EXAMPLEFILE.TXT would appear when viewed under the DOS command console operating in Windows 98. (2 Marks)",
-        questionTwentyOne = "b) Describe what is ‘Direct Access Method’ and list its benefits. (5 Marks)",
-        questionTwentyTwo = "c) Explain what the following MS-DOS commands will do during file management: (5 Marks)\ni) dir /W\n ii) dir /p\n iii) diskcopy G: H:\n iv) dir /OD\n  v) chkdsk G: /F",
-        questionTwentyThree = "d) Give FOUR reasons why Ubuntu is considered ‘safe’ and not prone to viruses. (4 Marks)\n\n e) Explain pros and cons of a command line interface. (4 Marks)",
-
-        questionTwentyFour = "QUESTION FIVE [10 Marks]",
-        questionTwentyFive = "a) List and describe the THREE memory allocation algorithms. (6 Marks)",
-        questionTwentySix = "b) Assume you have the following jobs to execute with one processor, with the jobs arriving in the order listed here:\ni ===T(pi)\n0 == 80\n1 == 20\n2 == 10\n3 == 20\n4 == 50\ni) Suppose a system uses FCFS scheduling. Create a Gantt chart illustrating the execution of these processes. (2 Marks)\nii) Calculate the average wait time for the processes. (2 Marks)",
-        questionTwentySeven = "c) What is a race condition? Give an example. (4 Marks) ",
-        questionTwentyEight = "d) Discuss the advantages and disadvantages of user level threads. (6 Marks)",
     ),
     FullPaperData(
         unitName = "Installation and Customization",

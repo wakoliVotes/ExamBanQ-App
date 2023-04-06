@@ -7,6 +7,7 @@ import androidx.navigation.compose.composable
 import com.example.exambank.presentation.dashboardviews.AcademicYearView
 import com.example.exambank.presentation.dashboardviews.HomeDashboard
 import com.example.exambank.presentation.paperviews.ExamPaperView
+import com.example.exambank.presentation.paperviews.ExamPaperView2019
 import com.example.exambank.viewscreens.*
 
 @Composable
@@ -28,6 +29,9 @@ fun BottomNavGraph(navController: NavHostController) {
         }
         composable(route = Routes.FullExamPaper.route){
             ExamPaperView()
+        }
+        composable(route = Routes.SeptDec2019.route){
+            ExamPaperView2019()
         }
     }
 }

@@ -119,7 +119,7 @@ fun AcademicYearView(
                         .padding()
                         .align(Alignment.End),
                     style = TextStyle(
-                        color = Color.Blue
+                        color = Color.Green
                     )
                 )
             }
@@ -163,14 +163,14 @@ fun AcademicYearView(
                     color = Color.Gray
                 )
                 Text(
-                    text = "Coming Soon",
+                    text = "Active",
                     fontSize = 10.sp,
                     fontWeight = FontWeight.W400,
                     modifier = Modifier
                         .padding()
                         .align(Alignment.End),
                     style = TextStyle(
-                        color = Color.Blue
+                        color = Color.Green
                     )
                 )
             }
