@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.exambank'
+    namespace 'com.anchormiles.exambank'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.exambank"
+        applicationId "com.anchormiles.exambank"
         minSdk 23
         targetSdk 33
         versionCode 1

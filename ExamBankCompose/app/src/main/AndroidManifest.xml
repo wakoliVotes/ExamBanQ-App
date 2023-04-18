@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
 
     <application
         android:allowBackup="true"
@@ -15,7 +16,7 @@
         android:theme="@style/Theme.ExamBankCompose"
         tools:targetApi="31">
         <activity
-            android:name="com.example.exambank.MainActivity"
+            android:name="com.anchormiles.exambank.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.ExamBankCompose">
             <intent-filter>
