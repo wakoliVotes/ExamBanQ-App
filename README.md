@@ -59,5 +59,6 @@ User Interface (UX) features | Importance
 [<img width="80" height="60" alt="screenshots" src="ExamBankCompose/screenshots/google_play1.png"
 align="center" hspace="10" vspace="10">](https://exambanq.vercel.app/)
 > - You can check & download the app on **[Google Play Store](https://exambanq.vercel.app/)**
+> - View & Explore Other Projects at [AnchorMiles Software](https://anchormiles.vercel.app/)
 
 
